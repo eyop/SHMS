@@ -8,17 +8,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
     <link rel="stylesheet" href="Style/animate.css">
 
-    <link rel="stylesheet" href="Style/style.css">
-    <link rel="stylesheet" href="Style/bootstrap.css">
+    <!-- <link rel="stylesheet" href="Style/style.css"> -->
+    <!-- <link rel="stylesheet" href="Style/bootstrap.css"> -->
     <!-- <link rel="stylesheet" href="Style/bootstrap.min.css"> -->
+    
 
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.css" rel="stylesheet">
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
-    <script src="js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+    
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
@@ -27,49 +28,56 @@
     <!-- Latest compiled JavaScript -->
     <title>SMART HEALTH MANEGMENT SYSTEM</title>
   </head>
-    
+    <style>
+      video{
+        width: 100%;
+        height: auto;
+      }
+      </style>
   <body style=" background-color: #011a3e;">
     
 
 
       <div class="main">
-        <header class=""  style="animation: bounceInDown 2s ;">
-          <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" >
-            <div class="container">
-        
-              <a class="navbar-brand js-scroll-trigger" href="#" style="margin-top: 10px;margin-left:-65px;font-family: 'IBM Plex Sans', sans-serif;"><h4><i class="fa fa-user-plus" aria-hidden="true"></i> YOUR HEALTH</h4></a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item" style="margin-right: 40px;">
-                    <a class="nav-link js-scroll-trigger" href="#home" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>HOME</h6></a>
-                  </li>
-          
-                  <li class="nav-item" style="margin-right: 40px;">
-                    <a class="nav-link js-scroll-trigger" href="#FUTURES" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>FUTURES</h6></a>
-                  </li>
-                    <li class="nav-item" style="margin-right: 40px;">
-                    <a class="nav-link js-scroll-trigger" href="#Gallery" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>Gallery</h6></a>
-                  </li>
-                    <li class="nav-item">
-                      <a class="nav-link js-scroll-trigger" href="#Contact" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>CONTACT</h6></a>
-                    </li>
-                  </li>
-                  <li class="nav-item" style="margin-right: 40px;">
-                    <a class="nav-link " href="index.php" style="color: white;font-family: 'IBM Plex Sans', sans-serif; "><h6>GET STARTED</h6></a>
-                  </li>
-        
-                </ul>
-              </div>
-            </div>
-          </nav>
+        <header class=""  style="animation: bounceInDown 2s ;  background-color: #011a3e;">
+
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="mainNav" style="animation: bounceOutDown 1s ;transition-delay: 1s; margin-bottom: 1%; background:  #0062cc;;" >
+    <div class="container">
+
+      <a class="navbar-brand js-scroll-trigger" href="#" style="margin-top: 10px;margin-left:-1%;font-family: 'IBM Plex Sans', sans-serif;"><h4><i class="fa fa-user-plus" aria-hidden="true"></i> YOUR HEALTH</h4></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" style="margin-right: 40px;">
+            <a class="nav-link js-scroll-trigger" href="index1.php" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>HOME</h6></a>
+          </li>
+          <li class="nav-item" style="margin-right: 40px;">
+            <a class="nav-link js-scroll-trigger" href="index1.php#FUTURES" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>FUTURES</h6></a>
+  
+        </li>
+        <li class="nav-item" style="margin-right: 40px;">
+          <a class="nav-link js-scroll-trigger" href="index1.php#Gallery" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>Gallery</h6></a>
+        </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index1.html#Contact" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>CONTACT</h6></a>
+            </li>
+          </li>
+          <li class="nav-item" style="margin-right: 40px;">
+            <a class="nav-link js-scroll-trigger" href="index.php" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>JOIN</h6></a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
         </header>
         <main class="" style="  color: white" >
-          <div style="margin-top: 5%; margin-left:20%;  ">
+          <div style="margin-top: 12%;   ">
 
-            <div class="tab-pane  active" id="Contact" style="width: 100%; animation: rotateIn 4s ;" >
+            <div class="tab-pane  active" id="Contact" style="animation: rotateIn 4s ;" >
               <video
               src="image/anim.mp4"
               muted
@@ -204,6 +212,10 @@
         <!-- Button trigger modal -->
 
       </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
   </body>
 </html>

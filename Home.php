@@ -134,13 +134,15 @@ if(!empty($BMI_R))
   <!-- Latest compiled and minified CSS -->
 
 
-  <link rel="stylesheet" href="Style/style.css">
+  <!-- <link rel="stylesheet" href="Style/style.css"> -->
 
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.css" rel="stylesheet">
 
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+
+  <link rel="stylesheet" href="Style/animate.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
@@ -157,33 +159,52 @@ if(!empty($BMI_R))
 </head>
 <body >
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-  <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> YOUR HEALTH </a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"  style="animation: fadeInRight 1s ;transition-delay: 5s;">
+  <a class="navbar-brand" href="#" style="margin-left: 2%;"><i class="fa fa-user-plus" aria-hidden="true"></i> YOUR HEALTH </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-                         <script>
-                             function clickDiv(id) {
-                               document.querySelector(id).click();
-                             }
-                                
-                             function BMI(){
-                              let height= document.getElementById('BMI_in_h').value;
-                              let weight= document.getElementById('BMI_in_w').value;
-                              let bmi = weight/((height/100)*(height/100));
-                              document.getElementById("BMI_r").value = bmi;
-                              
-                              
-                            }
-                          </script>
+ <script>
+     function clickDiv(id) {
+       document.querySelector(id).click();
+     }
+        
+     function BMI(){
+      let height= document.getElementById('BMI_in_h').value;
+      let weight= document.getElementById('BMI_in_w').value;
+      let bmi = weight/((height/100)*(height/100));
+      document.getElementById("BMI_r").value = bmi;
+      
+
+    }
+
+                            
+      function undisableTxt() {
+        document.getElementById("EX_d").disabled = false;
+      }
+      function calval(){
+        let cv=document.getElementById("EX_d");
+       
+        document.getElementById("EX_c").value=( cv.value*4);
+      }
+
+
+ </script>
   <style >
     .bg-primary {
-    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+      background:-webkit-linear-gradient(left, #1fb914, #52db2d);
 }
 .list-group-item.active {
-    z-index: 2;
+  z-index: 2;
     color: #fff;
-    background-color: #342ac1;
+    background-color: #942ac1;
+    border-color: #007bff;
+}
+
+a:active {
+  z-index: 2;
+    color: #fff;
+    background-color: #942ac1;
     border-color: #007bff;
 }
 .text-primary {
@@ -197,10 +218,17 @@ if(!empty($BMI_R))
 li{
   margin-left: 15px
 }
+li:active {
+  z-index: 2;
+    color: #fff;
+    background-color: #942ac1;
+    border-color: #007bff;
+    font-size: larger;
+}
 .navbar {
     overflow: hidden;
-    background:-webkit-linear-gradient(left,  #2eb929, #5af65d);
-    color: aqua;
+    
+    color: white;
     position: fixed;
     top: 0;
     width: auto;
@@ -209,10 +237,18 @@ li{
     padding: 0;
     
   }
+  .nav-link{
+  color: white;"
+}
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 10vh;
+  }
   </style>
 
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-     <ul class="navbar-nav mr-auto">
+<div class="collapse navbar-collapse " id="navbarSupportedContent"  style="animation: bounceOutDown 1s ;transition-delay: 1s;" >
+     <ul class="navbar-nav mr-auto" style="margin-left: 2%; ">
        <li class="nav-item " >
          <a class="nav-link" href=""><i class="fa fa-sign-out" aria-hidden="true"></i>Home</a>
         </li>
@@ -245,17 +281,19 @@ li{
   </style>
 
 <body style="">
-<div class="container-fluid " style="">
-        <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $username; ?> 
+<div class="container-fluid " style="animation: rotateInDownLeft 3s ;transition-delay: 1s;">
+        <h3 style = "margin-top: 5%;  margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $username; ?> 
        </h3>
     <div class="row">
-          <div class="col-md-4" style="max-width:49%; margin-top: 3%">
+          <div class="col-md-4" style="max-width:49%; margin-top: 3% ">
             <div class="list-group" id="list-tab" role="tablist">
               <a class="list-group-item list-group-item-action active" id="list-dash-list" data-toggle="list" href="#list-dash" role="tab" aria-controls="home">Dashboard</a>
               <a class="list-group-item list-group-item-action" href="#HRM" id="list-HRM-list" role="tab" data-toggle="modal" aria-controls="home">HEART RATE MONITOR</a>
               <a class="list-group-item list-group-item-action" href="#OXY" id="list-OXY-list" role="tab" data-toggle="modal" aria-controls="home">Blood OXYGEN MONITOR</a>
               <a class="list-group-item list-group-item-action" href="#Glucose" id="list-Glucose-list" role="tab" data-toggle="modal" aria-controls="home"> BLOOD GLUCOSE</a>
-              <a class="list-group-item list-group-item-action" href="#BMI" id="list-BMI-list" role="tab" data-toggle="modal" aria-controls="home"> BODY MASS INDEX</a>
+              <a class="list-group-item list-group-item-action" href="#BMI" id="list-BMI-list" role="tab" data-toggle="modal" aria-controls="home"> BODY MASS INDEX MOITOR</a>
+              <a class="list-group-item list-group-item-action" href="#BP" id="list-BP-list" role="tab" data-toggle="modal" aria-controls="home"> Blood Pressure</a>
+              <a class="list-group-item list-group-item-action" href="#EX" id="list-EX-list" role="tab" data-toggle="modal" aria-controls="home"> Exercise</a>
               
             </div><br>
           </div>
@@ -263,14 +301,14 @@ li{
     <div class="tab-content" id="nav-tabContent" style="">
 
 
-      <div class="tab-pane  active" id="list-dash" role="tabpanel" aria-labelledby="list-dash-list">
+      <div class="tab-pane  active" id="list-dash" role="tabpanel" aria-labelledby="list-dash-list" style="animation: flip  5s  ;transition-delay: 5s;" >
         <div class="container-fluid container-fullw bg-white" >
               <div class="row ">
 
                    <div class="col-sm-4 d-grid" style="">
                        <div class="panel panel-white no-radius text-center">
                          <div class="panel-body" >
-                           <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span>
+                          <img src="image/cardiogram-heartn.svg" style="width: 100px;height: 100px;"/>
                            <h4 class="StepTitle" style="margin-top: 5%;">HEART RATE MONITOR</h2>
                            
                            <p class="cl-effect-1">
@@ -285,7 +323,7 @@ li{
                        <div class="col-sm-4 d-grid" style="">
                          <div class="panel panel-white no-radius text-center">
                            <div class="panel-body" >
-                             <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span>
+                           <img src="image/lungs-lung-svgrepo-com.svg" style="width: 100px;height: 100px;"/>
                              <h4 class="StepTitle" style="margin-top: 5%;">Blood OXYGEN MONITOR</h2>
                            
                              <p class="links cl-effect-1">
@@ -300,8 +338,7 @@ li{
 
                      <div class="col-sm-4 d-grid" style="">
                         <div class="panel panel-white no-radius text-center">
-                          <div class="panel-body">
-                            <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-terminal fa-stack-1x fa-inverse"></i> </span>
+                          <div class="panel-body"><img src="image/health-care-blood.svg" style="width: 100px;height: 100px;"/>
                             <h4 class="StepTitle" style="margin-top: 5%;"> Blood Glucose MONITOR</h4>
                                                   
                             <p class="links cl-effect-1">
@@ -313,16 +350,29 @@ li{
                         </div>
                       </div>
 
-
+                      <div class="col-sm-4 d-grid" style="">
+                        <div class="panel panel-white no-radius text-center">
+                          <div class="panel-body" >
+                          <img src="image/blood-donation-blood-drop.svg" style="width: 100px;height: 100px;"/>
+                            <h4 class="StepTitle" style="margin-top: 5%;">Blood Pressure</h2>
+                          
+                            <p class="cl-effect-1">
+                              <a href="#BP" onclick="clickDiv('#list-BP-list')">
+                              Measure
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                        </div>
                 
                       <div class="col-sm-4 d-grid" style="">
                         <div class="panel panel-white no-radius text-center">
                           <div class="panel-body" >
-                            <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span>
+                          <img src="image/body-fitness-scale.svg" style="width: 100px;height: 100px;"/>
                             <h4 class="StepTitle" style="margin-top: 5%;">BODY MASS INDEX MOITOR</h2>
                           
                             <p class="cl-effect-1">
-                              <a href="#list-pres" onclick="clickDiv('#list-pres-list')">
+                              <a href="#BMI" onclick="clickDiv('#list-BMI-list')">
                               Measure
                               </a>
                             </p>
@@ -333,8 +383,8 @@ li{
                       <div class="col-sm-4 d-grid" style="">
                         <div class="panel panel-white no-radius text-center">
                           <div class="panel-body" >
-                            <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span>
-                            <h4 class="StepTitle" style="margin-top: 5%;">Other</h2>
+                          <img src="image/injection-doctor-svgrepo-com.svg" style="width: 100px;height: 100px;"/>
+                            <h4 class="StepTitle" style="margin-top: 5%;">Medication</h2>
                           
                             <p class="cl-effect-1">
                               <a href="#list-pres" onclick="clickDiv('#list-pres-list')">
@@ -350,11 +400,11 @@ li{
                       <div class="col-sm-4 d-grid" style="">
                         <div class="panel panel-white no-radius text-center">
                           <div class="panel-body" >
-                            <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span>
-                            <h4 class="StepTitle" style="margin-top: 5%;">Other</h2>
+                          <img src="image/person-lifting-weights-svgrepo-com.svg" style="width: 100px;height: 100px;"/>
+                            <h4 class="StepTitle" style="margin-top: 5%;">Exercise</h2>
                           
                             <p class="cl-effect-1">
-                              <a href="#list-pres" onclick="clickDiv('#list-pres-list')">
+                              <a href="#EX" onclick="clickDiv('#list-EX-list')">
                               Measure
                               </a>
                             </p>
@@ -363,20 +413,8 @@ li{
                       </div>
       
       
-                      <div class="col-sm-4 d-grid" style="">
-                        <div class="panel panel-white no-radius text-center">
-                          <div class="panel-body" >
-                            <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-paperclip fa-stack-1x fa-inverse"></i> </span>
-                            <h4 class="StepTitle" style="margin-top: 5%;">Other</h2>
-                          
-                            <p class="cl-effect-1">
-                              <a href="#app-hist" onclick="clickDiv('#list-pat-list')">
-                              Measure
-                              </a>
-                            </p>
-                          </div>
-                        </div>
-                        </div>
+                     
+
                       </div>
 
          
@@ -387,8 +425,8 @@ li{
           <!-- <div class="tab-pane fade" id="HRM" role="tabpanel" aria-labelledby=""> -->
                       
           
-        <div class="modal fade "id="OXY" tabindex="-1"  aria-hidden="false" aria-labelledby="list-OXY-list" role="tabpanel" aria-hidden="false">
-          <form class="container" method="post" action="Home.php">
+        <div class="modal fade "id="OXY" tabindex="-1"  aria-hidden="false" aria-labelledby="list-OXY-list" role="tabpanel" aria-hidden="false"  >
+          <form class="container" method="post" action="Home.php" style="animation: swing 2s  ;transition-delay: 2s;">
              <div class="modal-dialog">
     
 
@@ -422,7 +460,7 @@ li{
                   </div>
                           <div class="modal-footer">
                             <button type="reset" class="btn btn-secondary"  data-dismiss="modal">Close</button>
-                            <button type="submit" name="app-submit" class="btn btn-primary">Login</button>
+                            <button type="submit" name="app-submit" class="btn btn-primary">Submit</button>
                           </div>
                 </div>
                </div>
@@ -430,7 +468,7 @@ li{
          </form>
      </div>
         <div class="modal fade"id="HRM" tabindex="-1"  aria-hidden="false" aria-labelledby="list-HRM-list" role="tabpanel" aria-hidden="false">
-          <form class="container"  method="post" action="Home.php">
+          <form class="container"  method="post" action="Home.php" style="animation: bounceInUp 2s  ;transition-delay: 2s;">
              <div class="modal-dialog">
     
 
@@ -444,7 +482,7 @@ li{
                    <div class="md-form ">
                      <i class="fas fa-envelope prefix grey-text"></i>
                      <label data-error="wrong" data-success="right" for="HRM_in">bpm value:</label>
-                     <input type="number" id="HRM_v" class="form-control " name="HRM_v">
+                     <input type="number" id="HRM_v" min="15" max="300" class="form-control " name="HRM_v">
                    </div>
                    <div class="md-form ">
                          <i class="fas fa-lock prefix grey-text"></i>
@@ -464,17 +502,68 @@ li{
                   </div>
                           <div class="modal-footer">
                             <button type="reset" class="btn btn-secondary"  data-dismiss="modal">Close</button>
-                            <button type="submit" name="app-submit" class="btn btn-primary">Login</button>
+                            <button type="submit" name="app-submit" class="btn btn-primary">Submit</button>
                           </div>
                 </div>
                </div>
             </div>
          </form>
      </div>
-
+     <div class="modal fade"id="BP" tabindex="-1"  aria-hidden="false" aria-labelledby="list-BP-list" role="tabpanel" aria-hidden="false">
+                                <form class="container"  method="post" action="Home.php" style="animation: flip 2s  ;transition-delay: 2s;">
+                                   <div class="modal-dialog">
+                          
+                      
+                                    <div class="modal-content">
+                                     <div class="modal-header">
+                                        <h4 class="modal-title " id="BP-t">Blood Pressure</h4>
+                                       
+                                     </div>
+                                     <div class="modal-body">
+                                       <div class="modal-body mx-3">
+                                         <div class="md-form ">
+                                           <i class="fas fa-envelope prefix grey-text"></i>
+                                           <label data-error="wrong" data-success="right" for="BPS_in">SYSTOLIC (MMHG):</label>
+                                           <input type="range" id="BPS_v" value="121" min="121" max="300" class="form-control " name="BPS_v" oninput="this.nextElementSibling.value = this.value">
+                                           <output style="text-align: center;font-size: 20px;font-weight: bold;"> 121</output><br>
+                                    
+                                         </div>
+                                         <div class="md-form ">
+                                         <i class="fas fa-envelope prefix grey-text"></i>
+                                         <label data-error="wrong" data-success="right" for="BPD_in">DIASTOLIC (MMHG)</label>
+                                           <input type="range" id="BPD_v" value="121" min="121" max="300" class="form-control " name="BPD_v" oninput="this.nextElementSibling.value = this.value">
+                                           <output style="text-align: center;font-size: 20px;font-weight: bold;"> 121</output><br>
+                                           </div>
+                                           <div class="md-form ">
+                                             <i class="fas fa-envelope prefix grey-text"></i>
+                                             <label data-error="wrong" data-success="right" for="HRM_in">bpm :</label>
+                                             <input type="number" id="HRM_v" min="15" max="300"class="form-control " name="HRM_v"><br>
+                                           </div>
+                                         <div class="md-form ">
+                                               <i class="fas fa-lock prefix grey-text"></i>
+                                               <label data-error="wrong" data-success="right" for="Sstate-pass"> Medication:</label>
+                                               <select class="form-control" id="BP_state" name="BP_state">
+                                                     <option>None</option>
+                                                     <option>Taken</option>
+                                                     <option>Non taken</option>
+                                               </select>
+                                 
+                                          </div>
+                        
+                                        </div>
+                                                <div class="modal-footer">
+                                                  <button type="reset" class="btn btn-secondary"  data-dismiss="modal">Close</button>
+                                                  <button type="submit" name="app-submit" class="btn btn-primary">Submit</button>
+                                                </div>
+                                      </div>
+                                     </div>
+                                  </div>
+                               </form>
+                           </div>
+                      
 
         <div class="modal fade"id="Glucose" tabindex="-1"  aria-hidden="false" aria-labelledby="list-Glucose-list" role="tabpanel" aria-hidden="false">
-          <form class="container"  method="post" action="Home.php">
+          <form class="container"  method="post" action="Home.php" style="animation: rollIn 2s  ;transition-delay: 2s;">
              <div class="modal-dialog">
     
 
@@ -506,15 +595,72 @@ li{
                   </div>
                           <div class="modal-footer">
                             <button type="reset" class="btn btn-secondary"  data-dismiss="modal">Close</button>
-                            <button type="submit" name="app-submit" class="btn btn-primary">Login</button>
+                            <button type="submit" name="app-submit" class="btn btn-primary">Submit</button>
                           </div>
                 </div>
                </div>
             </div>
          </form>
      </div>
+
+
+
+
+     
+     <div class="modal fade"id="EX" tabindex="-1"  aria-hidden="false" aria-labelledby="list-EX-list" role="tabpanel" aria-hidden="false">
+                                <form class="container"  method="post" action="Home.php" style="animation: rollIn 2s  ;transition-delay: 2s;">
+                                   <div class="modal-dialog">
+                          
+                      
+                                    <div class="modal-content">
+                                     <div class="modal-header">
+                                        <h4 class="modal-title " id="EX-t">Exercise</h4>
+                                       
+                                     </div>
+                                     <div class="modal-body">
+                                       <div class="modal-body mx-3">
+                                         <div class="md-form ">
+                                           <i class="fas fa-envelope prefix grey-text"></i>
+                                           <select name="Exercise"class="form-control" id="EX_state" name="EX_state"  onchange="undisableTxt()"  required>
+                                            <option value="">Choose an Exercise</option>
+                                            <option value="running"> Running</option>
+                                            <option value="steps">Steps</option>
+                                            <option value="walking">Walking</option>
+                                            <option value="football">Football</option>
+                                            <option value="benchpress">Benchpress</option>
+                                            <option value="plank">Plank</option>
+                                            <option value="yoga">Yoga</option>
+                                            <option value="swimming">Swimming</option>
+                                            <option value="boxing">Boxing</option>
+                                            <option value="pushups">Pushups</option>
+                                            <option value="squats">Squats</option>
+                                        </select><br>
+                                         </div>
+                                         <div class="md-form ">
+                                               <label data-error="wrong" data-success="right" for="Sstate-pass">Exercise duration:</label>
+                                          <input type="number" style="" min="0" id="EX_d"class="form-control " name="EX_d" placeholder="in Second *" onkeyup="calval();" disabled /><br>
+                                          </div>
+
+                                          <div class="md-form ">
+                                            <i class="fas fa-lock prefix grey-text"></i>
+                                            <label data-error="wrong" data-success="right" for="Sstate-pass"> TOTAL Chalory:</label>
+                                            <input type="number" style="" min="0" id="EX_c"class="form-control " name="EX_c" placeholder=" calory *" disabled /><br>
+                                       </div>
+                        
+                                        </div>
+                                                <div class="modal-footer">
+                                                  <button type="reset" class="btn btn-secondary"  data-dismiss="modal">Close</button>
+                                                  <button type="submit" name="app-submit" class="btn btn-primary">Submit</button>
+                                                </div>
+                                      </div>
+                                     </div>
+                                  </div>
+                               </form>
+                           </div>
+
+
         <div class="modal fade"id="BMI" tabindex="-1"  aria-hidden="false" aria-labelledby="list-BMI-list" role="tabpanel" aria-hidden="false">
-          <form class="container"  method="post" action="Home.php">
+          <form class="container"  method="post" action="Home.php" style="animation: fadeInLeft 3s  ;transition-delay: 3s;">
              <div class="modal-dialog">
     
 
@@ -549,7 +695,7 @@ li{
                   </div>
                           <div class="modal-footer">
                             <button type="reset" class="btn btn-secondary"  data-dismiss="modal">Close</button>
-                            <button type="submit"  name="app-submit" class="btn btn-primary">Login</button>
+                            <button type="submit"  name="app-submit" class="btn btn-primary">Submit</button>
                           </div>
                 </div>
                </div>

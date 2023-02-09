@@ -136,10 +136,13 @@ li:active {
     <div class="list-group" id="list-tab" role="tablist">
       <a class="list-group-item list-group-item-action active" id="list-dash-list" data-toggle="list" href="#list-dash" role="tab" aria-controls="home">Dashboard</a>
       <a class="list-group-item list-group-item-action" href="#all-hist" id="list-pat-list" role="tab" data-toggle="list" aria-controls="home">ALL History</a>
-      <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Book Appointment</a>
-      <a class="list-group-item list-group-item-action" href="#list-pres" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Prescriptions</a>
-      <a class="list-group-item list-group-item-action" href="#list-pre" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Prescriptions</a>
-      <a class="list-group-item list-group-item-action" href="#list-pr" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Prescriptions</a>
+      <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">HEART RATE History</a>
+      <a class="list-group-item list-group-item-action" href="#list-pres" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Blood OXYGEN History</a>
+      <a class="list-group-item list-group-item-action" href="#list-pre" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Blood Glucose History</a>
+      <a class="list-group-item list-group-item-action" href="#list-pr" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Blood Pressure History</a>
+      <a class="list-group-item list-group-item-action" href="#list-pr" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">BODY MASS INDEX History</a>
+      <a class="list-group-item list-group-item-action" href="#list-pr" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Medication History</a>
+      <a class="list-group-item list-group-item-action" href="#list-pr" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Exercise History</a>
       
     </div><br>
   </div>
@@ -291,7 +294,7 @@ li:active {
               $con=mysqli_connect("localhost","root","","shms");
               global $con;
 
-              $query = "select heartrate,heartrate_state,time from records where heartrate > 0;";
+              $query = "select heartrate,heartrate_state,time from records where fname ='$fname' and lname='$lname' and heartrate > 0;";
               $result = mysqli_query($con,$query);
               while ($row = mysqli_fetch_array($result)){
         
@@ -326,7 +329,7 @@ li:active {
               $con=mysqli_connect("localhost","root","","shms");
               global $con;
 
-              $query = "select bloodoxygen,bloodoxygen_state,time from records where bloodoxygen > 0;";
+              $query = "select bloodoxygen,bloodoxygen_state,time from records where fname ='$fname' and lname='$lname' and bloodoxygen > 0;";
               $result = mysqli_query($con,$query);
               while ($row = mysqli_fetch_array($result)){
         
@@ -361,7 +364,7 @@ li:active {
               $con=mysqli_connect("localhost","root","","shms");
               global $con;
 
-              $query = "select glucose,glucose_status,time from records where glucose > 0;";
+              $query = "select glucose,glucose_status,time from records where fname ='$fname' and lname='$lname' and glucose > 0;";
               $result = mysqli_query($con,$query);
               while ($row = mysqli_fetch_array($result)){
         
