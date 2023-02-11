@@ -16,6 +16,7 @@ $contact = $_SESSION['contact'];
 ?>
 <html lang="en">
 <head>
+
   <title>Example</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,6 +30,17 @@ $contact = $_SESSION['contact'];
   <link rel="stylesheet" href="Style/style.css">
 
   <link rel="stylesheet" href="Style/animate.css">
+
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+          <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
+  
+  
+  
+  
 
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.css" rel="stylesheet">
        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -51,13 +63,7 @@ $contact = $_SESSION['contact'];
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-                         <script>
-                             function clickDiv(id) {
-                               document.querySelector(id).click();
-                             }
-                                
-                          
-                          </script>
+             
   <style >
     .bg-primary {
     background: -webkit-linear-gradient(left, #3931af, #00c6ff);
@@ -103,7 +109,7 @@ li:active {
         <a class="nav-link " href="Measurements.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Measurment</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="progress.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Progress</a>
+        <a class="nav-link" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Progress</a>
       </li>
        <li class="nav-item">
         <a class="nav-link" href="profile.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Profile</a>
@@ -125,15 +131,46 @@ li:active {
     li{
   margin-left: 15px
 }
-  </style>
+<style>
+  .graphBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    min-height: 200px;
+  
+
+    
+  }
+  .graphBox .box{
+    
+    /* width: 50%; */
+    position: relative;
+   background: #fff;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 08);
+    border-radius: 20px;
+    display: grid;
+         border: 1px solid red;
+         padding: 1rem 1rem;
+         margin-bottom: 2%;
+  }
+</style>
+  <script>
+  
+
+
+    </script>
 
 <body style="">
 <div class="container-fluid" style="margin-top:10%;" style="animation: rotateInDownLeft 3s ;transition-delay: 1s;">
-    <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $username ?> 
-   </h3>
+    <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome  <?php echo $username ?> </h3> 
+    <input type="number" id="uid" name="uid"value=<?php echo $uid ?> hidden ></input>
     <div class="row">
-  <div class="col-md-4" style="max-width:30%; margin-top: 3%;">
-    <div class="list-group" id="list-tab" role="tablist">
+  <div class="col-md-4 position-fixed" >
+    <div class="list-group" id="list-tab" role="tablist"style="max-width:30%; margin-top: 3%;">
       <a class="list-group-item list-group-item-action active" id="list-dash-list" data-toggle="list" href="#list-dash" role="tab" aria-controls="home">Dashboard</a>
       <a class="list-group-item list-group-item-action" href="#all-hist" id="list-pat-list" role="tab" data-toggle="list" aria-controls="home">ALL History</a>
       <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">HEART RATE History</a>
@@ -146,7 +183,7 @@ li:active {
       
     </div><br>
   </div>
-  <div class="col-md-8" style="margin-top: 3%;">
+  <!-- <div class="col-md-8" style="margin-top: 3%;">
     <div class="tab-content" id="nav-tabContent" style="">
 
 
@@ -219,178 +256,57 @@ li:active {
          
             </div>
      </div>
-</div>
-      
-<div class="tab-pane fade active" id="all-hist" role="tabpanel" aria-labelledby="list-pat-list"  style="animation: swing 2s  ;transition-delay: 2s;">
-         
-
-          <!-- SELECT * FROM `records` WHERE `time`=("2023-02-03 13:06:06"); -->
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              
-              <th scope="col">HEARTRATE</th>
-              <th scope="col">HEARTRATE-STATE</th>
-              <th scope="col">BLOOD-OXYGEN</th>
-              <th scope="col">BLOOD-OXYGEN-STATE</th>
-              <th scope="col">GLUCOSE</th>
-              <th scope="col">GLUCOSE-STATE</th>
-              <!-- <th scope="col">weight</th>
-              <th scope="col">height</th>
-              <th scope="col">Age</th> -->
-              <th scope="col">BMI</th>
-              <th scope="col">STRESS</th>
-              <th scope="col">STRESS-STATE</th>
-              <th scope="col">TIME</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php 
-
-              $con=mysqli_connect("localhost","root","","shms");
-              global $con;
-
-              $query = "select heartrate,heartrate_state,bloodoxygen,bloodoxygen_state,glucose,glucose_status,bmi,stress,stress_state,time from records where fname ='$fname' and lname='$lname';";
-              $result = mysqli_query($con,$query);
-              while ($row = mysqli_fetch_array($result)){
-        
-
-            ?><tr>
-            <td><?php echo $row['heartrate'];?></td>
-            <td><?php echo $row['heartrate_state'];?></td>
-            <td><?php echo $row['bloodoxygen'];?></td>
-            <td><?php echo $row['bloodoxygen_state'];?></td>
-            <td><?php echo $row['glucose'];?></td>
-            <td><?php echo $row['glucose_status'];?></td>
-            
-            <td><?php echo $row['bmi'];?></td>
-            <td><?php echo $row['stress'];?></td>
-            <td><?php echo $row['stress_state'];?></td>
-            <td><?php echo $row['time'];?></td>
-              <?php } ?>
-          </tbody>
-        </table>
-  <br>
-</div>
-
-
-
-
-
-<div class="tab-pane fade active" id="list-home" role="tabpanel" aria-labelledby="list-messages-list" style="animation: bounceInUp 2s  ;transition-delay: 2s;">
-<table class="table table-hover">
-          <thead>
-            <tr>
-              
-              <th scope="col">HEARTRATE</th>
-              <th scope="col">HEARTRATE-STATE</th>
-              <th scope="col">TIME</th>
-             
-            </tr>
-          </thead>
-          <tbody>
-            <?php 
-
-              $con=mysqli_connect("localhost","root","","shms");
-              global $con;
-
-              $query = "select heartrate,heartrate_state,time from records where fname ='$fname' and lname='$lname' and heartrate > 0;";
-              $result = mysqli_query($con,$query);
-              while ($row = mysqli_fetch_array($result)){
-        
-                #$fname = $row['fname'];
-                #$lname = $row['lname'];
-                #$email = $row['email'];
-                #$contact = $row['contact'];
-            ?><tr>
-            <td><?php echo $row['heartrate'];?></td>
-            <td><?php echo $row['heartrate_state'];?></td>
-            <td><?php echo $row['time'];?></td>
-              <?php } ?>
-          </tbody>
-        </table>
-  <br>
-  </div>
-
-<div class="tab-pane fade active" id="list-pres" role="tabpanel" aria-labelledby="list-messages-list" style="animation: flip 2s  ;transition-delay: 2s;">
-<table class="table table-hover">
-          <thead>
-            <tr>
-              
-              <th scope="col">BLOOD-OXYGEN</th>
-              <th scope="col">BLOOD-OXYGEN-STATE</th>
-              <th scope="col">TIME</th>
-             
-            </tr>
-          </thead>
-          <tbody>
-            <?php 
-
-              $con=mysqli_connect("localhost","root","","shms");
-              global $con;
-
-              $query = "select bloodoxygen,bloodoxygen_state,time from records where fname ='$fname' and lname='$lname' and bloodoxygen > 0;";
-              $result = mysqli_query($con,$query);
-              while ($row = mysqli_fetch_array($result)){
-        
-                #$fname = $row['fname'];
-                #$lname = $row['lname'];
-                #$email = $row['email'];
-                #$contact = $row['contact'];
-            ?><tr>
-            <td><?php echo $row['bloodoxygen'];?></td>
-            <td><?php echo $row['bloodoxygen_state'];?></td>
-            <td><?php echo $row['time'];?></td>
-              <?php } ?>
-          </tbody>
-        </table>
-  <br>
-  </div>
-
-<div class="tab-pane fade active" id="list-pre" role="tabpanel" aria-labelledby="list-messages-list"  style="animation: rollIn 2s  ;transition-delay: 2s;">
-<table class="table table-hover">
-          <thead>
-            <tr>
-              
-              <th scope="col">GLUCOSE</th>
-              <th scope="col">GLUCOSE-STATE</th>
-              <th scope="col">TIME</th>
-             
-            </tr>
-          </thead>
-          <tbody>
-            <?php 
-
-              $con=mysqli_connect("localhost","root","","shms");
-              global $con;
-
-              $query = "select glucose,glucose_status,time from records where fname ='$fname' and lname='$lname' and glucose > 0;";
-              $result = mysqli_query($con,$query);
-              while ($row = mysqli_fetch_array($result)){
-        
-                #$fname = $row['fname'];
-                #$lname = $row['lname'];
-                #$email = $row['email'];
-                #$contact = $row['contact'];
-            ?><tr>
-            <td><?php echo $row['glucose'];?></td>
-            <td><?php echo $row['glucose_status'];?></td>
-            <td><?php echo $row['time'];?></td>
-              <?php } ?>
-          </tbody>
-        </table>
-  <br>
-  </div>
-
-
-  
+</div> -->
 </div>
    </div>
-    <!-- Optional JavaScript -->
+<div class=" container ">
+<!-- <p>sdfasdfasdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p> -->
+           <div class="chart-container box" style="animation: flip  5s  ;transition-delay: 5s;position: relative; height:auto; width:auto">
+           <!-- heartrates Score        -->
+           <canvas  id="mycanvas"></canvas>
+           </div>
+           <!-- <p>sdfasdfasdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p> -->
+
+           <div class="chart-container box" style="animation: flip  5s  ;transition-delay: 5s;position: relative; height:auto; width:auto">
+                <!--  //bloodoxygen Score -->
+           <canvas  id="myChart1"></canvas>
+           </div>
+           <!-- <p>sdfasdfasdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p> -->
+
+           <!-- Optional JavaScript -->
+           <div class="chart-container box" style="animation: flip  5s  ;transition-delay: 5s;position: relative;  height:auto; width:auto">
+                  <!-- //glucose Score -->
+           <canvas id="myChart2"></canvas>
+           </div>
+           <!-- <p>sdfasdfasdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p> -->
+
+         
+           <div class="chart-container box" style="animation: flip  5s  ;transition-delay: 5s;position: relative;  height:auto; width:auto">
+           <!-- Today Score        -->
+           <canvas  id="myChart4"></canvas>
+           </div>
+           <!-- <p>sdfasdfasdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p> -->
+
+           <div class="chart-container box" style="animation: flip  5s  ;transition-delay: 5s;position: relative;  height:auto; width:auto">
+                  <!--   //bmi Score -->
+           <canvas  id="myChart3"></canvas>
+           </div>
+           <!-- <p>sdfasdfasdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p> -->
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+           <div class="chart-container box" style="animation: flip  5s  ;transition-delay: 5s;position: relative;  height:auto; width:auto">
+                  <canvas  id="myChart6"></canvas>
+           </div>
+</div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="graph.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.all.min.js">
 
    </script>

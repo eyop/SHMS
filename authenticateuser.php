@@ -21,7 +21,7 @@ if(isset($_POST['patsub'])){
 	}
   else {
     echo("<script>alert('Invalid Username or Password. Try Again!');
-          window.location.href = 'index1.php';</script>");
+          window.location.href = 'login.php';</script>");
     // header("Location:error.php");
   }
 		

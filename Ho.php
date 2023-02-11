@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<?php
 
+
+
+?>
 
 
 
@@ -14,6 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   
   
   
@@ -124,96 +129,51 @@
            <main class="widget_wrapper">
 
 
-            
-                           <div style="">
-                          
-                             <!-- <div class=" tab-pane container " id="home" aria-hidden="true" > -->
-                             
-                              <form>
-                                <div class="row register-form">
-                                    
-                                  <div class="col-md-6 " style="" >
-                                      <div class="form-group">
-                                        <select name="Exercise"class="form-control" style="" onchange="undisableTxt()"  required>
-                                            <option value="">Choose an option</option>
-                                            <option value="running"> Running</option>
-                                            <option value="steps">Steps</option>
-                                            <option value="walking">Walking</option>
-                                            <option value="football">Football</option>
-                                            <option value="benchpress">Benchpress</option>
-                                            <option value="plank">Plank</option>
-                                            <option value="yoga">Yoga</option>
-                                            <option value="swimming">Swimming</option>
-                                            <option value="boxing">Boxing</option>
-                                            <option value="pushups">Pushups</option>
-                                            <option value="squats">Squats</option>
-                                        </select>
-                                      </div>
-                                      
-                                   
-                                  </div>
-                              
-                                  <div class="col-md-6" >
-                                       
-                                      <div class="form-group" style="display: flex;">
-                                        <div>
+           <?php
+echo date("Y-m-d");
+$uid 
 
-                                        </div>
-                                        <div>
-
-                                          <input type="number" style="" min="0" id="321"name="contact" class="form-control" placeholder=" calory *" disabled />
-                                        </div>
-                                      </div>
-                                      
-                                  
-                                      
-                                  </div>
-
-                              </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                              </form>
-            
-                              <!-- </div> -->
-                            </div>
+?>
 
 
 
                             <div class="graphBox " Style="animate__rubberBand;">
+              
+
+
                               <div class="box">
-                                <!-- how much steps per day -->
+                               
                                 <canvas id="myChart"></canvas>
                               </div>
+
                               <div class="">
-                                <!-- how much calory per month -->
+                                
                                 <canvas id="myChart2"></canvas>
                               </div>
+
                               <div class="">
-                                <!-- how much calory per week -->
                                 <canvas id="myChart3"></canvas>
                               </div>
                               <div class="">
-                                <!-- how much calory per ex -->
                                 <canvas id="myChart4"></canvas>
                               </div>
+                              
+                              <div class="">
+                                <canvas id="myChart6"></canvas>
+                              </div>
+                              <!-- <div class="">  -->
+                                <!-- how much calory per ex -->
+                                <!-- <canvas id="myChart4"></canvas>
+                              </div> -->
 
                               
+                            <!-- </div> -->
+
+                            <div id="tab-pane active  " id="123" >
+                              <canvas id="mycanvas"></canvas>
                             </div>
-                            
-                            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                            <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
                             
                             <script>
                           

@@ -13,8 +13,7 @@ $lname = $_SESSION['lname'];
 $contact = $_SESSION['contact'];
 
 
-if(isset($_POST['app-submit']))
-{
+if (isset($_POST['app-submit'])) {
   $uid = $_SESSION['uid'];
   $username = $_SESSION['username'];
   $email = $_SESSION['email'];
@@ -23,76 +22,81 @@ if(isset($_POST['app-submit']))
   $gender = $_SESSION['gender'];
   $contact = $_SESSION['contact'];
 
-if(!empty($bpm))
-{
-  $bpm="NULL";
-}else{
-  
-  $bpm =$_POST['HRM_v'];
-}
+  if (!empty($bpm)) {
+    $bpm = "NULL";
+  } else {
 
-if(!empty($bpmstate))
-{
-  $bpmstate="NULL";
-}else{
-  $bpmstate =$_POST['HRM_state'];
-}
+    $bpm = $_POST['HRM_v'];
+  }
 
-if(!empty($Glucose))
-{
-  $Glucose="NULL";
-}else{
-  $Glucose =$_POST['Glucose_v'];
-}
+  if (!empty($bpmstate)) {
+    $bpmstate = "NULL";
+  } else {
+    $bpmstate = $_POST['HRM_state'];
+  }
 
-if(!empty($Glucosestate))
-{
-  $Glucosestate="NULL";
-}else{
-  $Glucosestate =$_POST['Glucose_state'];
-}
+  if (!empty($Glucose)) {
+    $Glucose = "NULL";
+  } else {
+    $Glucose = $_POST['Glucose_v'];
+  }
 
-if(!empty($oxygen))
-{
-  $oxygen="NULL";
-}else{
-  $oxygen =$_POST['OXY_v'];
-}
+  if (!empty($Glucosestate)) {
+    $Glucosestate = "NULL";
+  } else {
+    $Glucosestate = $_POST['Glucose_state'];
+  }
 
-if(!empty($oxygenstate))
-{
-  $oxygenstate="NULL";
-}else{
-  $oxygenstate =$_POST['OXY_state'];
-}
+  if (!empty($oxygen)) {
+    $oxygen = "NULL";
+  } else {
+    $oxygen = $_POST['OXY_v'];
+  }
 
-if(!empty($BMIwight))
-{
-  $BMIwight="NULL";
-}else{
-  $BMIwight =$_POST['BMI_w'];
-}
+  if (!empty($oxygenstate)) {
+    $oxygenstate = "NULL";
+  } else {
+    $oxygenstate = $_POST['OXY_state'];
+  }
 
-if(!empty($BMI_h))
-{
-  $BMI_h="NULL";
-}else{
-  $BMI_h =$_POST['BMI_h'];
-}
+  if (!empty($BMIwight)) {
+    $BMIwight = "NULL";
+  } else {
+    $BMIwight = $_POST['BMI_w'];
+  }
 
-if(!empty($BMI_a))
-{
-  $BMI_a="NULL";
-}else{
-  $BMI_a =$_POST['BMI_a'];
-}
+  if (!empty($BMI_h)) {
+    $BMI_h = "NULL";
+  } else {
+    $BMI_h = $_POST['BMI_h'];
+  }
 
-if(!empty($BMI_R))
-{
-  $BMI_R="NULL";
-}else{
-  $BMI_R =$_POST['BMI_r'];
-}
+  if (!empty($BMI_a)) {
+    $BMI_a = "NULL";
+  } else {
+    $BMI_a = $_POST['BMI_a'];
+  }
+
+  if (!empty($BMI_R)) {
+    $BMI_R = "NULL";
+  } else {
+    $BMI_R = $_POST['BMI_r'];
+  }
+  if (!empty($BPD_v)) {
+    $BPD_v = "NULL";
+  } else {
+    $BPD_v = $_POST['BPD_v'];
+  }
+  if (!empty($BPS_v)) {
+    $BPS_v = "NULL";
+  } else {
+    $BPS_v = $_POST['BPS_v'];
+  }
+  if (!empty($BP_state)) {
+    $BP_state = "NULL";
+  } else {
+    $BP_state = $_POST['BP_state'];
+  }
 
 
 
@@ -106,19 +110,36 @@ if(!empty($BMI_R))
   // $BMI_a = !empty($BMI_a) ? "'$BMI_a'" : "NULL";
   // $BMI_R = !empty($BMI_R) ? "'$BMI_R'" : "NULL";
   
+  $EX_D = $_POST['EX_d'];
+  if (!empty($EX_D )) {
+    
+      $EX_C = $_POST['EX_cal'];
+  
+    
+    
+  $EX_State = $_POST['EX_state'];
+  
+    $query = mysqli_query($con, "insert into exercise(uid,fname,lname,gender,email,contact,exercisetype,duration,calories) values($uid,'$fname','$lname','$gender','$email','$contact','$EX_State','$EX_D','$EX_C')");
+    if ($query) {
+      echo "<script>alert('Your appointment successfully booked');</script>";
+    } else {
+      echo "<script>alert('Unable to process your request. Please try again!');</script>";
+    }
+  } 
+  else {
+    $query = mysqli_query($con, "insert into records(uid,fname,lname,gender,email,contact,heartrate,heartrate_state,bloodoxygen,bloodoxygen_state,BP_SYSTOLIC,BP_DIASTOLIC,BP_state,glucose,glucose_status,weight,height,Age,bmi) values($uid,'$fname','$lname','$gender','$email','$contact','$bpm','$bpmstate','$oxygen','$oxygenstate','$BPS_v','$BPD_v','$BP_state','$Glucose','$Glucosestate','$BMIwight','$BMI_h','$BMI_a','$BMI_R')");
 
-  $query=mysqli_query($con,"insert into records(uid,fname,lname,gender,email,contact,heartrate,heartrate_state,bloodoxygen,bloodoxygen_state,glucose,glucose_status,weight,height,Age,bmi,stress,stress_state) values($uid,'$fname','$lname','$gender','$email','$contact','$bpm','$bpmstate','$oxygen','$oxygenstate','$Glucose','$Glucosestate','$BMIwight','$BMI_h','$BMI_a','$BMI_R','','')");
+    if ($query) {
+      echo "<script>alert('Your appointment successfully booked');</script>";
+    } else {
+      echo "<script>alert('Unable to process your request. Please try again!');</script>";
+    }
+    
 
-  if($query)
-  {
-    echo "<script>alert('Your appointment successfully booked');</script>";
-  }
-  else{
-    echo "<script>alert('Unable to process your request. Please try again!');</script>";
   }
   header("Location:Home.php");
-
 }
+
 
 ?>
 
@@ -170,10 +191,11 @@ if(!empty($BMI_R))
      }
         
      function BMI(){
-      let height= document.getElementById('BMI_in_h').value;
-      let weight= document.getElementById('BMI_in_w').value;
+      let height= document.getElementById('BMI_h').value;
+      let weight= document.getElementById('BMI_w').value;
       let bmi = weight/((height/100)*(height/100));
-      document.getElementById("BMI_r").value = bmi;
+      
+      document.getElementById("BMI_r").value = Math. round(bmi);
       
 
     }
@@ -185,7 +207,8 @@ if(!empty($BMI_R))
       function calval(){
         let cv=document.getElementById("EX_d");
        
-        document.getElementById("EX_c").value=( cv.value*4);
+        // document.getElementsById("EX_c").value=( cv.value*4);
+        document.getElementById("EX_cal").value=( cv.value*4);
       }
 
 
@@ -250,7 +273,7 @@ li:active {
 <div class="collapse navbar-collapse " id="navbarSupportedContent"  style="animation: bounceOutDown 1s ;transition-delay: 1s;" >
      <ul class="navbar-nav mr-auto" style="margin-left: 2%; ">
        <li class="nav-item " >
-         <a class="nav-link" href=""><i class="fa fa-sign-out" aria-hidden="true"></i>Home</a>
+         <a class="nav-link" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link " href="#list-dash"><i class="fa fa-sign-out" id="list-dash-list"aria-controls="home">Record</i></a>
@@ -259,10 +282,10 @@ li:active {
         <a class="nav-link" href="Measurements.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Measurment</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href=""><i class="fa fa-sign-out" aria-hidden="true"></i>Progress</a>
+        <a class="nav-link" href="progress.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Progress</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href=""><i class="fa fa-sign-out" aria-hidden="true"></i>Profile</a>
+        <a class="nav-link" href="profile.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Profile</a>
       </li>
        <li class="nav-item">
         <a class="nav-link"style=" margin-left: 100px" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
@@ -301,7 +324,7 @@ li:active {
     <div class="tab-content" id="nav-tabContent" style="">
 
 
-      <div class="tab-pane  active" id="list-dash" role="tabpanel" aria-labelledby="list-dash-list" style="animation: flip  5s  ;transition-delay: 5s;" >
+      <div class="tab-pane  active" id="list-dash" role="tabpanel" aria-labelledby="list-dash-list" style="animation: flip  1s  ;transition-delay: 1s;" >
         <div class="container-fluid container-fullw bg-white" >
               <div class="row ">
 
@@ -621,7 +644,7 @@ li:active {
                                        <div class="modal-body mx-3">
                                          <div class="md-form ">
                                            <i class="fas fa-envelope prefix grey-text"></i>
-                                           <select name="Exercise"class="form-control" id="EX_state" name="EX_state"  onchange="undisableTxt()"  required>
+                                           <select class="form-control" id="EX_state" name="EX_state"  onchange="undisableTxt()"  required>
                                             <option value="">Choose an Exercise</option>
                                             <option value="running"> Running</option>
                                             <option value="steps">Steps</option>
@@ -643,8 +666,8 @@ li:active {
 
                                           <div class="md-form ">
                                             <i class="fas fa-lock prefix grey-text"></i>
-                                            <label data-error="wrong" data-success="right" for="Sstate-pass"> TOTAL Chalory:</label>
-                                            <input type="number" style="" min="0" id="EX_c"class="form-control " name="EX_c" placeholder=" calory *" disabled /><br>
+                                            <label data-error="wrong" data-success="right" for="Sstate-pass"> TOTAL Calories:</label>
+                                            <input type="number"  min="0" id="EX_cal"class="form-control " name="EX_cal"   /><br>
                                        </div>
                         
                                         </div>
@@ -679,18 +702,18 @@ li:active {
                  <div class="md-form ">
                    <i class="fas fa-envelope prefix grey-text"></i>
                    <label data-error="wrong" data-success="right" for="BMI_in_h">height:</label>
-                   <input type="number" id="BMI_h" class="form-control " name="BMI_h"><label>CM</label>
+                   <input type="number" id="BMI_h" class="form-control " name="BMI_h" ><label>CM</label>
                  </div>
                  <div class="md-form ">
                    <i class="fas fa-envelope prefix grey-text"></i>
                    <label data-error="wrong" data-success="right" for="BMI_in_a">Age:</label>
-                   <input type="number" id="BMI_a" class="form-control " name="BMI_a">
+                   <input type="number" id="BMI_a" class="form-control "onclick="BMI()"  name="BMI_a">
                  </div>
                  <div class="md-form ">
                    <i class="fas fa-envelope prefix grey-text"></i>
-                   <button type="button" class="btn btn-secondary"  onclick="BMI()" >Calculate</button>
                    <!-- <label data-error="wrong" data-success="right" for="BMI_in_r">Age:</label> -->
-                   <input type="number" id="BMI_r" class="form-control  "placeholder="RESULT" name="BMI_r" disabled>
+                   <input type="number" id="BMI_r" class="form-control" name="BMI_r" >
+                   <!-- <button type="button" class="btn btn-secondary"   >Calculate</button> -->
                  </div>
                   </div>
                           <div class="modal-footer">
