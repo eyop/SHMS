@@ -94,7 +94,7 @@ li:active {
  <div class="collapse navbar-collapse" id="navbarSupportedContent"style="animation: bounceOutDown 1s ;transition-delay: 1s;">
      <ul class="navbar-nav mr-auto">
        <li class="nav-item">
-        <a class="nav-link " href="Home.php"><i class="fa fa-sign-out " id="list-dash-list"aria-controls="home"></i>Home</a>
+        <a class="nav-link " href="Home1.php"><i class="fa fa-sign-out " id="list-dash-list"aria-controls="home"></i>Home</a>
       </li>
        <li class="nav-item">
         <a class="nav-link active" href="Home.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Record</a>
@@ -136,13 +136,12 @@ li:active {
     <div class="list-group" id="list-tab" role="tablist">
       <a class="list-group-item list-group-item-action active" id="list-dash-list" data-toggle="list" href="#list-dash" role="tab" aria-controls="home">Dashboard</a>
       <a class="list-group-item list-group-item-action" href="#all-hist" id="list-pat-list" role="tab" data-toggle="list" aria-controls="home">ALL History</a>
-      <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">HEART RATE History</a>
-      <a class="list-group-item list-group-item-action" href="#list-pres" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Blood OXYGEN History</a>
-      <a class="list-group-item list-group-item-action" href="#list-pre" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Blood Glucose History</a>
-      <a class="list-group-item list-group-item-action" href="#list-pr" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Blood Pressure History</a>
-      <a class="list-group-item list-group-item-action" href="#list-pr" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">BODY MASS INDEX History</a>
-      <a class="list-group-item list-group-item-action" href="#list-pr" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Medication History</a>
-      <a class="list-group-item list-group-item-action" href="#list-pr" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Exercise History</a>
+      <a class="list-group-item list-group-item-action" href="#list-home"id="list-home-list" data-toggle="list"  role="tab" aria-controls="home">HEART RATE History</a>
+      <a class="list-group-item list-group-item-action" href="#list-oxy" id="list-oxy-list" role="tab" data-toggle="list" aria-controls="home">Blood OXYGEN History</a>
+      <a class="list-group-item list-group-item-action" href="#list-glu" id="list-glu-list" role="tab" data-toggle="list" aria-controls="home">Blood Glucose History</a>
+      <a class="list-group-item list-group-item-action" href="#list-pre" id="list-pre-list" role="tab" data-toggle="list" aria-controls="home">Blood Pressure History</a>
+      <a class="list-group-item list-group-item-action" href="#list-bmi" id="list-bmi-list" role="tab" data-toggle="list" aria-controls="home">BODY MASS INDEX History</a>
+      <a class="list-group-item list-group-item-action" href="#list-ex" id="list-ex-list" role="tab" data-toggle="list" aria-controls="home">Exercise History</a>
       
     </div><br>
   </div>
@@ -153,29 +152,31 @@ li:active {
       <div class="tab-pane  active" id="list-dash" role="tabpanel" aria-labelledby="list-dash-list"  style="animation: flip  5s  ;transition-delay: 5s;">
          <div class="container-fluid container-fullw bg-white" >
               <div class="row">
-              <div class="col-sm-4 d-grid" style="">
-                       <div class="panel panel-white no-radius text-center">
-                         <div class="panel-body" >
-                           <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span>
-                           <h4 class="StepTitle" style="margin-top: 5%;">HEART RATE MONITOR</h2>
-                           
-                           <p class="cl-effect-1">
-                             <a href="#HRM" onclick="clickDiv('#list-HRM-list')">
-                               Measure
-                             </a>
-                           </p>
-                         </div>
-                       </div>
-                     </div>
+              
+                 <div class="col-sm-4 d-grid" style="">
+                          <div class="panel panel-white no-radius text-center">
+                            <div class="panel-body" >
+                             <img src="image/cardiogram-heartn.svg" style="width: 100px;height: 100px;"/>
+                              <h4 class="StepTitle" style="margin-top: 5%;">HEART RATE MONITOR</h2>
+                              
+                              <p class="cl-effect-1">
+                                <a href="#list-home" onclick="clickDiv('#list-home-list')">
+                                  Measure
+                                </a>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
 
-                       <div class="col-sm-4 d-grid" style="">
+
+                        <div class="col-sm-4 d-grid" style="">
                          <div class="panel panel-white no-radius text-center">
                            <div class="panel-body" >
-                             <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span>
+                           <img src="image/lungs-lung-svgrepo-com.svg" style="width: 100px;height: 100px;"/>
                              <h4 class="StepTitle" style="margin-top: 5%;">Blood OXYGEN MONITOR</h2>
                            
                              <p class="links cl-effect-1">
-                               <a href="#OXY" onclick="clickDiv('#list-OXY-list')">
+                               <a href="#list-oxy" onclick="clickDiv('#list-oxy-list')">
                                Measure
                                </a>
                              </p>
@@ -183,15 +184,13 @@ li:active {
                          </div>
                        </div>
 
-
-                     <div class="col-sm-4 d-grid" style="">
+                       <div class="col-sm-4 d-grid" style="">
                         <div class="panel panel-white no-radius text-center">
-                          <div class="panel-body">
-                            <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-terminal fa-stack-1x fa-inverse"></i> </span>
+                          <div class="panel-body"><img src="image/health-care-blood.svg" style="width: 100px;height: 100px;"/>
                             <h4 class="StepTitle" style="margin-top: 5%;"> Blood Glucose MONITOR</h4>
                                                   
                             <p class="links cl-effect-1">
-                              <a href="#Glucose" onclick="clickDiv('#list-Glucose-list')">
+                              <a href="#list-glu" onclick="clickDiv('#list-glu-list')">
                                 Measure
                               </a>
                             </p>
@@ -200,29 +199,70 @@ li:active {
                       </div>
 
 
-                
                       <div class="col-sm-4 d-grid" style="">
                         <div class="panel panel-white no-radius text-center">
                           <div class="panel-body" >
-                            <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span>
+                          <img src="image/blood-donation-blood-drop.svg" style="width: 100px;height: 100px;"/>
+                            <h4 class="StepTitle" style="margin-top: 5%;">Blood Pressure</h2>
+                          
+                            <p class="cl-effect-1">
+                              <a href="#list-pre" onclick="clickDiv('#list-pre-list')">
+                              Measure
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                        </div>
+                
+
+
+                        <div class="col-sm-4 d-grid" style="">
+                        <div class="panel panel-white no-radius text-center">
+                          <div class="panel-body" >
+                          <img src="image/body-fitness-scale.svg" style="width: 100px;height: 100px;"/>
                             <h4 class="StepTitle" style="margin-top: 5%;">BODY MASS INDEX MOITOR</h2>
                           
                             <p class="cl-effect-1">
-                              <a href="#list-pres" onclick="clickDiv('#list-pres-list')">
+                              <a href="#list-bmi" onclick="clickDiv('#list-bmi-list')">
                               Measure
                               </a>
                             </p>
                           </div>
                         </div>
                       </div>
+
+                           
+                      <div class="col-sm-4 d-grid" style="">
+                        <div class="panel panel-white no-radius text-center">
+                          <div class="panel-body" >
+                          <img src="image/person-lifting-weights-svgrepo-com.svg" style="width: 100px;height: 100px;"/>
+                            <h4 class="StepTitle" style="margin-top: 5%;">Exercise</h2>
+                          
+                            <p class="cl-effect-1">
+                              <a href="#list-ex" onclick="clickDiv('#list-ex-list')">
+                              Measure
+                              </a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      
                 
          
             </div>
      </div>
 </div>
       
-<div class="tab-pane fade active" id="all-hist" role="tabpanel" aria-labelledby="list-pat-list"  style="animation: swing 2s  ;transition-delay: 2s;">
-         
+<div class="tab-pane fade " id="all-hist" role="tabpanel" aria-labelledby="list-pat-list"  style="animation: swing 2s  ;transition-delay: 2s;">
+        <form class="form-group" method="post" action="search.php">
+          <div class="row">
+          
+                  <div class="col-md-4"><label>Email ID:</label></div>
+                  <div class="col-md-8"><input type="date"  class="form-control" name="date"format="yyyy-mm-dd"min="2022-02-20" max="2032-02-20" required></div><br><br>
+                  
+                </div>
+          <input type="submit" name="search_data" value="search data" class="btn btn-primary" onclick="confirm('do you really want to delete?')">
+        </form>
 
           <!-- SELECT * FROM `records` WHERE `time`=("2023-02-03 13:06:06"); -->
         <table class="table table-hover">
@@ -235,12 +275,9 @@ li:active {
               <th scope="col">BLOOD-OXYGEN-STATE</th>
               <th scope="col">GLUCOSE</th>
               <th scope="col">GLUCOSE-STATE</th>
-              <!-- <th scope="col">weight</th>
-              <th scope="col">height</th>
-              <th scope="col">Age</th> -->
+              <th scope="col">BP_SYSTOLIC</th>
+              <th scope="col">BP_DIASTOLIC</th>
               <th scope="col">BMI</th>
-              <th scope="col">STRESS</th>
-              <th scope="col">STRESS-STATE</th>
               <th scope="col">TIME</th>
             </tr>
           </thead>
@@ -250,7 +287,7 @@ li:active {
               $con=mysqli_connect("localhost","root","","shms");
               global $con;
 
-              $query = "select heartrate,heartrate_state,bloodoxygen,bloodoxygen_state,glucose,glucose_status,bmi,stress,stress_state,time from records where fname ='$fname' and lname='$lname';";
+              $query = "select heartrate,heartrate_state,bloodoxygen,bloodoxygen_state,glucose,glucose_status,BP_SYSTOLIC,BP_DIASTOLIC,bmi,time from records where uid = $uid;";
               $result = mysqli_query($con,$query);
               while ($row = mysqli_fetch_array($result)){
         
@@ -263,9 +300,9 @@ li:active {
             <td><?php echo $row['glucose'];?></td>
             <td><?php echo $row['glucose_status'];?></td>
             
+            <td><?php echo $row['BP_SYSTOLIC'];?></td>
+            <td><?php echo $row['BP_DIASTOLIC'];?></td>
             <td><?php echo $row['bmi'];?></td>
-            <td><?php echo $row['stress'];?></td>
-            <td><?php echo $row['stress_state'];?></td>
             <td><?php echo $row['time'];?></td>
               <?php } ?>
           </tbody>
@@ -277,7 +314,7 @@ li:active {
 
 
 
-<div class="tab-pane fade active" id="list-home" role="tabpanel" aria-labelledby="list-messages-list" style="animation: bounceInUp 2s  ;transition-delay: 2s;">
+<div class="tab-pane fade " id="list-home" role="tabpanel" aria-labelledby="list-home-list" style="animation: bounceInUp 2s  ;transition-delay: 2s;">
 <table class="table table-hover">
           <thead>
             <tr>
@@ -294,7 +331,7 @@ li:active {
               $con=mysqli_connect("localhost","root","","shms");
               global $con;
 
-              $query = "select heartrate,heartrate_state,time from records where fname ='$fname' and lname='$lname' and heartrate > 0;";
+              $query = "select heartrate,heartrate_state,time from records where uid ='$uid' and heartrate > 0;";
               $result = mysqli_query($con,$query);
               while ($row = mysqli_fetch_array($result)){
         
@@ -312,7 +349,7 @@ li:active {
   <br>
   </div>
 
-<div class="tab-pane fade active" id="list-pres" role="tabpanel" aria-labelledby="list-messages-list" style="animation: flip 2s  ;transition-delay: 2s;">
+<div class="tab-pane fade " id="list-oxy" role="tabpanel" aria-labelledby="list-oxy-list" style="animation: flip 2s  ;transition-delay: 2s;">
 <table class="table table-hover">
           <thead>
             <tr>
@@ -329,7 +366,7 @@ li:active {
               $con=mysqli_connect("localhost","root","","shms");
               global $con;
 
-              $query = "select bloodoxygen,bloodoxygen_state,time from records where fname ='$fname' and lname='$lname' and bloodoxygen > 0;";
+              $query = "select bloodoxygen,bloodoxygen_state,time from records where uid ='$uid' and bloodoxygen > 0;";
               $result = mysqli_query($con,$query);
               while ($row = mysqli_fetch_array($result)){
         
@@ -347,7 +384,7 @@ li:active {
   <br>
   </div>
 
-<div class="tab-pane fade active" id="list-pre" role="tabpanel" aria-labelledby="list-messages-list"  style="animation: rollIn 2s  ;transition-delay: 2s;">
+<div class="tab-pane fade " id="list-glu" role="tabpanel" aria-labelledby="list-glu-list"  style="animation: rollIn 2s  ;transition-delay: 2s;">
 <table class="table table-hover">
           <thead>
             <tr>
@@ -364,7 +401,7 @@ li:active {
               $con=mysqli_connect("localhost","root","","shms");
               global $con;
 
-              $query = "select glucose,glucose_status,time from records where fname ='$fname' and lname='$lname' and glucose > 0;";
+              $query = "select glucose,glucose_status,time from records where uid ='$uid' and glucose > 0;";
               $result = mysqli_query($con,$query);
               while ($row = mysqli_fetch_array($result)){
         
@@ -381,6 +418,116 @@ li:active {
         </table>
   <br>
   </div>
+
+  <div class="tab-pane fade " id="list-bmi" role="tabpanel" aria-labelledby="list-bmi-list"  style="animation: rollIn 2s  ;transition-delay: 2s;">
+<table class="table table-hover">
+          <thead>
+            <tr>
+              
+              <th scope="col">WEIGHT</th>
+              <th scope="col">HEIGHT</th>
+              <th scope="col">BMI</th>
+              <th scope="col">TIME</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+
+              $con=mysqli_connect("localhost","root","","shms");
+              global $con;
+
+              $query = "select weight,height,bmi,time from records where uid ='$uid' and bmi > 0 ;";
+              $result = mysqli_query($con,$query);
+              while ($row = mysqli_fetch_array($result)){
+        
+            ?><tr>
+            <td><?php echo $row['weight'];?></td>
+            <td><?php echo $row['height'];?></td>
+            <td><?php echo $row['bmi'];?></td>
+            <td><?php echo $row['time'];?></td>
+              <?php } ?>
+          </tbody>
+        </table>
+  <br>
+  </div>
+
+
+  <div class="tab-pane fade " id="list-pre" role="tabpanel" aria-labelledby="list-pre-list"  style="animation: rollIn 2s  ;transition-delay: 2s;">
+<table class="table table-hover">
+          <thead>
+            <tr>
+              
+              <th scope="col">BP_SYSTOLIC</th>
+              <th scope="col">BP_DIASTOLIC</th>
+              <th scope="col">TIME</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+
+              $con=mysqli_connect("localhost","root","","shms");
+              global $con;
+
+              $query = "select BP_SYSTOLIC,BP_DIASTOLIC,time from records where uid ='$uid' and BP_SYSTOLIC > 0 and BP_DIASTOLIC > 0;";
+              $result = mysqli_query($con,$query);
+              while ($row = mysqli_fetch_array($result)){
+        
+            ?><tr>
+            <td><?php echo $row['BP_SYSTOLIC'];?></td>
+            <td><?php echo $row['BP_DIASTOLIC'];?></td>
+            <td><?php echo $row['time'];?></td>
+              <?php } ?>
+          </tbody>
+        </table>
+  <br>
+  </div>
+
+
+  <div class="tab-pane fade " id="list-ex" role="tabpanel" aria-labelledby="list-ex-list"  style="animation: rollIn 2s  ;transition-delay: 2s;">
+  <form class="form-group" method="post" action="search.php">
+          <div class="row">
+          
+                  <div class="col-md-4"><label>Email ID:</label></div>
+                  <div class="col-md-8"><input type="date"  class="form-control" name="date"format="yyyy-mm-dd"min="2022-02-20" max="2032-02-20" required></div><br><br>
+                  
+                </div>
+          <input type="submit" name="search_exercise" value="search data" class="btn btn-primary" onclick="confirm('do you really want to Search?')">
+        </form>
+
+  <table class="table table-hover">
+          <thead>
+            <tr>
+              
+              <th scope="col">EXERCISE-TYPE</th>
+              <th scope="col">DURATION</th>
+              <th scope="col">CALORIES</th>
+              <th scope="col">TIME</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+
+              $con=mysqli_connect("localhost","root","","shms");
+              global $con;
+
+              $query = "select exercisetype,duration,calories,time from exercise where uid ='$uid' and duration > 0 ;";
+              $result = mysqli_query($con,$query);
+              while ($row = mysqli_fetch_array($result)){
+        
+            ?><tr>
+            <td><?php echo $row['exercisetype'];?></td>
+            <td><?php echo $row['duration'];?></td>
+            <td><?php echo $row['calories'];?></td>
+            <td><?php echo $row['time'];?></td>
+              <?php } ?>
+          </tbody>
+        </table>
+  <br>
+  </div>
+
 
 
   

@@ -151,7 +151,6 @@ if (isset($_POST['app-submit'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- <link rel="stylesheet" href="Style/style.css"> -->
-  
   <!-- Latest compiled and minified CSS -->
 
 
@@ -178,7 +177,7 @@ if (isset($_POST['app-submit'])) {
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
   <!-- Latest compiled JavaScript -->
 </head>
-<body >
+<body  >
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"  style="animation: fadeInRight 1s ;transition-delay: 5s;">
   <a class="navbar-brand" href="#" style="margin-left: 2%;"><i class="fa fa-user-plus" aria-hidden="true"></i> YOUR HEALTH </a>
@@ -268,15 +267,17 @@ li:active {
     color: black;
     border-radius: 10vh;
   }
+
+  
   </style>
 
 <div class="collapse navbar-collapse " id="navbarSupportedContent"  style="animation: bounceOutDown 1s ;transition-delay: 1s;" >
      <ul class="navbar-nav mr-auto" style="margin-left: 2%; ">
        <li class="nav-item " >
-         <a class="nav-link" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Home</a>
+         <a class="nav-link" href="Home1.php"><i class="fa fa-sign-out" id="list-dash-list" aria-hidden="true"></i>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#list-dash"><i class="fa fa-sign-out" id="list-dash-list"aria-controls="home">Record</i></a>
+          <a class="nav-link " href="#list-rec"><i class="fa fa-sign-out" id="list-rec-list"aria-controls="home">Record</i></a>
           </li>
        <li class="nav-item">
         <a class="nav-link" href="Measurements.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Measurment</a>
@@ -324,7 +325,8 @@ li:active {
     <div class="tab-content" id="nav-tabContent" style="">
 
 
-      <div class="tab-pane  active" id="list-dash" role="tabpanel" aria-labelledby="list-dash-list" style="animation: flip  1s  ;transition-delay: 1s;" >
+      
+      <div class="tab-pane  active" id="list-rec" role="tabpanel" aria-labelledby="list-rec-list" style="animation: flip  1s  ;transition-delay: 1s;" >
         <div class="container-fluid container-fullw bg-white" >
               <div class="row ">
 

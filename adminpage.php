@@ -8,6 +8,13 @@ if(isset($_POST['D-user']))
   $uemail=$_POST['uemail'];
   $query="delete from users where email='$uemail';";
   $result=mysqli_query($con,$query);
+
+  $query="delete from exercise where email='$uemail';";
+  $result=mysqli_query($con,$query);
+
+  $query="delete from records where email='$uemail';";
+  $result=mysqli_query($con,$query);
+
   if($result)
     {
       echo "<script>alert('Doctor removed successfully!');</script>";
@@ -54,6 +61,35 @@ if(isset($_POST['D-user']))
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  </style>
+
+<script>
+    var check = function() {
+  if (document.getElementById('password').value ==
+    document.getElementById('cpassword').value) {
+    document.getElementById('message').style.color = '#5dd05d';
+    document.getElementById('message').innerHTML = 'Matched';
+  } else {
+    document.getElementById('message').style.color = '#f55252';
+    document.getElementById('message').innerHTML = 'Not Matching';
+  }
+}
+
+function alphaOnly(event) {
+  var key = event.keyCode;
+  return ((key >= 65 && key <= 90) || key == 8 || key == 32);
+};
+
+function checklen()
+{
+    var pass1 = document.getElementById("password");  
+    if(pass1.value.length<6){  
+        alert("Password must be at least 6 characters long. Try again!");  
+        return false;  
+  }  
+}
+
+</script>
 
   
   <style >
@@ -118,10 +154,7 @@ if(isset($_POST['D-user']))
       <a class="list-group-item list-group-item-action" href="#list-doc" id="list-doc-list"  role="tab"    aria-controls="home" data-toggle="list">User's List</a>
       <a class="list-group-item list-group-item-action" href="#list-pres" id="list-pres-list"  role="tab" data-toggle="list" aria-controls="home">Record's List</a>
       <a class="list-group-item list-group-item-action" href="#list-settings1" id="list-ddoc-list"  role="tab" data-toggle="list" aria-controls="home">Delete User</a>
-      <a class="list-group-item list-group-item-action" href="#list-pat" id="list-pat-list"  role="tab" data-toggle="list" aria-controls="home">Patient List</a>
-      <a class="list-group-item list-group-item-action" href="#list-app" id="list-app-list"  role="tab" data-toggle="list" aria-controls="home">Appointment Details</a>
-      <a class="list-group-item list-group-item-action" href="#list-settings" id="list-adoc-list"  role="tab" data-toggle="list" aria-controls="home">Add Doctor</a>
-      <a class="list-group-item list-group-item-action" href="#list-mes" id="list-mes-list"  role="tab" data-toggle="list" aria-controls="home">Queries</a>
+      <a class="list-group-item list-group-item-action" href="#add-user" id="list-user-list"  role="tab" data-toggle="list" aria-controls="home">Add User</a>
       
     </div><br>
   </div>
@@ -130,138 +163,12 @@ if(isset($_POST['D-user']))
 
 
 
-      <div class="tab-pane fade show active" id="list-dash" role="tabpanel" aria-labelledby="list-dash-list">
-      <div class="container-fluid container-fullw bg-white" >
-          <div class="row ">
-
-            <div class="col-sm-4 d-grid" style="">
-                <div class="panel panel-white no-radius text-center">
-                  <div class="panel-body" >
-                      <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-users fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">User's List</h4>
-                      <script>
-                        function clickDiv(id) {
-                          document.querySelector(id).click();
-                        }
-                      </script> 
-                      <p class="links cl-effect-1">
-                        <a href="#list-doc" onclick="clickDiv('#list-doc-list')">
-                          View Doctors
-                        </a>
-                      </p>
-                    </div>
-                </div>
-
-             </div>
-
-
-
-            <div class="col-sm-4 d-grid" style="">
-                <div class="panel panel-white no-radius text-center">
-                  <div class="panel-body" >
-                      <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-users fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">Record's List</h4>
-                    
-                      <p class="cl-effect-1">
-                        <a href="#list-pres" onclick="clickDiv('#list-pres-list')">
-                          View Prescriptions
-                        </a>
-                      </p>
-                    </div>
-                </div>
-
-             </div>
-            <div class="col-sm-4 d-grid" style="">
-                <div class="panel panel-white no-radius text-center">
-                  <div class="panel-body" >
-                      <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-users fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">Manage Doctors</h4>
-                    
-                    <p class="cl-effect-1">
-                      <a href="#app-hist" onclick="clickDiv('#list-adoc-list')">Add Doctors</a>
-                      &nbsp|
-                      <a href="#app-hist" onclick="clickDiv('#list-ddoc-list')">
-                        Delete User
-                      </a>         
-                      </p>
-                    </div>
-                </div>
-
-             </div>
-
-                <!-- <div class="col-sm-4" style="left: -3%">
-                  <div class="panel panel-white no-radius text-center">
-                    <div class="panel-body" >
-                      <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-users fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">Patient List</h4>
-                      
-                      <p class="cl-effect-1">
-                        <a href="#app-hist" onclick="clickDiv('#list-pat-list')">
-                          View Patients
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                </div> -->
-              
-
-                <!-- <div class="col-sm-4">
-                  <div class="panel panel-white no-radius text-center">
-                    <div class="panel-body" >
-                      <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-paperclip fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">Appointment Details</h4>
-                    
-                      <p class="cl-effect-1">
-                        <a href="#app-hist" onclick="clickDiv('#list-app-list')">
-                          View Appointments
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                </div> -->
-
-                <!-- <div class="col-sm-4 d-grid" style="">
-                        <div class="panel panel-white no-radius text-center">
-                          <div class="panel-body" >
-                      <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">Record's List</h4>
-                    
-                      <p class="cl-effect-1">
-                        <a href="#list-pres" onclick="clickDiv('#list-pres-list')">
-                          View Prescriptions
-                        </a>
-                      </p>
-                    </div>
-                  
-                </div> -->
-
+    <div class="tab-pane fade show active" id="list-dash" role="tabpanel" aria-labelledby="list-dash-list">
+                
+                  <canvas  id="mycanvas"></canvas>
                 
 
-<!-- 
-                <div class="col-sm-4 d-grid" style="">
-                         <div class="panel panel-white no-radius text-center">
-                           <div class="panel-body" >
-                      <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-plus fa-stack-1x fa-inverse"></i> </span>
-                      <h4 class="StepTitle" style="margin-top: 5%;">Manage Doctors</h4>
-                    
-                      <p class="cl-effect-1">
-                        <a href="#app-hist" onclick="clickDiv('#list-adoc-list')">Add Doctors</a>
-                        &nbsp|
-                        <a href="#app-hist" onclick="clickDiv('#list-ddoc-list')">
-                          Delete User
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                </div> -->
-              </div>
-                        
-
-      
-                
-              </div>
-            </div>
+          </div>
       
       
             
@@ -285,6 +192,8 @@ if(isset($_POST['D-user']))
                     <th scope="col">Email</th>
                     <th scope="col">Contact</th>
                     <th scope="col">Password</th>
+                    <th scope="col">country</th>
+                    <th scope="col">region</th>
                     
                   </tr>
                 </thead>
@@ -302,6 +211,8 @@ if(isset($_POST['D-user']))
                       $email = $row['email'];
                       $contact = $row['contact'];
                       $password = $row['password'];
+                      $country = $row['country'];
+                      $region = $row['region'];
                       
                       echo "<tr>
                         <td>$uid</td>
@@ -311,6 +222,8 @@ if(isset($_POST['D-user']))
                         <td>$email</td>
                         <td>$contact</td>
                         <td>$password</td>
+                        <td>$country</td>
+                        <td>$region</td>
                       </tr>";
                     }
 
@@ -325,8 +238,8 @@ if(isset($_POST['D-user']))
               <div class="col-md-8">
                  <form class="form-group" action="search.php" method="post">
                    <div class="row">
-                   <div class="col-md-10"><input type="text" name="doctor_contact" placeholder="Enter Email ID" class = "form-control"></div>
-                   <div class="col-md-2"><input type="submit" name="doctor_search_submit" class="btn btn-primary" value="Search"></div></div>
+                   <div class="col-md-10"><input type="text" name="user_contact" placeholder="Enter Email ID" class = "form-control"></div>
+                   <div class="col-md-2"><input type="submit" name="User_search_submit" class="btn btn-primary" value="Search"></div></div>
                  </form>
                </div>
    
@@ -345,14 +258,14 @@ if(isset($_POST['D-user']))
                      <th scope="col">HEARTRATE-STATE</th>
                      <th scope="col">BLOOD-OXYGEN</th>
                      <th scope="col">BLOOD-OXYGEN-STATE</th>
+                     <th scope="col">BP_SYSTOLIC</th>
+                     <th scope="col">BP_DIASTOLIC</th>
                      <th scope="col">GLUCOSE</th>
                      <th scope="col">GLUCOSE-STATE</th>
                      <th scope="col">weight</th>
                      <th scope="col">height</th>
                      <th scope="col">Age</th>
                      <th scope="col">BMI</th>
-                     <th scope="col">STRESS</th>
-                     <th scope="col">STRESS-STATE</th>
                      <th scope="col">TIME</th>
                     
                   </tr>
@@ -375,14 +288,14 @@ if(isset($_POST['D-user']))
                       $heartrate_state = $row['heartrate_state'];
                       $bloodoxygen = $row['bloodoxygen'];
                       $bloodoxygen_state = $row['bloodoxygen_state'];
+                      $BP_SYSTOLIC = $row['BP_SYSTOLIC'];
+                      $BP_DIASTOLIC = $row['BP_DIASTOLIC'];
                       $glucose = $row['glucose'];
                       $glucose_status = $row['glucose_status'];
                       $weight = $row['weight'];
                       $height = $row['height'];
                       $Age = $row['Age'];
                       $bmi = $row['bmi'];
-                      $stress = $row['stress'];
-                      $stress_state = $row['stress_state'];
                       $time = $row['time'];
                       
                       echo "<tr>
@@ -397,14 +310,14 @@ if(isset($_POST['D-user']))
                         <td>$heartrate_state</td>
                         <td>$bloodoxygen</td>
                         <td>$bloodoxygen_state</td>
+                        <td>$BP_SYSTOLIC</td>
+                        <td>$BP_DIASTOLIC</td>
                         <td>$glucose</td>
                         <td>$glucose_status</td>
                         <td>$weight</td>
                         <td>$height</td>
                         <td>$Age</td>
                         <td>$bmi</td>
-                        <td>$stress</td>
-                        <td>$stress_state</td>
                         <td>$time</td>
                       </tr>";
                     }
@@ -426,6 +339,69 @@ if(isset($_POST['D-user']))
                   
                 </div>
           <input type="submit" name="D-user" value="Delete user" class="btn btn-primary" onclick="confirm('do you really want to delete?')">
+        </form>
+      </div>
+
+
+  <div class="tab-pane fade" id="add-user" role="tabpanel" aria-labelledby="list-user-list">
+
+      <h3 class="register-heading text-center"  >Register as User</h3><br>
+
+        <form class="form-group"  method="post" action="userfunction.php" style="border: #342ac1;">
+          <div class="row">
+          
+          <div class="col-md-6">
+          
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"  placeholder="First Name *" name="fname"  onkeydown="return alphaOnly(event);" required/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Last Name *" name="lname" onkeydown="return alphaOnly(event);" required/>
+                                        </div>
+                                       
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Your Email *" name="email"  />
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <div class="maxl">
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="gender" value="Male" checked>
+                                                    <span> Male </span> 
+                                                </label>
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="gender" value="Female">
+                                                    <span>Female </span> 
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-md-6"  >
+                                         
+                                        <div class="form-group">
+                                            <input type="tel" minlength="10" maxlength="10" name="contact" class="form-control" placeholder="Your Phone *"  />
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Password *" id="password" name="password" onkeyup='check();' required/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control"  id="cpassword" placeholder="Confirm Password *" name="cpassword"  onkeyup='check();' required/><span id='message'></span>
+                                        </div>
+                                        <div class="form-group">
+                                          <input type="text" class="form-control" id='country'name='country' placeholder='Country'>
+                                        </div>
+                                        <div class="form-group">
+                                          <input type="text" class="form-control" id='region'name='region' placeholder='Region' >
+                                        </div>
+              
+                                        <div>
+                                            <input type="submit" class="btn btn-primary" name="Admin_user" onclick="return checklen();" value="Register"/>
+                                       </div>
+                                    </div>
+                </div>
         </form>
       </div>
 
@@ -520,6 +496,10 @@ if(isset($_POST['D-user']))
           </div>
         </div>
       </footer>
+
+          <script src="graph.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

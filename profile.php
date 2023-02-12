@@ -32,20 +32,23 @@ if (isset($_POST['edit-submit'])) {
     
   $fname = $_POST['fname'];
   $lname = $_POST['lname'];
-  $contact = $_POST['contact'];
+  $contact1 = $_POST['contact'];
   $bloodgroup = $_POST['bloodgroup'];
   $country = $_POST['country'];
   $region = $_POST['region'];
-  $_SESSION['username'] = $_POST['fname']." ".$_POST['lname'];
-  $_SESSION['fname'] = $_POST['fname'];
-  $_SESSION['lname'] = $_POST['lname'];
-  $_SESSION['contact'] = $_POST['contact'];
 
 
-  $query = mysqli_query($con,"update users set fname = '$fname',lname = '$lname',contact = '$contact',bloodgroup = '$bloodgroup', country = '$country', region = '$region' where uid = $uid");
+
+  $query = mysqli_query($con,"update users set fname = '$fname',lname = '$lname',contact = '$contact1',bloodgroup = '$bloodgroup', country = '$country', region = '$region' where uid = $uid");
+  $query = mysqli_query($con,"update exercise set fname = '$fname',lname = '$lname',contact = '$contact1' where uid = $uid");
+  $query = mysqli_query($con,"update records set fname = '$fname',lname = '$lname',contact = '$contact1' where uid = $uid");
 //   $query1 = mysqli_query($con,"update records set fname = '$fname',lname = '$lname',contact = '$contact' where  uid = $uid");
 //   $query =;
 //   UPDATE `users` SET `bloodgroup` = 'am', `country` = 'ethiopia', `region` = 'addis abeba' WHERE `users`.`uid` = 10;
+$_SESSION['username'] = $_POST['fname']." ".$_POST['lname'];
+$_SESSION['fname'] = $_POST['fname'];
+$_SESSION['lname'] = $_POST['lname'];
+$_SESSION['contact'] = $_POST['contact'];
 if ($query)
      {
         echo("<script>alert('Your Data successfully Changed. !');
@@ -213,7 +216,7 @@ body {
  <div class="collapse navbar-collapse" id="navbarSupportedContent"style="animation: bounceOutDown 1s ;transition-delay: 1s;">
      <ul class="navbar-nav mr-auto">
        <li class="nav-item">
-        <a class="nav-link " href="Home.php"><i class="fa fa-sign-out " id="list-dash-list"aria-controls="home"></i>Home</a>
+        <a class="nav-link " href="Home1.php"><i class="fa fa-sign-out " id="list-dash-list"aria-controls="home"></i>Home</a>
       </li>
        <li class="nav-item">
         <a class="nav-link active" href="Home.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Record</a>
@@ -243,9 +246,10 @@ body {
     <div class="row">
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                <img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+                <img class="rounded-circle mt-5" width="150px" src="image/anonymous-user.png">
                 <span class="font-weight-bold"><?php echo $username ?></span>
                 <span class="text-black-50"><?php echo $email ?></span><span>
+                <span class="text-black-50"><?php echo $gender ?></span><span>
                     </span>
                 </div>
                 <form method="post" action="profile.php">

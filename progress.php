@@ -29,7 +29,7 @@ $contact = $_SESSION['contact'];
 
   <link rel="stylesheet" href="Style/style.css">
 
-  <link rel="stylesheet" href="Style/animate.css">
+  <link rel="stylesheet" href="vendor/animate.css/animate.css">
 
   
 
@@ -58,7 +58,7 @@ $contact = $_SESSION['contact'];
   <!-- Latest compiled JavaScript -->
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style="animation: fadeInRight 1s ;transition-delay: 5s;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style="animation: fadeInLeft 1s ;transition-delay: 5s;">
   <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> YOUR HEALTH </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -100,7 +100,7 @@ li:active {
  <div class="collapse navbar-collapse" id="navbarSupportedContent"style="animation: bounceOutDown 1s ;transition-delay: 1s;">
      <ul class="navbar-nav mr-auto">
        <li class="nav-item">
-        <a class="nav-link " href="Home.php"><i class="fa fa-sign-out " id="list-dash-list"aria-controls="home"></i>Home</a>
+        <a class="nav-link " href="Home1.php"><i class="fa fa-sign-out " id="list-dash-list"aria-controls="home"></i>Home</a>
       </li>
        <li class="nav-item">
         <a class="nav-link active" href="Home.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Record</a>
@@ -183,80 +183,7 @@ li:active {
       
     </div><br>
   </div>
-  <!-- <div class="col-md-8" style="margin-top: 3%;">
-    <div class="tab-content" id="nav-tabContent" style="">
-
-
-      <div class="tab-pane  active" id="list-dash" role="tabpanel" aria-labelledby="list-dash-list"  style="animation: flip  5s  ;transition-delay: 5s;">
-         <div class="container-fluid container-fullw bg-white" >
-              <div class="row">
-              <div class="col-sm-4 d-grid" style="">
-                       <div class="panel panel-white no-radius text-center">
-                         <div class="panel-body" >
-                           <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span>
-                           <h4 class="StepTitle" style="margin-top: 5%;">HEART RATE MONITOR</h2>
-                           
-                           <p class="cl-effect-1">
-                             <a href="#HRM" onclick="clickDiv('#list-HRM-list')">
-                               Measure
-                             </a>
-                           </p>
-                         </div>
-                       </div>
-                     </div>
-
-                       <div class="col-sm-4 d-grid" style="">
-                         <div class="panel panel-white no-radius text-center">
-                           <div class="panel-body" >
-                             <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span>
-                             <h4 class="StepTitle" style="margin-top: 5%;">Blood OXYGEN MONITOR</h2>
-                           
-                             <p class="links cl-effect-1">
-                               <a href="#OXY" onclick="clickDiv('#list-OXY-list')">
-                               Measure
-                               </a>
-                             </p>
-                           </div>
-                         </div>
-                       </div>
-
-
-                     <div class="col-sm-4 d-grid" style="">
-                        <div class="panel panel-white no-radius text-center">
-                          <div class="panel-body">
-                            <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-terminal fa-stack-1x fa-inverse"></i> </span>
-                            <h4 class="StepTitle" style="margin-top: 5%;"> Blood Glucose MONITOR</h4>
-                                                  
-                            <p class="links cl-effect-1">
-                              <a href="#Glucose" onclick="clickDiv('#list-Glucose-list')">
-                                Measure
-                              </a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-
-                
-                      <div class="col-sm-4 d-grid" style="">
-                        <div class="panel panel-white no-radius text-center">
-                          <div class="panel-body" >
-                            <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i> </span>
-                            <h4 class="StepTitle" style="margin-top: 5%;">BODY MASS INDEX MOITOR</h2>
-                          
-                            <p class="cl-effect-1">
-                              <a href="#list-pres" onclick="clickDiv('#list-pres-list')">
-                              Measure
-                              </a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                
-         
-            </div>
-     </div>
-</div> -->
+ 
 </div>
    </div>
 <div class=" container ">
@@ -302,6 +229,7 @@ li:active {
     
     <script src="graph.js"></script>
           <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <!-- <script src="vendor/Chart.js/Chart.js"></script> -->
 
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->

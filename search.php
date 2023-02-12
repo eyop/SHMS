@@ -10,14 +10,15 @@
 <?php
 include("userfunction.php");
 $con=mysqli_connect("localhost","root","","shms");
-
+$uid = $_SESSION['uid'];
 if(isset($_POST['User_search_submit']))
 {
-	$contact=$_POST['user_contact'];
-  $query = "select * from users where email= '$contact'";
+
+	$email=$_POST['user_email'];
+  $query = "select * from users where email= '$email' ";
   $result = mysqli_query($con,$query);
   $row=mysqli_fetch_array($result);
-  if($row['uid']=="" & $row['fname']==""& $row['lname']=="" & $row['gender']=="" & $row['email']=="" & $row['contact']==""& $row['password']==""& $row['cpassword']==""){
+  if($row['uid']=="" & $row['fname']==""& $row['lname']=="" & $row['gender']=="" & $row['email']=="" & $row['contact']==""& $row['password']==""& $row['cpassword']=="" & $row['time']==""){
     echo "<script> alert('No entries found!'); 
           window.location.href = 'adminpage.php#list-doc';</script>";
   }
@@ -71,6 +72,152 @@ if(isset($_POST['User_search_submit']))
 }
   }
 	
+
+
+  
+if(isset($_POST['search_data']))
+{
+	$date=$_POST['date'];
+  $query = "select * from records where uid = $uid and time between '$date 00:00:00' and '$date 23:59:59'";
+  $result = mysqli_query($con,$query);
+  $row=mysqli_fetch_array($result);
+  if($row['uid']=="" & $row['fname']==""& $row['lname']==""  & $row['heartrate']==""  & $row['heartrate_state']==""& $row['bloodoxygen']==""  & $row['bloodoxygen_state']=="" & $row['glucose']==""& $row['glucose_status']=="" & $row['BP_SYSTOLIC']=="" & $row['BP_DIASTOLIC']==""& $row['bmi']=="" & $row['time']==""){
+    echo "<script> alert('No entries found!'); 
+          window.location.href = 'adminpage.php#list-doc';</script>";
+  }
+  else {
+    echo "<div class='container-fluid' style='margin-top:50px;'>
+	<div class ='card'>
+	<div class='card-body' style='background-color:#342ac1;color:#ffffff;'>
+<table class='table table-hover'>
+  <thead>
+    <tr>
+
+      <th scope='col'>User ID</th>
+      <th scope='col'>First Name</th>
+      <th scope='col'>Last Name</th>
+      <th scope='col'>HEARTRATE</th>
+      <th scope='col'>HEARTRATE-STATE</th>
+      <th scope='col'>BLOOD-OXYGEN</th>
+      <th scope='col'>BLOOD-OXYGEN-STATE</th>
+      <th scope='col'>GLUCOSE</th>
+      <th scope='col'>GLUCOSE-STATE</th>
+      <th scope='col'>BP_SYSTOLIC</th>
+      <th scope='col'>BP_DIASTOLIC</th>
+      <th scope='col'>BMI</th>
+      <th scope='col'>TIME</th>
+    </tr>
+  </thead>
+  <tbody>";
+
+	while ($row=mysqli_fetch_array($result)){
+                      $uid = $row['uid'];
+                      $fname = $row['fname'];
+                      $lname = $row['lname'];
+                      $heartrate = $row['heartrate'];
+                      $heartrate_state = $row['heartrate_state'];
+                      $bloodoxygen = $row['bloodoxygen'];
+                      $bloodoxygen_state = $row['bloodoxygen_state'];
+                      $glucose = $row['glucose'];
+                      $glucose_status = $row['glucose_status'];
+                      $BP_SYSTOLIC = $row['BP_SYSTOLIC'];
+                      $BP_DIASTOLIC = $row['BP_DIASTOLIC'];
+                      $bmi = $row['bmi'];
+                      $time = $row['time'];
+                      
+        echo "<tr>
+        <td>$uid</td>
+        <td>$fname</td>
+        <td>$lname</td>
+        <td>$heartrate</td>
+        <td>$heartrate_state</td>
+        <td>$bloodoxygen</td>
+        <td>$bloodoxygen_state</td>
+        <td>$glucose</td>
+        <td>$glucose_status</td>
+        <td>$BP_SYSTOLIC</td>
+        <td>$BP_DIASTOLIC</td>
+        <td>$bmi</td>
+        <td>$time</td>
+        </tr>";
+	}
+	echo "</tbody>
+    </table>
+    <center>
+    <a href='Measurements.php' class='btn btn-light'>Back to dashboard
+    </a>
+    </div>
+    </center>
+    </div>
+    </div>
+    </div>";
+}
+  }
+
+
+  
+  
+if(isset($_POST['search_exercise']))
+{
+  
+	$date=$_POST['date'];
+  $query = "select * from exercise where uid = $uid and time between '$date 00:00:00' and '$date 23:59:59'";
+  $result = mysqli_query($con,$query);
+  $row=mysqli_fetch_array($result);
+  if( $row['fname']=="" & $row['lname']==""  & $row['exercisetype']==""  & $row['duration']==""& $row['calories']=="" & $row['time']==""){
+    echo "<script> alert('No entries found!'); 
+          window.location.href = 'adminpage.php#list-doc';</script>";
+  }
+  else {
+    echo "<div class='container-fluid' style='margin-top:50px;'>
+	<div class ='card'>
+	<div class='card-body' style='background-color:#342ac1;color:#ffffff;'>
+<table class='table table-hover'>
+  <thead>
+    <tr>
+
+      <th scope='col'>User ID</th>
+      <th scope='col'>First Name</th>
+      <th scope='col'>Last Name</th>
+      <th scope='col'>Exercisetype</th>
+      <th scope='col'>Duration</th>
+      <th scope='col'>Calories</th>
+      <th scope='col'>TIME</th>
+    </tr>
+  </thead>
+  <tbody>";
+
+	while ($row=mysqli_fetch_array($result)){
+                      $uid = $row['uid'];
+                      $fname = $row['fname'];
+                      $lname = $row['lname'];
+                      $exercisetype = $row['exercisetype'];
+                      $duration = $row['duration'];
+                      $calories = $row['calories'];
+                      $time = $row['time'];
+                      
+        echo "<tr>
+        <td>$uid</td>
+        <td>$fname</td>
+        <td>$lname</td>
+        <td>$exercisetype</td>
+        <td>$duration</td>
+        <td>$calories</td>
+        <td>$time</td>
+        </tr>";
+	}
+	echo "</tbody>
+    </table>
+    <center>
+    <a href='Measurements.php' class='btn btn-light'>Back to dashboard
+    </a>
+    </div>
+    </center>
+    </div>
+    </div>
+    </div>";
+}
+  }
 
 ?>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
