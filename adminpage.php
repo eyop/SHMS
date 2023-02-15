@@ -155,6 +155,7 @@ function checklen()
       <a class="list-group-item list-group-item-action" href="#list-pres" id="list-pres-list"  role="tab" data-toggle="list" aria-controls="home">Record's List</a>
       <a class="list-group-item list-group-item-action" href="#list-settings1" id="list-ddoc-list"  role="tab" data-toggle="list" aria-controls="home">Delete User</a>
       <a class="list-group-item list-group-item-action" href="#add-user" id="list-user-list"  role="tab" data-toggle="list" aria-controls="home">Add User</a>
+      <a class="list-group-item list-group-item-action" href="#user-req" id="list-user-req"  role="tab" data-toggle="list" aria-controls="home">User Request</a>
       
     </div><br>
   </div>
@@ -232,6 +233,49 @@ function checklen()
               </table>
           <br>
       </div>
+            
+  <div class="tab-pane fade active" id="user-req" role="tabpanel" aria-labelledby="list-user-req">
+
+  <div class="col-md-8">
+      <form class="form-group" action="search.php" method="post">
+        <div class="row">
+        <div class="col-md-10"><input type="text" name="mes_contact" placeholder="Enter Contact" class = "form-control"></div>
+        <div class="col-md-2"><input type="submit" name="mes_search_submit" class="btn btn-primary" value="Search"></div></div>
+      </form>
+    </div>
+    <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">User Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Contact</th>
+                    <th scope="col">Message</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php 
+
+                    $con=mysqli_connect("localhost","root","","shms");
+                    global $con;
+
+                    $query = "select * from contact;";
+                    $result = mysqli_query($con,$query);
+                    while ($row = mysqli_fetch_array($result)){
+              
+                    
+                  ?>
+                      <tr>
+                        <td><?php echo $row['name'];?></td>
+                        <td><?php echo $row['email'];?></td>
+                        <td><?php echo $row['contact'];?></td>
+                        <td><?php echo $row['message'];?></td>
+                      </tr>
+                    <?php } ?>
+                </tbody>
+              </table>
+        <br>
+      </div>
+      
       <div class="tab-pane fade active" id="list-pres" role="tabpanel" aria-labelledby="list-pres-list">
               
 
@@ -414,82 +458,14 @@ function checklen()
 
 
 
-   <footer class="deneb_footer ">
-        <div class="widget_wrapper" style="background-image:
-          url(http://demo.tortoizthemes.com/deneb-html/deneb-ltr/assets/images/footer_bg.png);">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-4 col-md-6 col-12">
-                <div class="widget widegt_about">
-                  <div class="widget_title">
-                    <img src="assets/images/logo_1.png" class="img-fluid"
-                      alt="">
-                  </div>
-                  <p>Wecare.</p>
-                  <ul class="social">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="widget widget_link">
-                  <div class="widget_title">
-                    <h4>Links</h4>
-                  </div>
-                  <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Blog</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="widget widget_contact">
-                  <div class="widget_title">
-                    <h4>Contact Us</h4>
-                  </div>
-                  <div class="contact_info">
-                    <div class="single_info">
-                      <div class="icon">
-                        <i class="fas fa-phone-alt"></i>
-                      </div>
-                      <div class="info">
-                        <p><a href="tel:+919246147999">1800-121-3637</a></p>
-                        <p><a href="tel:+919246147999">+91 924-614-7999</a></p>
-                      </div>
-                    </div>
-                    <div class="single_info">
-                      <div class="icon">
-                        <i class="fas fa-envelope"></i>
-                      </div>
-                      <div class="info">
-                        <p><a href="mailto:info@deneb.com">info@deneb.com</a></p>
-                        <p><a href="mailto:services@deneb.com">services@deneb.com</a></p>
-                      </div>
-                    </div>
-                    <div class="single_info">
-                      <div class="icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                      </div>
-                      <div class="info">
-                        <p>125, Park street aven, Brocklyn,<span>Newyork.</span></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+   <footer class="deneb_footer fixed-bottom">
+      
         <div class="copyright_area">
           <div class="container">
             <div class="row">
               <div class="col-lg-12">
                 <div class="copyright_text">
-                  <p>Copyright &copy; 2020 All rights reserved.</p>
+                  <p>Copyright &copy; 2023 All rights reserved.</p>
                 </div>
               </div>
             </div>

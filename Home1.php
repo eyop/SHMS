@@ -44,7 +44,7 @@ $contact = $_SESSION['contact'];
 
   <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
 
-
+ <link rel="stylesheet" href="biuty.css">
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"> -->
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
   <!-- Latest compiled JavaScript -->
@@ -170,107 +170,199 @@ autoplay
 ></video>
 </div>
 </div>
+<div>
 
-<section id="intro" class="intro" style="font-family: 'IBM Plex Sans', sans-serif;">
-            <div class="intro-content">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-6" style=" animation: bounceInLeft 10s ;">
-                    <div class="">
-                      <h2 >YOUR HEALTH</h2>
-                    </div>
-                    <div class="" >
-                      <h4 class="h-light" >Provide best quality health monitoring for you</h4>
-                    </div>
-                    <div class="well well-trans"style="color: white">
-                      <div class="wow fadeInRight" data-wow-delay="0.1s">
-                        <ul class="lead-list">
-                          <li><span class="fa fa-check-square-o fa-2x
-                              icon-success"></span> <span class="list"><strong>Choose your favourite services</strong><br />Don't forget to add someting</span></li>
-                          <li><span class="fa fa-check-square-o fa-2x
-                              icon-success"></span> <span class="list"><strong>Only use friendly environment</strong><br />Don't forget to add someting</span></li>
-                        </ul>
-                        <p class="text-right " >
-                          <a href="#" class="btn btn-skin btn-lg"style="background:white;color:#006ccf">Learn more <i class="fa fa-angle-right"></i></a>
-                        </p>
+            <div class=" tab-pane container active " id="FUTURES" aria-hidden="true" style="padding-top: 5%;padding-bottom: 5%;" >
+              <section id="intro" class="intro" style="font-family: 'IBM Plex Sans', sans-serif;">
+                <div class="intro-content">
+                  <div class="container"style="color: white">
+                       <div class="text-center">
+                          <h2 >YOUR HEALTH</h2>
+                          <h4 class="h-light" >Provide best quality health monitoring for you</h4>
+                        </div>
+                        
+                    <div class="row">
+                      <div class="col-lg-6" style=" animation: bounceInLeft 10s ;">
+                       
+                        <div class=" ">
+                          <div class="wow fadeInRight" data-wow-delay="0.1s">
+                            <ul class="lead-list">
+                              <li><span class="fa fa-check-square-o fa-2x
+                                  icon-success"></span> <span class="list"><strong>Choose your favourite services</strong><br />
+                                  <ul>
+                                    <li>
+                                      HEARTRATE MONITOR
+                                    </li>
+                                    <li>
+                                      BLOOD-GLUCOSE MONITOR
+                                    </li>
+                                    <li>
+                                      BLOOD-OXYGEN MONITOR
+                                    </li>
+                                    <li>
+                                      BLOOD-PRESSURE MONITOR
+                                    </li>
+                                    <li>
+                                      BODY MASS INDEX MONITOR
+                                    </li>
+                                    <li>
+                                      BODY MASS INDEX MONITOR
+                                    </li>
+                                  </ul>
+                                </span></li>
+                              <li><span class="fa fa-check-square-o fa-2x
+                                  icon-success"></span> <span class="list"><strong>USER friendly environment</strong><br />
+                                  <ul>
+                                    <li>
+                                      TABULAR REPRESENTATION OF MEASUREMENT
+                                    </li>
+                                    <li>
+                                      GRAPHICAL REPRESENTATION OF MEASUREMENT
+                                    </li>
+                                    <li>
+                                      EASY TO GET STARTED
+                                    </li>
+                                    <li>
+                                      BEST CUSTOMER SUPPORT
+                                    </li>
+                                  </ul>
+                                </span></li>
+                            </ul>
+                            
+                          </div>
+                        </div>
+                        
+
                       </div>
-                    </div>
-
-
-                  </div>
-                  <div class="col-lg-6"  style=" animation: bounceInDown 10s ;">
-                    <div class="">
-                      <img src="image/logo.jpg" class="img-responsive"
-                        alt="" />
+                      <div class="col-lg-4"  style=" animation: bounceInDown 10s ;">
+                        <div class="">
+                        <ul class="lead-list">
+                              <li><span class="fa fa-check-square-o fa-2x
+                                  icon-success"></span> <span class="list"><strong>PROVIDE PRIVACY AND sequrity SECURITY</strong><br />
+                                  <ul>
+                                    <li>
+                                     YOUR DATA ARE PROTECTED
+                                    </li>
+                                    <li>
+                                      WE DO NOT SHARE YOUR DATA TO OTHER'S!
+                                    </li>
+                                    <li>
+                                      WE MAKE SURE YOU HAVE STRONG PASSWORD
+                                    </li>
+                                </ul>
+                                </span></li>
+                            </ul>
+                            <p class="text-right " >
+                              <a href="#" class="btn btn-skin btn-lg"style="background:white;color:#006ccf">Learn more <i class="fa fa-angle-right"></i></a>
+                            </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
+              </section>
 
-          <div id="FUTURES_s" class="carousel slide" data-bs-ride="carousel">
-          <!-- Indicators/dots -->
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#FUTURES_s"
-              data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#FUTURES_s"
-              data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#FUTURES_s"
-              data-bs-slide-to="2"></button>
-            <button type="button" data-bs-target="#FUTURES_s"
-              data-bs-slide-to="3"></button>
-            <button type="button" data-bs-target="#FUTURES_s"
-              data-bs-slide-to="4"></button>
-          </div>
-          <!-- The slideshow/carousel -->
-          <div class="carousel-inner">
 
-            <div class="carousel-item active"style=" animation: swing 5s ; animation-delay: 5s;">
-              <img src="image/T (1).jpg" alt="Chicago" class="d-block"style="width:100%">
-
-            </div>
-            <div class="carousel-item" style=" animation: swing 5s ; ">
-              <img src="image/T (2).jpg" alt="New York" class="d-block"style="width:100%">
-              <!-- <div class="carousel-caption">
-                           <p>We love the Big Apple!</p>
-                           </div>   -->
-            </div>
-            <div class="carousel-item" style=" animation: swing 5s ;">
-              <img src="image/T (3).jpg" alt="New York" class="d-block"style="width:100%">
-              <!-- <div class="carousel-caption">
-                           <p>We love the Big Apple!</p>
-                           </div>   -->
-            </div>
-            <div class="carousel-item" style=" animation: swing 5s ; ">
-              <img src="image/T (4).jpg" alt="New York" class="d-block"style="width:100%">
-              <!-- <div class="carousel-caption">
-                           <p>We love the Big Apple!</p>
-                           </div>   -->
-            </div>
-            <div class="carousel-item" style=" animation: swing 5s ; ">
-              <img src="image/T (5).jpg" alt="New York" class="d-block"style="width:100%">
-              <!-- <div class="carousel-caption">
-                           <p>We love the Big Apple!</p>
-                           </div>   -->
             </div>
           </div>
-          <!-- Left and right controls/icons -->
-          <button class="carousel-control-prev" type="button"
-            data-bs-target="#FUTURES_s" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-          <button class="carousel-control-next" type="button"
-            data-bs-target="#FUTURES_s" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </button>
+
+          <div class="tab-pane container hiding" id="Gallery" style="padding-top: 5%;padding-bottom: 5%;color: white">
+          
+          <div class="slider">
+        
+        <input type="radio" name="toggle" id="btn-1" checked >
+        <input type="radio" name="toggle" id="btn-2">
+        <input type="radio" name="toggle" id="btn-3">
+        <input type="radio" name="toggle" id="btn-4">
+      
+        <div class="slider-controls">
+          <label for="btn-1"></label>
+          <label for="btn-2"></label>
+          <label for="btn-3"></label>
+          <label for="btn-4"></label>
+        </div>
+      
+        <ul class="slides">
+          <li class="slide">
+            <div class="slide-content">
+              <h2 class="slide-title">BLOOD PRESSURE</h2>
+              <p class="slide-text">
+                 <span class="list"><strong>Help with early diagnosis</strong><br />
+                    Self-monitoring can help your health care provider diagnose high blood pressure earlier than if you have only occasional blood pressure readings in a medical office.<br>
+                </span>
+                 <span class="list"><strong>Cut your health care costs</strong><br />
+                    Self-monitoring might help cut down on medical visits.
+                </span>
+                 <span class="list"><strong>Encourage better control</strong><br />
+                    Self-monitoring can give you a stronger sense of control over your health. Self-monitoring might help you feel more motivated to control your blood pressure with improved diet, physical activity and proper medication use.<br>
+                </span>
+              </p>
+              <a href="Home.php" class="slide-link">Learn more</a>
+            </div>
+            <p class="slide-image">
+              <img src="image/BP.jpg" class="img" alt="stuff" width="100%" height="100%">
+            </p>
+          </li>
+          <li class="slide">
+            <div class="slide-content">
+              <h2 class="slide-title">Exercise</h2>
+              <p class="slide-text">
+                <span class="list"><strong>Get Accountable</strong><br />
+                It can help you push a little harder with your workouts, too!<br>
+                </span>
+                <span class="list"><strong>Daily Motivation</strong><br />
+                  Another one of the advantages of fitness trackers is the visual progress. Your tracker can show you how many calories you’ve burned, how many steps you’ve taken, and how long you’ve been active.<br>
+                  They can also remind you when you aren’t getting that activity. This visual display of your progress can help you push harder, which leads to the next item on our list.<br>
+                </span>
+              </p>
+              <a href="Home.php" class="slide-link">Learn more</a>
+            </div>
+            <p class="slide-image">
+              <img src="image/exercise.jpg" class="img" alt="stuff" width="100%" height="100%">
+            </p>
+          </li>
+          <li class="slide">
+            <div class="slide-content">
+              <h2 class="slide-title">Glucose level</h2>
+              <p class="slide-text">
+                <span class="list"><strong>Briefness</strong><br />
+                  Provides information necessary for you and your healthcare provider to determine how well your treatment plan is working<br>
+                  Gives insight into how diet, exercise, stress, and illness affect your glucose levels<br>
+                  Reduces anxiety associated with not knowing how well you’re managing your diabetes between visits with your healthcare provider<br>
+                  Increases motivation to practice healthy habits<br>
+                  Helps you determine if your glucose levels are too high or too low to drive or operate heavy machinery<br>
+                </span>
+              </p>
+              <a href="Home.php" class="slide-link">Learn more</a>
+            </div>
+            <p class="slide-image">
+              <img src="image/Glucose.jpg" class="img" alt="stuff" width="100%" height="100%">
+            </p>
+          </li>
+          <li class="slide">
+            <div class="slide-content">
+              <h2 class="slide-title">Heartrate</h2>
+              <p class="slide-text">
+                <span class="list">
+                  <strong>Tracks progress and setbacks</strong><br />
+                  <strong>Real-time feedback</strong><br />
+                  Monitoring your heart rate gives you valuable data, both about your health and about your exercise progress. The measurement provides valuable insight into an individual's development in sport, and it is easy to monitor.<br>
+              </span>
+              </p>
+              <a href="Home.php" class="nav-link">Learn more</a>
+            </div>
+            <p class="slide-image">
+              <img src="image/heartrate.jpg" class="img" alt="stuff" width="100%" height="100%">
+            </p>
+          </li>
+        </ul>
+      </div>
+          
         </div>
         
-        <div class="carousel-item active wow fadeInUp" data-wow-offset="0"
-            data-wow-delay="1s">
-            <img src="./image/T (6).jpg" alt="Los Angeles" class=""style="width:100%">
-            
-          </div>
+
+
+      
   
   
   
@@ -286,8 +378,20 @@ autoplay
 
   </div>
 
-                      
-
+  <footer class="deneb_footer fixed-bottom">
+      
+      <div class="copyright_area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="copyright_text">
+                <p>Copyright &copy; 2023 All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
           </body>
 </html>
 

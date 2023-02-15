@@ -2,6 +2,9 @@
     <!-- Login page  -->
 <head>
 	<title>HMS</title>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
 <link rel="stylesheet" type="text/css" href="style1.css">
 
@@ -76,7 +79,7 @@ function checklen()
           <a class="nav-link js-scroll-trigger" href="index1.php#Gallery" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>Gallery</h6></a>
         </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index1.html#Contact" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>CONTACT</h6></a>
+              <a class="nav-link js-scroll-trigger" href="contact.html" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>CONTACT</h6></a>
             </li>
           </li>
           <li class="nav-item" style="margin-right: 40px;">
@@ -190,6 +193,20 @@ function checklen()
                 </div>
 
             </div>
+            <footer class="deneb_footer fixed-bottom">
+      
+      <div class="copyright_area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="copyright_text">
+                <p>Copyright &copy; 2023 All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     </body>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

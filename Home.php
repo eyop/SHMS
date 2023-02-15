@@ -734,7 +734,20 @@ li:active {
   </div>
 
                       
-
+  <footer class="deneb_footer fixed-bottom">
+      
+      <div class="copyright_area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="copyright_text">
+                <p>Copyright &copy; 2023 All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
           </body>
 </html>
 

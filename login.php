@@ -57,7 +57,7 @@
                   <li class="nav-item" style="margin-right: 40px;">
                     <a class="nav-link js-scroll-trigger" href="index1.html#FUTURES" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>FUTURES</h6></a>
                     <li class="nav-item">
-                      <a class="nav-link js-scroll-trigger" href="index1.html#Contact" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>CONTACT</h6></a>
+                      <a class="nav-link js-scroll-trigger" href="contact.html" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>CONTACT</h6></a>
                     </li>
                   </li>
                   <li class="nav-item" style="margin-right: 40px;">

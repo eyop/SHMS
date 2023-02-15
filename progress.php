@@ -38,6 +38,7 @@ $contact = $_SESSION['contact'];
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
   
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   
   
   
@@ -66,7 +67,7 @@ $contact = $_SESSION['contact'];
              
   <style >
     .bg-primary {
-    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+      background: -webkit-linear-gradient(left, #7e33df, #5900ff);
 }
 .list-group-item.active {
     z-index: 2;
@@ -115,7 +116,7 @@ li:active {
         <a class="nav-link" href="profile.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Profile</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link"style=" margin-left: 100px" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+        <a class="nav-link" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
       </li>
        <li class="nav-item">
         <a class="nav-link" href="#"></a>
@@ -226,7 +227,21 @@ li:active {
            </div>
 </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
+    <footer class="deneb_footer fixed-bottom">
+      
+      <div class="copyright_area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="copyright_text">
+                <p>Copyright &copy; 2023 All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="graph.js"></script>
           <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
           <!-- <script src="vendor/Chart.js/Chart.js"></script> -->
