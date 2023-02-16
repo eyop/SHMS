@@ -1,0 +1,44 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "text-align: -webkit-match-parent",
+          "-webkit-text-size-adjust",
+          "-webkit-tap-highlight-color",
+          "text-decoration-skip-ink",
+          "@-ms-viewport",
+          "@-ms-viewport",
+          "@-ms-viewport",
+          "@-ms-viewport"
+        ]
+      }
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_chr <= 109",
+    "not and_ff <= 109",
+    "not chrome <= 109",
+    "not edge <= 109",
+    "not firefox <= 109",
+    "not ios_saf <= 16.3",
+    "not opera <= 94",
+    "not safari <= 16.3",
+    "not samsung <= 19",
+    "not and_chr <= 109",
+    "not and_ff <= 109",
+    "not chrome <= 109",
+    "not edge <= 109",
+    "not firefox <= 109",
+    "not ios_saf <= 16.3",
+    "not opera <= 94",
+    "not safari <= 16.3",
+    "not samsung <= 19"
+  ]
+}
