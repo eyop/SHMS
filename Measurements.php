@@ -49,13 +49,13 @@ $contact = $_SESSION['contact'];
   <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
 
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="lib/js/bootstrap.min-3.4.1.js">
+  <link rel="stylesheet" href="lib/css/3.4.1-bootstrap.min.css">
 
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
   <script src="lib/jquery/3.6.1-jquery.min.js"></script>
 
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-  <script src="lib/js/bootstrap.min-3.4.1.js"></script>
+  <!-- <script src="lib/js/bootstrap.min-3.4.1.js"></script> -->
 
 
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"> -->
@@ -67,7 +67,7 @@ $contact = $_SESSION['contact'];
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style="animation: fadeInRight 1s ;transition-delay: 5s;">
   <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> YOUR HEALTH </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
                          <script>
@@ -108,6 +108,27 @@ li:active {
     border-color: #007bff;
     font-size: larger;
 }
+.navbar {
+    overflow: hidden;
+    
+    color: white;
+    position: fixed;
+    top: 0;
+    width: auto;
+    border-top-right-radius: 10px;
+    border: #f2f2f2 2;
+    padding: 0;
+    
+  }
+  .nav-link{
+  color: white;"
+}
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 10vh;
+  }
+
 
   </style>
 
@@ -152,7 +173,7 @@ li:active {
     <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $username ?> 
    </h3>
     <div class="row">
-  <div class="col-md-4" style="max-width:30%; margin-top: 3%;">
+  <div class="col-md-4 " style="max-width:30%; margin-top: 3%;">
     <div class="list-group" id="list-tab" role="tablist">
       <a class="list-group-item list-group-item-action active" id="list-dash-list" data-toggle="list" href="#list-dash" role="tab" aria-controls="home">Dashboard</a>
       <a class="list-group-item list-group-item-action" href="#all-hist" id="list-pat-list" role="tab" data-toggle="list" aria-controls="home">ALL History</a>
@@ -581,10 +602,11 @@ li:active {
 
 <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> -->
 
-<script src="lib.js/bootstrap-4.0.0-beta.min.js"></script>
+<script src="lib/js/bootstrap-4.0.0-beta.min.js"></script>
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.all.min.js"> -->
 <script src="lib/js/sweetalert2.all.min.js" ></script>
+
 
 </body>
 </html>

@@ -36,7 +36,7 @@ if(isset($_POST['patsub1'])){
           $_SESSION['gender'] = $_POST['gender'];
           $_SESSION['contact'] = $_POST['contact'];
           $_SESSION['email'] = $_POST['email'];
-          header("Location:Home.php");
+          header("Location:Home1.php");
       }
       $query1 = "select * from users;";
       $result1 = mysqli_query($con,$query1);

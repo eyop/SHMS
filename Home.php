@@ -198,7 +198,35 @@ if (isset($_POST['app-submit'])) {
       let height= document.getElementById('BMI_h').value;
       let weight= document.getElementById('BMI_w').value;
       let bmi = weight/((height/100)*(height/100));
+      var m= document.getElementById('stat');
+     
       
+
+      if(bmi<18.5)
+      {
+        document.getElementById('stat').innerHTML = 'You are UNDERWEIGHT!';
+        document.getElementById('stat').style.color = "#6b9ed0";
+
+      }else if(bmi>18.5 && bmi<25)
+      {
+        document.getElementById('stat').innerHTML = 'You are NORMAL!';
+        document.getElementById('stat').style.color = "lightgreen";
+
+      }else if(bmi>25 && bmi<30)
+      {
+        document.getElementById('stat').innerHTML = 'You are OVERWEIGHT!';
+        document.getElementById('stat').style.color = "#ffff00";
+
+      }else if(bmi>30 && bmi<35)
+      {
+        document.getElementById('stat').innerHTML = 'You are an OBESE!';
+        document.getElementById('stat').style.color = "orange";
+
+      }else{
+        document.getElementById('stat').innerHTML = 'You are EXTREMELY OBESE!';
+        document.getElementById('stat').style.color = "red";
+
+      }
       document.getElementById("BMI_r").value = Math. round(bmi);
       
 
@@ -206,13 +234,54 @@ if (isset($_POST['app-submit'])) {
 
                             
       function undisableTxt() {
+        
         document.getElementById("EX_d").disabled = false;
+        
+        var d=document.getElementById("EX_state");
+        var display=d.options[d.selectedIndex].text;
+        
+        if(display== "Running" ||display== "Walking"||display== "Football"||display== "Plank"||display== "Yoga"||display== "Swimming"||display== "Boxing")
+        {
+          document.getElementById('tesst').innerHTML = "duration in minutes";
+        }else if(display== "Steps" ||display== "Benchpress"||display== "Pushups"||display== "Squats"){
+          document.getElementById('tesst').innerHTML = "number";
+        }
+                              
+        
+      
       }
       function calval(){
         let cv=document.getElementById("EX_d");
-       
-        // document.getElementsById("EX_c").value=( cv.value*4);
-        document.getElementById("EX_cal").value=( cv.value*4);
+        var dm=document.getElementById("EX_state");
+        var displays=dm.options[dm.selectedIndex].text;
+        
+        if(displays== "Running"){document.getElementById("EX_cal").value =  Math.round( cv.value*10);}
+        else if(displays== "Walking"){
+          document.getElementById("EX_cal").value = Math.round( cv.value*8.3);}
+
+        else if(displays== "Football"){
+          document.getElementById("EX_cal").value = Math.round( cv.value*3.54);}
+        
+        else if(displays== "Plank"){
+          document.getElementById("EX_cal").value = Math.round( cv.value*3.5);}
+        else if(displays== "Yoga"){
+          document.getElementById("EX_cal").value = Math.round( cv.value*3.28);}
+        else if(displays== "Swimming"){
+          document.getElementById("EX_cal").value = Math.round( cv.value*544);}
+        else if(displays== "Boxing"){
+          document.getElementById("EX_cal").value = Math.round( cv.value*12.2);}
+        else if(displays== "Steps"){
+          document.getElementById("EX_cal").value = Math.round( cv.value*0.05);}
+        else if(displays== "Benchpress"){
+          document.getElementById("EX_cal").value = Math.round( cv.value*3);}
+        else if(displays== "Pushups"){
+          document.getElementById("EX_cal").value = Math.round( cv.value*0.32);}
+        else if(displays== "Squats"){
+          document.getElementById("EX_cal").value = Math.round( cv.value*0.32);}
+      
+
+        // document.getElementById("EX_cal").value=( cv.value*4);
+        
       }
 
 
@@ -470,12 +539,12 @@ li:active {
                    <div class="md-form ">
                      <i class="fas fa-envelope prefix grey-text"></i>
                      <label data-error="wrong" data-success="right" for="OXY_in">SpO2 value:</label>
-                     <input type="number" id="OXY_v" class="form-control " name="OXY_v"><label>%</label>
+                     <input type="number" id="OXY_v" class="form-control " name="OXY_v"placeholder="%" required>
                    </div>
                    <div class="md-form ">
                          <i class="fas fa-lock prefix grey-text"></i>
                          <label data-error="wrong" data-success="right" for="OXY_state-pass">Select Current Status:</label>
-                         <select class="form-control" id="OXY_state" name="OXY_state">
+                         <select class="form-control" id="OXY_state" name="OXY_state"required>
                                <option>General</option>
                                <option>Resting</option>
                                <option>Exercise Lightly</option>
@@ -512,12 +581,12 @@ li:active {
                    <div class="md-form ">
                      <i class="fas fa-envelope prefix grey-text"></i>
                      <label data-error="wrong" data-success="right" for="HRM_in">bpm value:</label>
-                     <input type="number" id="HRM_v" min="15" max="300" class="form-control " name="HRM_v">
+                     <input type="number" id="HRM_v" min="15" max="300" class="form-control " name="HRM_v" required>
                    </div>
                    <div class="md-form ">
                          <i class="fas fa-lock prefix grey-text"></i>
                          <label data-error="wrong" data-success="right" for="Sstate-pass">Select Current Status:</label>
-                         <select class="form-control" id="HRM_state" name="HRM_state">
+                         <select class="form-control" id="HRM_state" name="HRM_state"required>
                                <option>General</option>
                                <option>Resting</option>
                                <option>After Exercise</option>
@@ -554,25 +623,25 @@ li:active {
                                          <div class="md-form ">
                                            <i class="fas fa-envelope prefix grey-text"></i>
                                            <label data-error="wrong" data-success="right" for="BPS_in">SYSTOLIC (MMHG):</label>
-                                           <input type="range" id="BPS_v" value="121" min="121" max="300" class="form-control " name="BPS_v" oninput="this.nextElementSibling.value = this.value">
+                                           <input type="range" id="BPS_v" value="121" min="121" max="300" class="form-control " name="BPS_v" oninput="this.nextElementSibling.value = this.value "required>
                                            <output style="text-align: center;font-size: 20px;font-weight: bold;"> 121</output><br>
                                     
                                          </div>
                                          <div class="md-form ">
                                          <i class="fas fa-envelope prefix grey-text"></i>
                                          <label data-error="wrong" data-success="right" for="BPD_in">DIASTOLIC (MMHG)</label>
-                                           <input type="range" id="BPD_v" value="121" min="121" max="300" class="form-control " name="BPD_v" oninput="this.nextElementSibling.value = this.value">
+                                           <input type="range" id="BPD_v" value="121" min="121" max="300" class="form-control " name="BPD_v" oninput="this.nextElementSibling.value = this.value "required>
                                            <output style="text-align: center;font-size: 20px;font-weight: bold;"> 121</output><br>
                                            </div>
                                            <div class="md-form ">
                                              <i class="fas fa-envelope prefix grey-text"></i>
                                              <label data-error="wrong" data-success="right" for="HRM_in">bpm :</label>
-                                             <input type="number" id="HRM_v" min="15" max="300"class="form-control " name="HRM_v"><br>
+                                             <input type="number" id="HRM_v" min="15" max="300"class="form-control " name="HRM_v"required><br>
                                            </div>
                                          <div class="md-form ">
                                                <i class="fas fa-lock prefix grey-text"></i>
                                                <label data-error="wrong" data-success="right" for="Sstate-pass"> Medication:</label>
-                                               <select class="form-control" id="BP_state" name="BP_state">
+                                               <select class="form-control" id="BP_state" name="BP_state"required>
                                                      <option>None</option>
                                                      <option>Taken</option>
                                                      <option>Non taken</option>
@@ -607,12 +676,12 @@ li:active {
                    <div class="md-form ">
                      <i class="fas fa-envelope prefix grey-text"></i>
                      <label data-error="wrong" data-success="right" for="Glucose_in">MG/DL value:</label>
-                     <input type="number" id="Glucose_v" class="form-control " name="Glucose_v"><label>%</label>
+                     <input type="number" id="Glucose_v" class="form-control " name="Glucose_v"placeholder="%" required>
                    </div>
                    <div class="md-form ">
                          <i class="fas fa-lock prefix grey-text"></i>
                          <label data-error="wrong" data-success="right" for="Sstate-pass">Select Current Status:</label>
-                         <select class="form-control" id="Glucose_state" name="Glucose_state">
+                         <select class="form-control" id="Glucose_state" name="Glucose_state"required>
                            <option>Fasting</option>
                            <option>Pre-meal</option>
                            <option>Post-meal</option>
@@ -645,13 +714,14 @@ li:active {
                                     <div class="modal-content">
                                      <div class="modal-header">
                                         <h4 class="modal-title " id="EX-t">Exercise</h4>
-                                       
+                                   
                                      </div>
                                      <div class="modal-body">
                                        <div class="modal-body mx-3">
                                          <div class="md-form ">
+                                        
                                            <i class="fas fa-envelope prefix grey-text"></i>
-                                           <select class="form-control" id="EX_state" name="EX_state"  onchange="undisableTxt()"  required>
+                                           <select class="form-control" id="EX_state" name="EX_state"  onchange="undisableTxt();"  required>
                                             <option value="">Choose an Exercise</option>
                                             <option value="running"> Running</option>
                                             <option value="steps">Steps</option>
@@ -667,8 +737,8 @@ li:active {
                                         </select><br>
                                          </div>
                                          <div class="md-form ">
-                                               <label data-error="wrong" data-success="right" for="Sstate-pass">Exercise duration:</label>
-                                          <input type="number" style="" min="0" id="EX_d"class="form-control " name="EX_d" placeholder="in Second *" onkeyup="calval();" disabled /><br>
+                                               <label data-error="wrong" data-success="right" for="Sstate-pass"id="tesst">Exercise duration:</label>
+                                          <input type="number" style="" min="0" id="EX_d"class="form-control " name="EX_d"  onkeyup="calval();" disabled required/><br>
                                           </div>
 
                                           <div class="md-form ">
@@ -704,12 +774,12 @@ li:active {
                  <div class="md-form ">
                      <i class="fas fa-envelope prefix grey-text"></i>
                      <label data-error="wrong" data-success="right" for="BMI_in_w">Weight:</label>
-                     <input type="number" id="BMI_w"class="form-control " name="BMI_w"><label>KG</label>
+                     <input type="number" id="BMI_w"class="form-control " name="BMI_w"required><label>KG</label>
                    </div>
                  <div class="md-form ">
                    <i class="fas fa-envelope prefix grey-text"></i>
                    <label data-error="wrong" data-success="right" for="BMI_in_h">height:</label>
-                   <input type="number" id="BMI_h" class="form-control " name="BMI_h" ><label>CM</label>
+                   <input type="number" id="BMI_h" class="form-control " name="BMI_h" placeholder="in CM" required>
                  </div>
                  <div class="md-form ">
                    <i class="fas fa-envelope prefix grey-text"></i>
@@ -718,7 +788,7 @@ li:active {
                  </div>
                  <div class="md-form ">
                    <i class="fas fa-envelope prefix grey-text"></i>
-                   <!-- <label data-error="wrong" data-success="right" for="BMI_in_r">Age:</label> -->
+                   <label data-error="wrong" data-success="right" for="BMI_in_r" id="stat">result</label>
                    <input type="number" id="BMI_r" class="form-control" name="BMI_r" >
                    <!-- <button type="button" class="btn btn-secondary"   >Calculate</button> -->
                  </div>

@@ -83,7 +83,7 @@
 
         </header>
         <main class="" style="  color: white" >
-          <div style="margin-top: 12%;   ">
+          <div style="margin-top: 10%;   ">
 
             <div class="tab-pane  active" id="#" style="animation: rotateIn 4s ;" >
               <video
@@ -292,7 +292,7 @@
         <!-- Button trigger modal -->
 
       </div>
-      <footer class="deneb_footer fixed-bottom">
+      <footer class="deneb_footer "style="position: fixed;left: 0;bottom: 0;width: 100%;background-color: gray;color: white;text-align: center;">
       
       <div class="copyright_area">
         <div class="container">

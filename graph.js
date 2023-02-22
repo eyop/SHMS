@@ -204,6 +204,56 @@ $(document).ready(function(){
       
 
 
+$(document).ready(function(){
+  $.ajax({
+    url: "http://localhost/SHMS/Totalexdata.php",
+    method: "GET",
+    success: function(data) {
+      console.log(data);
+      var exercisetype = [];
+     
+      var calories = [];
+  
+      for(var i in data) {
+        if(uidm==data[i].uid)
+          {
+        exercisetype.push(data[i].exercisetype);
+        // duration.push(data[i].duration);
+        calories.push(data[i].calories);
+          }
+      }
+//Total Score
+      var chartdata5 = {
+        labels: exercisetype,
+        datasets : [
+          {
+            label: 'Total Score',
+            backgroundColor: [
+              'rgb(255, 99, 132)',
+              'rgb(54, 162, 235)',
+              'rgb(255, 205, 86)'
+            ],
+            borderColor: 'rgba(200, 200, 200, 0.75)',
+            hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
+            hoverBorderColor: 'rgba(200, 200, 200, 1)',
+            hoverOffset: 50,
+            data: calories,
+          }
+        ]
+      };
+
+      var ctx5 = $("#myChart5");
+
+      var barGraph = new Chart(ctx5, {
+        type: 'pie',
+        data: chartdata5
+      });
+    },
+    error: function(data) {
+      console.log(data);
+    }
+  });
+});
 
 // $(document).ready(function(){
 //   $.ajax({

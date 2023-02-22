@@ -17,7 +17,7 @@ if(isset($_POST['patsub'])){
       $_SESSION['contact'] = $row['contact'];
       $_SESSION['email'] = $row['email'];
     }
-		header("Location:Home.php");
+		header("Location:Home1.php");
 	}
   else {
     echo("<script>alert('Invalid Username or Password. Try Again!');

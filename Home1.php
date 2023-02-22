@@ -160,7 +160,7 @@ li:active {
 <body style=" background-color: #011a3e;">
 <div class="container-fluid " style="animation: rotateInDownLeft 3s ;transition-delay: 1s;">
 
-<h3 style = "color: white; margin-top: 5%;  margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $username; ?> 
+<h3 style = "color: white; margin-top: 8%;  margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $username; ?> 
        </h3>
 
       <div class="tab-pane  active" id="list-dash" role="tabpanel" aria-labelledby="list-dash-list" style="animation: flip  1s  ;transition-delay: 1s;" >

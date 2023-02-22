@@ -47,7 +47,7 @@ $contact = $_SESSION['contact'];
   
 
        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.css" rel="stylesheet"> -->
-       <link href="lib/js/5.2.3-bootstrap.bundle.min.js" rel="stylesheet">
+       <link href="lib/css/5.2.3-bootstrap.css" rel="stylesheet">
 
 
        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -151,7 +151,9 @@ li:active {
     li{
   margin-left: 15px
 }
-<style>
+
+
+
   .graphBox{
     position: relative;
     width: 100%;
@@ -177,75 +179,71 @@ li:active {
          padding: 1rem 1rem;
          margin-bottom: 2%;
   }
+  .chart-container{
+  display : flex;
+align-items: center;
+justify-content: center;
+width:100%;
+min-height: 50%;
+margin:1%
+
+  }
+  .chart{
+    padding: 2rem;
+border: 1px solid #f49131;
+border-radius: 1rem;
+
+box-shadow: 0 0 16px rgba(0,0,0,0.);
+
+  }
+
+
+ 
 </style>
-  <script>
-  
-
-
-    </script>
-
+ 
 <body style="">
 <div class="container-fluid" style="margin-top:10%;" style="animation: rotateInDownLeft 3s ;transition-delay: 1s;">
     <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome  <?php echo $username ?> </h3> 
     <input type="number" id="uid" name="uid"value=<?php echo $uid ?> hidden ></input>
-    <div class="row">
-  <div class="col-md-4 position-fixed" >
-    <div class="list-group" id="list-tab" role="tablist"style="max-width:30%; margin-top: 3%;">
-      <a class="list-group-item list-group-item-action active" id="list-dash-list" data-toggle="list" href="#list-dash" role="tab" aria-controls="home">Dashboard</a>
-      <a class="list-group-item list-group-item-action" href="#all-hist" id="list-pat-list" role="tab" data-toggle="list" aria-controls="home">ALL History</a>
-      <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">HEART RATE History</a>
-      <a class="list-group-item list-group-item-action" href="#list-pres" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Blood OXYGEN History</a>
-      <a class="list-group-item list-group-item-action" href="#list-pre" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Blood Glucose History</a>
-      <a class="list-group-item list-group-item-action" href="#list-pr" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Blood Pressure History</a>
-      <a class="list-group-item list-group-item-action" href="#list-pr" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">BODY MASS INDEX History</a>
-      <a class="list-group-item list-group-item-action" href="#list-pr" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Medication History</a>
-      <a class="list-group-item list-group-item-action" href="#list-pr" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home">Exercise History</a>
-      
-    </div><br>
-  </div>
  
-</div>
    </div>
-<div class=" container ">
-<!-- <p>sdfasdfasdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p> -->
-           <div class="chart-container box" style="animation: flip  5s  ;transition-delay: 5s;position: relative; height:auto; width:auto">
+<div class=" container  ">
+
+<div class="chart-container  " style="animation: flip  5s  ;transition-delay: 5s;position: relative; ">
+          <div>
+            <h3>Today Score </h3>
+          </div>
+<!--       -->
+           <canvas class=" chart " id="myChart4"alt="TODAY RECORDED VALUE"></canvas>
+           </div>
+           <div class="chart-container " style="animation: flip  5s  ;transition-delay: 5s;position: relative; ">
            <!-- heartrates Score        -->
-           <canvas  id="mycanvas"></canvas>
+           <canvas class=" chart "  id="mycanvas"></canvas>
            </div>
-           <!-- <p>sdfasdfasdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p> -->
 
-           <div class="chart-container box" style="animation: flip  5s  ;transition-delay: 5s;position: relative; height:auto; width:auto">
+           <div class="chart-container " style="animation: flip  5s  ;transition-delay: 5s;position: relative; ">
                 <!--  //bloodoxygen Score -->
-           <canvas  id="myChart1"></canvas>
+           <canvas class=" chart " id="myChart1"></canvas>
            </div>
-           <!-- <p>sdfasdfasdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p> -->
-
-           <!-- Optional JavaScript -->
-           <div class="chart-container box" style="animation: flip  5s  ;transition-delay: 5s;position: relative;  height:auto; width:auto">
-                  <!-- //glucose Score -->
-           <canvas id="myChart2"></canvas>
-           </div>
-           <!-- <p>sdfasdfasdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p> -->
-
          
-           <div class="chart-container box" style="animation: flip  5s  ;transition-delay: 5s;position: relative;  height:auto; width:auto">
-           <!-- Today Score        -->
-           <canvas  id="myChart4"></canvas>
+           <div class="chart-container " style="animation: flip  5s  ;transition-delay: 5s;position: relative;  ">
+                  <!-- //glucose Score -->
+           <canvas class=" chart "id="myChart2"></canvas>
            </div>
-           <!-- <p>sdfasdfasdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p> -->
 
-           <div class="chart-container box" style="animation: flip  5s  ;transition-delay: 5s;position: relative;  height:auto; width:auto">
+           <div class="chart-container " style="animation: flip  5s  ;transition-delay: 5s;position: relative;  ">
                   <!--   //bmi Score -->
-           <canvas  id="myChart3"></canvas>
+           <canvas class=" chart " id="myChart3"></canvas>
            </div>
-           <!-- <p>sdfasdfasdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p> -->
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-           <div class="chart-container box" style="animation: flip  5s  ;transition-delay: 5s;position: relative;  height:auto; width:auto">
-                  <canvas  id="myChart6"></canvas>
+           
+           <div class="chart-container " style="animation: flip  5s  ;transition-delay: 5s;position: relative;  ">
+                  <!--   to be con -->
+           <canvas class=" chart " id="myChart5"></canvas>
            </div>
+
+    
 </div>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <footer class="deneb_footer fixed-bottom">
       
       <div class="copyright_area">
@@ -270,12 +268,13 @@ li:active {
 
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+      <!-- <script src="lib/jquery/jquery-3.2.1.slim.min.js"></script> -->
     
       <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
-    <script src="lib/js/popper.min.js"></script>
+    <!-- <script src="lib/js/bootstrap-4.0.0-beta.min.js"></script> -->
     
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> -->
-   
+     <script src="lib/js/popper.min.js"></script>
    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.all.min.js"> -->
    <script src="lib/js/sweetalert2.all.min.js">
 

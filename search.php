@@ -83,7 +83,7 @@ if(isset($_POST['search_data']))
   $row=mysqli_fetch_array($result);
   if($row['uid']=="" & $row['fname']==""& $row['lname']==""  & $row['heartrate']==""  & $row['heartrate_state']==""& $row['bloodoxygen']==""  & $row['bloodoxygen_state']=="" & $row['glucose']==""& $row['glucose_status']=="" & $row['BP_SYSTOLIC']=="" & $row['BP_DIASTOLIC']==""& $row['bmi']=="" & $row['time']==""){
     echo "<script> alert('No entries found!'); 
-          window.location.href = 'adminpage.php#list-doc';</script>";
+          window.location.href = 'Measurements.php';</script>";
   }
   else {
     echo "<div class='container-fluid' style='margin-top:50px;'>
@@ -166,7 +166,7 @@ if(isset($_POST['search_exercise']))
   $row=mysqli_fetch_array($result);
   if( $row['fname']=="" & $row['lname']==""  & $row['exercisetype']==""  & $row['duration']==""& $row['calories']=="" & $row['time']==""){
     echo "<script> alert('No entries found!'); 
-          window.location.href = 'adminpage.php#list-doc';</script>";
+          window.location.href = 'Measurements.php';</script>";
   }
   else {
     echo "<div class='container-fluid' style='margin-top:50px;'>
