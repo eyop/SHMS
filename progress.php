@@ -17,7 +17,7 @@ $contact = $_SESSION['contact'];
 <html lang="en">
 <head>
 
-  <title>Example</title>
+  <title>Progress</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,11 +74,13 @@ $contact = $_SESSION['contact'];
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"> -->
 
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
-<link rel="stylesheet" href="lib/css/4.0.0-alpha.6-bootstrap.min.css">
+
+<!-- carefull -->
+<!-- <link rel="stylesheet" href="lib/css/4.0.0-alpha.6-bootstrap.min.css"> -->
   <!-- Latest compiled JavaScript -->
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style="animation: fadeInLeft 1s ;transition-delay: 5s;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style="position: fixed; animation: fadeInLeft 1s ;transition-delay: 5s;">
   <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> YOUR HEALTH </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -86,7 +88,7 @@ $contact = $_SESSION['contact'];
              
   <style >
     .bg-primary {
-      background: -webkit-linear-gradient(left, #7e33df, #5900ff);
+      background: -webkit-linear-gradient(left, #001427, #001427);
 }
 .list-group-item.active {
     z-index: 2;
@@ -201,18 +203,16 @@ box-shadow: 0 0 16px rgba(0,0,0,0.);
  
 </style>
  
-<body style="">
-<div class="container-fluid" style="margin-top:10%;" style="animation: rotateInDownLeft 3s ;transition-delay: 1s;">
+<body style="background-color: #FFFFFA;">
+<div class="container-fluid"  style="margin-top: 5%; animation: rotateInDownLeft 3s ;transition-delay: 1s;">
     <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome  <?php echo $username ?> </h3> 
     <input type="number" id="uid" name="uid"value=<?php echo $uid ?> hidden ></input>
  
    </div>
 <div class=" container  ">
 
-<div class="chart-container  " style="animation: flip  5s  ;transition-delay: 5s;position: relative; ">
-          <div>
-            <h3>Today Score </h3>
-          </div>
+<div class="chart-container  " style=" animation: flip  5s  ;transition-delay: 5s;position: relative; ">
+       
 <!--       -->
            <canvas class=" chart " id="myChart4"alt="TODAY RECORDED VALUE"></canvas>
            </div>
@@ -244,10 +244,10 @@ box-shadow: 0 0 16px rgba(0,0,0,0.);
 
     
 </div>
-    <footer class="deneb_footer fixed-bottom">
+    <footer class="deneb_footer " >
       
       <div class="copyright_area">
-        <div class="container">
+        <div class="container"style="background-color:#BE97C6;">
           <div class="row">
             <div class="col-lg-12">
               <div class="copyright_text">

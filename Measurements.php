@@ -16,7 +16,7 @@ $contact = $_SESSION['contact'];
 ?>
 <html lang="en">
 <head>
-  <title>Example</title>
+  <title>Measurements</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,7 +61,9 @@ $contact = $_SESSION['contact'];
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"> -->
 
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
-<link rel="stylesheet" href="lib/css/4.0.0-alpha.6-bootstrap.min.css">
+
+<!-- carefull -->
+<!-- <link rel="stylesheet" href="lib/css/4.0.0-alpha.6-bootstrap.min.css"> -->
   <!-- Latest compiled JavaScript -->
 </head>
 <body>
@@ -79,7 +81,7 @@ $contact = $_SESSION['contact'];
                           </script>
   <style >
     .bg-primary {
-    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    background: -webkit-linear-gradient(left, #000000, #000000);
 }
 .list-group-item.active {
     z-index: 2;
@@ -169,7 +171,7 @@ li:active {
   </style>
 
 <body style="">
-<div class="container-fluid" style="margin-top:10%;" style="animation: rotateInDownLeft 3s ;transition-delay: 1s;">
+<div class="container-fluid"  style="animation: rotateInDownLeft 3s ;transition-delay: 1s;margin-top:3%;">
     <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $username ?> 
    </h3>
     <div class="row">
@@ -202,7 +204,7 @@ li:active {
                               
                               <p class="cl-effect-1">
                                 <a href="#list-home" onclick="clickDiv('#list-home-list')">
-                                  Measure
+                                  Show
                                 </a>
                               </p>
                             </div>
@@ -218,7 +220,7 @@ li:active {
                            
                              <p class="links cl-effect-1">
                                <a href="#list-oxy" onclick="clickDiv('#list-oxy-list')">
-                               Measure
+                               Show
                                </a>
                              </p>
                            </div>
@@ -232,7 +234,7 @@ li:active {
                                                   
                             <p class="links cl-effect-1">
                               <a href="#list-glu" onclick="clickDiv('#list-glu-list')">
-                                Measure
+                              Show
                               </a>
                             </p>
                           </div>
@@ -248,7 +250,7 @@ li:active {
                           
                             <p class="cl-effect-1">
                               <a href="#list-pre" onclick="clickDiv('#list-pre-list')">
-                              Measure
+                              Show
                               </a>
                             </p>
                           </div>
@@ -265,7 +267,7 @@ li:active {
                           
                             <p class="cl-effect-1">
                               <a href="#list-bmi" onclick="clickDiv('#list-bmi-list')">
-                              Measure
+                              Show
                               </a>
                             </p>
                           </div>
@@ -281,7 +283,7 @@ li:active {
                           
                             <p class="cl-effect-1">
                               <a href="#list-ex" onclick="clickDiv('#list-ex-list')">
-                              Measure
+                              Show
                               </a>
                             </p>
                           </div>
@@ -302,7 +304,7 @@ li:active {
                   <div class="col-md-8"><input type="date"  class="form-control" name="date"format="yyyy-mm-dd"min="2022-02-20" max="2032-02-20" required></div><br><br>
                   
                 </div>
-          <input type="submit" name="search_data" value="search data" class="btn btn-primary" onclick="confirm('do you really want to delete?')">
+          <input type="submit" name="search_data" value="search data" class="btn btn-primary" >
         </form>
 
           <!-- SELECT * FROM `records` WHERE `time`=("2023-02-03 13:06:06"); -->
@@ -534,7 +536,7 @@ li:active {
                   <div class="col-md-8"><input type="date"  class="form-control" name="date"format="yyyy-mm-dd"min="2022-02-20" max="2032-02-20" required></div><br><br>
                   
                 </div>
-          <input type="submit" name="search_exercise" value="search data" class="btn btn-primary" onclick="confirm('do you really want to Search?')">
+          <input type="submit" name="search_exercise" value="search exercise" class="btn btn-primary" onclick="confirm('do you really want to Search?')">
         </form>
 
   <table class="table table-hover">
@@ -574,7 +576,7 @@ li:active {
   
 </div>
    </div>
-   <footer class="deneb_footer fixed-bottom">
+   <footer class="deneb_footer "style="background-color:#587B7F" >
       
       <div class="copyright_area">
         <div class="container">

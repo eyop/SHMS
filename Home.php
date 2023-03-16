@@ -121,7 +121,7 @@ if (isset($_POST['app-submit'])) {
   
     $query = mysqli_query($con, "insert into exercise(uid,fname,lname,gender,email,contact,exercisetype,duration,calories) values($uid,'$fname','$lname','$gender','$email','$contact','$EX_State','$EX_D','$EX_C')");
     if ($query) {
-      echo "<script>alert('Your appointment successfully booked');</script>";
+      echo "<script>alert('Your Data successfully Saved');</script>";
     } else {
       echo "<script>alert('Unable to process your request. Please try again!');</script>";
     }
@@ -130,7 +130,7 @@ if (isset($_POST['app-submit'])) {
     $query = mysqli_query($con, "insert into records(uid,fname,lname,gender,email,contact,heartrate,heartrate_state,bloodoxygen,bloodoxygen_state,BP_SYSTOLIC,BP_DIASTOLIC,BP_state,glucose,glucose_status,weight,height,Age,bmi) values($uid,'$fname','$lname','$gender','$email','$contact','$bpm','$bpmstate','$oxygen','$oxygenstate','$BPS_v','$BPD_v','$BP_state','$Glucose','$Glucosestate','$BMIwight','$BMI_h','$BMI_a','$BMI_R')");
 
     if ($query) {
-      echo "<script>alert('Your appointment successfully booked');</script>";
+      echo "<script>alert('Your Data successfully Saved');</script>";
     } else {
       echo "<script>alert('Unable to process your request. Please try again!');</script>";
     }
@@ -145,7 +145,7 @@ if (isset($_POST['app-submit'])) {
 
 <html lang="en">
 <head>
-  <title>Example</title>
+  <title>RECORD</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -288,7 +288,8 @@ if (isset($_POST['app-submit'])) {
  </script>
   <style >
     .bg-primary {
-      background:-webkit-linear-gradient(left, #1fb914, #52db2d);
+      background:-webkit-linear-gradient(left, #008148, #008148);
+      color: black;
 }
 .list-group-item.active {
   z-index: 2;
@@ -345,7 +346,7 @@ li:active {
   
   </style>
 
-<div class="collapse navbar-collapse " id="navbarSupportedContent"  style="animation: bounceOutDown 1s ;transition-delay: 1s;" >
+<div class="collapse navbar-collapse " id="navbarSupportedContent"  style="animation: bounceOutDown 1s ;transition-delay: 1s; " >
      <ul class="navbar-nav mr-auto" style="margin-left: 2%; ">
        <li class="nav-item " >
          <a class="nav-link" href="Home1.php"><i class="fa fa-sign-out" id="list-dash-list" aria-hidden="true"></i>Home</a>
@@ -363,7 +364,7 @@ li:active {
         <a class="nav-link" href="profile.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Profile</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link"style=" margin-left: 100px" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+        <a class="nav-link" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
       </li>
        <li class="nav-item">
         <a class="nav-link" href="#"></a>
@@ -378,7 +379,7 @@ li:active {
     #inputbtn:hover{cursor:pointer;}
   </style>
 
-<body style="">
+<body style="background-color: #DBD2E0;">
 <div class="container-fluid " style="animation: rotateInDownLeft 3s ;transition-delay: 1s;">
         <h3 style = "margin-top: 5%;  margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $username; ?> 
        </h3>
@@ -395,16 +396,18 @@ li:active {
               
             </div><br>
           </div>
+
+          
    <div class="col-md-8" style="margin-top: 1%;">
     <div class="tab-content" id="nav-tabContent" style="">
 
 
       
       <div class="tab-pane  active" id="list-rec" role="tabpanel" aria-labelledby="list-rec-list" style="animation: flip  1s  ;transition-delay: 1s;" >
-        <div class="container-fluid container-fullw bg-white" >
+        <div class="container-fluid container-fullw " >
               <div class="row ">
 
-                   <div class="col-sm-4 d-grid" style="">
+                   <div class="col-sm-4 d-grid" style="border-radius: 100px;">
                        <div class="panel panel-white no-radius text-center">
                          <div class="panel-body" >
                           <img src="image/cardiogram-heartn.svg" style="width: 100px;height: 100px;"/>
@@ -479,20 +482,6 @@ li:active {
                         </div>
                       </div>
                       
-                      <div class="col-sm-4 d-grid" style="">
-                        <div class="panel panel-white no-radius text-center">
-                          <div class="panel-body" >
-                          <img src="image/injection-doctor-svgrepo-com.svg" style="width: 100px;height: 100px;"/>
-                            <h4 class="StepTitle" style="margin-top: 5%;">Medication</h2>
-                          
-                            <p class="cl-effect-1">
-                              <a href="#list-pres" onclick="clickDiv('#list-pres-list')">
-                              Measure
-                              </a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
       
                      
       
@@ -521,7 +510,7 @@ li:active {
              </div>
 
 
-          <!-- <div class="tab-pane fade" id="HRM" role="tabpanel" aria-labelledby=""> -->
+       
                       
           
         <div class="modal fade "id="OXY" tabindex="-1"  aria-hidden="false" aria-labelledby="list-OXY-list" role="tabpanel" aria-hidden="false"  >
@@ -790,7 +779,7 @@ li:active {
                    <i class="fas fa-envelope prefix grey-text"></i>
                    <label data-error="wrong" data-success="right" for="BMI_in_r" id="stat">result</label>
                    <input type="number" id="BMI_r" class="form-control" name="BMI_r" >
-                   <!-- <button type="button" class="btn btn-secondary"   >Calculate</button> -->
+                 
                  </div>
                   </div>
                           <div class="modal-footer">
@@ -809,20 +798,8 @@ li:active {
   </div>
 
                       
-  <footer class="deneb_footer fixed-bottom">
-      
-      <div class="copyright_area">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="copyright_text">
-                <p>Copyright &copy; 2023 All rights reserved.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+  
           </body>
+     
 </html>
 

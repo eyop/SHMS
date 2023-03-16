@@ -17,7 +17,7 @@ $contact = $_SESSION['contact'];
 
 <html lang="en">
 <head>
-  <title>Example</title>
+  <title>HOME</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +64,7 @@ $contact = $_SESSION['contact'];
 
   <style >
     .bg-primary {
-      background:-webkit-linear-gradient(left, #1fb914, #52db2d);
+      background:-webkit-linear-gradient(left, #555B6E, #555B6E);
 }
 .list-group-item.active {
   z-index: 2;
@@ -157,7 +157,7 @@ li:active {
     #inputbtn:hover{cursor:pointer;}
   </style>
 
-<body style=" background-color: #011a3e;">
+<body style=" background-color: #89B0AE; ">
 <div class="container-fluid " style="animation: rotateInDownLeft 3s ;transition-delay: 1s;">
 
 <h3 style = "color: white; margin-top: 8%;  margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $username; ?> 
@@ -177,10 +177,10 @@ autoplay
 </div>
 <div>
 
-            <div class=" tab-pane container active " id="FUTURES" aria-hidden="true" style="padding-top: 5%;padding-bottom: 5%;" >
+            <div class=" tab-pane container active " id="FUTURES" aria-hidden="true" style="background-color: #BEE3DB; padding-top: 5%;padding-bottom: 5%;" >
               <section id="intro" class="intro" style="font-family: 'IBM Plex Sans', sans-serif;">
                 <div class="intro-content">
-                  <div class="container"style="color: white">
+                  <div class="container"style="color: black">
                        <div class="text-center">
                           <h2 >YOUR HEALTH</h2>
                           <h4 class="h-light" >Provide best quality health monitoring for you</h4>
@@ -257,9 +257,7 @@ autoplay
                                 </ul>
                                 </span></li>
                             </ul>
-                            <p class="text-right " >
-                              <a href="#" class="btn btn-skin btn-lg"style="background:white;color:#006ccf">Learn more <i class="fa fa-angle-right"></i></a>
-                            </p>
+    
                         </div>
                       </div>
                     </div>
@@ -271,7 +269,7 @@ autoplay
             </div>
           </div>
 
-          <div class="tab-pane container hiding" id="Gallery" style="padding-top: 5%;padding-bottom: 5%;color: white">
+          <div class="tab-pane container hiding" id="Gallery" style="background-color: FFC4EB; padding-top: 5%;padding-bottom: 5%;color: black">
           
           <div class="slider">
         
@@ -383,13 +381,13 @@ autoplay
 
   </div>
 
-  <footer class="deneb_footer fixed-bottom">
+  <footer class="deneb_footer  "style="background-color:#C297B8;">
       
       <div class="copyright_area">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
-              <div class="copyright_text">
+              <div class="copyright_text center">
                 <p>Copyright &copy; 2023 All rights reserved.</p>
               </div>
             </div>

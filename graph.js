@@ -15,6 +15,14 @@ let uidm= document.getElementById('uid').value;
         var bmi = [];
         var times = [];
         
+  if(data[i]==null){
+     heartrates.push(0);
+     bloodoxygen .push(0);
+     glucose.push(0);
+     bmi.push(0);
+     times.push(0);
+  }else{
+
   
         for(var i in data) {
           if(uidm==data[i].uid)
@@ -25,9 +33,10 @@ let uidm= document.getElementById('uid').value;
             glucose.push(data[i].glucose);
             bmi.push(data[i].bmi);
             times.push(data[i].time);
+            
           }
          
-  
+        }
         }
 
         //heartrates Score
@@ -159,6 +168,13 @@ $(document).ready(function(){
       var exercisetype = [];
      
       var calories = [];
+  if(data[i]==null)
+  {
+    exercisetype.push(0);
+    calories.push(0);
+
+  }else{
+
   
       for(var i in data) {
         if(uidm==data[i].uid)
@@ -168,6 +184,7 @@ $(document).ready(function(){
         calories.push(data[i].calories);
           }
       }
+    }
 //Today Score
       var chartdata4 = {
         labels: exercisetype,
@@ -213,7 +230,14 @@ $(document).ready(function(){
       var exercisetype = [];
      
       var calories = [];
-  
+      if(data[i]==null)
+      {
+        exercisetype.push(0);
+        calories.push(0);
+    
+      }else{
+
+      
       for(var i in data) {
         if(uidm==data[i].uid)
           {
@@ -222,6 +246,7 @@ $(document).ready(function(){
         calories.push(data[i].calories);
           }
       }
+    }
 //Total Score
       var chartdata5 = {
         labels: exercisetype,

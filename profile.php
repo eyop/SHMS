@@ -92,7 +92,7 @@ if ($query2)
 ?>
 <html lang="en">
 <head>
-  <title>Example</title>
+  <title>Profile</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -130,12 +130,14 @@ if ($query2)
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"> -->
 
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
-<link rel="stylesheet" href="lib/css/4.0.0-alpha.6-bootstrap.min.css" >
+
+<!-- carefull -->
+<!-- <link rel="stylesheet" href="lib/css/4.0.0-alpha.6-bootstrap.min.css" > -->
 
   <!-- Latest compiled JavaScript -->
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style="animation: fadeInRight 1s ;transition-delay: 5s;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style=" animation: fadeInRight 1s ;transition-delay: 5s;">
   <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> YOUR HEALTH </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -149,7 +151,7 @@ if ($query2)
                           </script>
   <style >
     .bg-primary {
-    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    background: -webkit-linear-gradient(left, #25283D, #25283D);
 }
 .list-group-item.active {
     z-index: 2;
@@ -159,7 +161,7 @@ if ($query2)
 }
 a:active {
     z-index: 2;
-    color: #fff;
+    color: #ffff;
     background-color: #942ac1;
     border-color: #007bff;
 }
@@ -180,7 +182,7 @@ li:active {
 }
 /*000000000000000000000000000000000000000000hgjvvvvvvvvvvvvvvvvvvvvh */
 body {
-    background: rgb(99, 39, 120);
+   background-color: #6883BA;
     
 }
 
@@ -226,7 +228,7 @@ body {
 }
   </style>
 
- <div class="collapse navbar-collapse" id="navbarSupportedContent"style="animation: bounceOutDown 1s ;transition-delay: 1s;">
+ <div class="collapse navbar-collapse" id="navbarSupportedContent"style="color:white; animation: bounceOutDown 1s ;transition-delay: 1s;">
      <ul class="navbar-nav mr-auto">
        <li class="nav-item">
         <a class="nav-link " href="Home1.php"><i class="fa fa-sign-out " id="list-dash-list"aria-controls="home"></i>Home</a>
@@ -322,9 +324,9 @@ body {
 </div>
 </div>
 
-<footer class="deneb_footer fixed-bottom">
+<footer class="deneb_footer" >
       
-      <div class="copyright_area">
+      <div class="copyright_area"style="background-color:#62A87C">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">

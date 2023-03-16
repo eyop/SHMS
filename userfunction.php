@@ -19,7 +19,7 @@ if(isset($_POST['patsub1'])){
 	if(mysqli_num_rows($result)!=0)
 	{
     echo("<script>alert('User already exists. Try Again!');
-          window.location.href = 'index.php';</script>");
+          window.location.href = 'index1.php';</script>");
       
   }
 
@@ -100,14 +100,6 @@ if(isset($_POST['Admin_user'])){
     }
   }
 }
-// if(isset($_POST['update_data']))
-// {
-// 	$contact=$_POST['contact'];
-// 	$status=$_POST['status'];
-// 	$query="update appointmenttb set payment='$status' where contact='$contact';";
-// 	$result=mysqli_query($con,$query);
-// 	if($result)
-// 		header("Location:updated.php");
-// }
+
 
 ?>

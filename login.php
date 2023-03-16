@@ -5,6 +5,7 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
+    <title>LOGIN</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 <!-- 
@@ -41,7 +42,7 @@
 }
 
   </style>
-  <body style="background: -webkit-linear-gradient(left, #3931af, #00c6ff); background-size: cover;">
+  <body style="background: -webkit-linear-gradient(left, #011627, #0A416E); background-size: cover;">
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="margin-left:5%; animation: bounceOutDown 1s ;transition-delay: 1s;">
             <div class="container">
         
@@ -52,20 +53,20 @@
               <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                   <li class="nav-item" style="margin-right: 40px;">
-                    <a class="nav-link js-scroll-trigger" href="index1.php" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>HOME</h6></a>
+                    <a class="nav-link js-scroll-trigger" href="index.php" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>HOME</h6></a>
                   </li>
           
                   <li class="nav-item" style="margin-right: 40px;">
-                    <a class="nav-link js-scroll-trigger" href="index1.html#Gallery" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>Gallery</h6></a>
+                    <a class="nav-link js-scroll-trigger" href="index.html#Gallery" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>Gallery</h6></a>
                   </li>
                   <li class="nav-item" style="margin-right: 40px;">
-                    <a class="nav-link js-scroll-trigger" href="index1.html#FUTURES" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>FUTURES</h6></a>
+                    <a class="nav-link js-scroll-trigger" href="index.html#FUTURES" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>FUTURES</h6></a>
                     <li class="nav-item">
                       <a class="nav-link js-scroll-trigger" href="contact.html" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>CONTACT</h6></a>
                     </li>
                   </li>
                   <li class="nav-item" style="margin-right: 40px;">
-                    <a class="nav-link js-scroll-trigger" href="index.php" style="color: white;font-family: 'IBM Plex Sans', sans-serif; "><h6>GET STARTED</h6></a>
+                    <a class="nav-link js-scroll-trigger" href="index1.php" style="color: white;font-family: 'IBM Plex Sans', sans-serif; "><h6>GET STARTED</h6></a>
                   </li>
         
                 </ul>
@@ -106,8 +107,7 @@
                 <div class="row">
                  <div class="col-md-4"  style="padding-left: 160px;margin-top: 10%">
                     <center><input type="submit" id="inputbtn" name="patsub" value="Login" class="btn btn-primary"></center></div>           
-                 <!--  <div class="col-md-8" style="margin-top: 10%">
-                    <a href="index.php" class="btn btn-primary">Back</a></div> -->
+                 
                 </div>
               </form>
             </center>
