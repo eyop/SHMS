@@ -5,7 +5,7 @@ session_destroy();
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+   
     <title>Log_Out</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,9 +25,7 @@ session_destroy();
   <body style="background: -webkit-linear-gradient(left, #171738, #2E1760);color:white;padding-top:100px;text-align:center;">
     <h3>You have logged out.</h3><br><br>
     <a href="index1.php" class="btn btn-outline-light">Back to Login Page</a>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
+   
      <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
      <script src="lib/jquery/jquery-3.2.1.slim.min.js"></script>
 

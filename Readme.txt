@@ -42,3 +42,23 @@
     username                      password
 
     admin                         admin123
+
+
+## GETTING INTO THE PROJECT:
+WEB-Based Smart Health Management System 
+
+ This system has a ‘Home’ page from where the a visitor can see what we are offering.
+ This system also has a ‘Login’ Users and administrator can login into their accounts by toggling the tabs accordingly.
+
+‘Contact’ page allows users to provide feedback or queries about the services of the hospital. Fig 1.3 shows the ‘Contact’ page.
+
+The ‘Login’ page consists of 3 modules:
+1. User Module
+2. Admin Module
+
+### User Module:
+
+This module allows User to create their account, to store their health mesurement data, see their mesurement history and also their progress.
+The registration page asks User to enter their First Name, Last Name, Email ID, Contact Number, Password and radio buttons to select their gender.
+
+Once the User has created his/her own account after clicking the ‘Register’ button, then he will be redirected to his/her Dashboard

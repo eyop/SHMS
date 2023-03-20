@@ -16,8 +16,6 @@ let uidm= document.getElementById('uid').value;
         var times = [];
         
   
-
-  
         for(var i in data) {
           if(uidm==data[i].uid)
           {
@@ -27,11 +25,10 @@ let uidm= document.getElementById('uid').value;
             glucose.push(data[i].glucose);
             bmi.push(data[i].bmi);
             times.push(data[i].time);
-            
           }
          
+  
         }
-        
 
         //heartrates Score
 
@@ -158,25 +155,24 @@ $(document).ready(function(){
     url: "http://localhost/SHMS/Todayexdata.php",
     method: "GET",
     success: function(data) {
+      console.log(4);
       console.log(data);
-      var exercisetype = [];
+      console.log(7);
+      var exercisetypeT = [];
      
-      var calories = [];
-  
-
+      var caloriesT = [];
   
       for(var i in data) {
         if(uidm==data[i].uid)
           {
-        exercisetype.push(data[i].exercisetype);
+        exercisetypeT.push(data[i].exercisetype);
         // duration.push(data[i].duration);
-        calories.push(data[i].calories);
+        caloriesT.push(data[i].calories);
           }
       }
-    
 //Today Score
-      var chartdata4 = {
-        labels: exercisetype,
+      var chartdata7 = {
+        labels: exercisetypeT,
         datasets : [
           {
             label: 'Today Score',
@@ -189,16 +185,16 @@ $(document).ready(function(){
             hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
             hoverBorderColor: 'rgba(200, 200, 200, 1)',
             hoverOffset: 50,
-            data: calories,
+            data: caloriesT,
           }
         ]
       };
 
-      var ctx4 = $("#myChart4");
+      var ctx7 = $("#myChart4");
 
-      var barGraph = new Chart(ctx4, {
+      var barGraph = new Chart(ctx7, {
         type: 'pie',
-        data: chartdata4
+        data: chartdata7
       });
     },
     error: function(data) {
@@ -219,9 +215,7 @@ $(document).ready(function(){
       var exercisetype = [];
      
       var calories = [];
-     
-
-      
+  
       for(var i in data) {
         if(uidm==data[i].uid)
           {
@@ -230,7 +224,6 @@ $(document).ready(function(){
         calories.push(data[i].calories);
           }
       }
-    
 //Total Score
       var chartdata5 = {
         labels: exercisetype,
@@ -264,182 +257,3 @@ $(document).ready(function(){
   });
 });
 
-// $(document).ready(function(){
-//   $.ajax({
-//     url: "http://localhost/SHMS/Totalexdata.php",
-//     method: "GET",
-//     success: function(data) {
-//       console.log(data);
-//       // var exercisetype = [];
-//       // var duration = [];
-//       var calories = [];
-//       var time = [];
-     
-//       for(var i in data) {
-//         exercisetype.push(data[i].exercisetype);
-//         // duration.push(data[i].duration);
-//         calories.push(data[i].calories);
-//         time.push(data[i].time);
-//       }
-
-//       var chartdata6 = {
-//         labels:calories,
-//         datasets : [
-//           {
-//             label: 'alll Score',
-//             backgroundColor: [
-//               'rgb(255, 99, 132)',
-//               'rgb(54, 162, 235)',
-//               'rgb(255, 205, 86)'
-//             ],
-//             borderColor: 'rgba(200, 200, 200, 0.75)',
-//             hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
-//             hoverBorderColor: 'rgba(200, 200, 200, 1)',
-//             hoverOffset: 50,
-//             data: time,
-//           }
-//         ]
-//       };
-
-//       var ctx6 = $("#myChart6");
-
-//       var barGra = new Chart(ctx6, {
-//         type: 'line',
-//         data: chartdata6
-//       });
-//     },
-//     error: function(data) {
-//       console.log(data);
-//     }
-//   });
-// });
-      
-    //   var heartrate = [];
-    //   var tim= [];
-      
-    //   var m =data.split("S");
-      
-    //   var b=m[0].split(",");
-    //   var c=m[1].split(",");
-      
-      
-    //   console.log(b);
-    //   for(var i=0;i<b.length;i++)
-    //  {
-        
-    //     heartrate.push( b[i]);
-    //   }
-    //   for(var i=0;i<c.length;i++)
-    //  {
-        
-    //   tim.push( c[i]);
-    //   }
-     
-     
-     
-    //  console.log(heartrate);
-     
-    
-      // console.log(tim);
-// 
-      
-
-
-
-
-
-
-
-// // how much steps per day
-//   new Chart(ctx, {
-//     type: 'doughnut',
-//     data: {
-//       labels: ['Achived','Goals'],
-//       datasets: [{
-//         label: 'NO umber of calory'+z,
-//         data: [152, 19],
-//         backgroundColor: [
-//           'rgb(75, 192, 192)',
-//           'rgb(255, 255, 55)',
-          
-//         ]
-  
-//       }]
-//     },
-//     options: {
-//       scales: {
-//         y: {
-//           beginAtZero: true
-//         }
-//       }
-//     }
-//   });
-//   var a=117,b=67,c=88,d=35,e=33,f=177,g=93;
-//   //how much calory per month
-  
-
-//   new Chart(ctx1, {
-//     type: 'line',
-//     data: {
-//       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July','August', 'September', 'October', 'November','December'],
-//       datasets: [{
-//         label: '# of Votes',
-//         data: [a, b, c, d, e, f,g,a, b, c, d, e],
-//         borderWidth: 1
-//       }]
-//     },
-//     options: {
-//       scales: {
-//         y: {
-//           beginAtZero: true
-//         }
-//       }
-//     }
-//   });
-
-//   var a=117,b=67,c=88,d=35,e=33,f=177,g=93;
-//   //how much calory per week
-//   new Chart(ctx2, {
-//     type: 'bar',
-//     data: {
-//       labels: ['monday', 'Tusday', 'Wensday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-//       datasets: [{
-//         label: '# of Votes',
-//         data: [a, b, c, d, e, f,g],
-//         borderWidth: 1
-//       }]
-//     },
-//     options: {
-//       scales: {
-//         y: {
-//           beginAtZero: true
-//         }
-//       }
-//     }
-//   });
-
-
-//   var a=117,b=67,c=88,d=35,e=33,f=177,g=93;
-//   //how much calory per ex
-//   new Chart(ctx3, {
-//     type: 'pie',
-//     data: {
-//       labels: ['monday', 'Tusday', 'Wensday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-//       datasets: [{
-//         label: '# of Votes',
-//         data: [a, b, c, d, e, f,g],
-//         borderWidth: 1
-//       }]
-//     },
-//     options: {
-//       scales: {
-//         y: {
-//           beginAtZero: true
-//         }
-//       }
-//     }
-//   });
-
-
-
-    

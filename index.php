@@ -11,9 +11,8 @@
     <link rel="stylesheet" href="Style/animate.css">
 
     <!-- <link rel="stylesheet" href="Style/style.css"> -->
-    <!-- <link rel="stylesheet" href="Style/bootstrap.css"> -->
-    <!-- <link rel="stylesheet" href="Style/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="biuty.css">
+   >
+    <link rel="stylesheet" href="Style/Home1.css">
 
     
 
@@ -289,24 +288,156 @@
         </div>
         </main>
 
-        <!-- Button trigger modal -->
+       
 
       </div>
-      <footer class="deneb_footer "style="width: 100%;background-color: #83E8BA;color: black;text-align: center;">
-      
-      <div class="copyright_area">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="copyright_text">
-                <p>Copyright &copy; 2023 All rights reserved.</p>
-              </div>
-            </div>
+      <div class="container my-5">
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-white"
+          style="background-color: #45526e"
+          >
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+              SHMS - Smart Health Management System 
+            </h6>
+            <p>
+              we provide smart daily health manegment system fro you.
+              
+            </p>
           </div>
-        </div>
-      </div>
-    </footer>
+          <!-- Grid column -->
 
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+            <p>
+              <a class="text-white">Unlimited Daily health Storage</a>
+            </p>
+            <p>
+              <a class="text-white">Analise your data</a>
+            </p>
+            <p>
+              <a class="text-white">graphical Health progress </a>
+            </p>
+            <p>
+              <a class="text-white">Remote Monitoring</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+              Useful links
+            </h6>
+            <p>
+              <a class="text-white" href="https://www.healthchecks360.com/">Health Checks</a>
+            </p>
+            <p>
+              <a class="text-white" href="https://www.thehealthfeed.com/">The Health Feed</a>
+            </p>
+            <p>
+              <a class="text-white" href="https://www.healthyads.com/" >Healthyads</a>
+            </p>
+           
+          </div>
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+            <p><i class="fas fa-home mr-3"></i> Addis Abeba, Ethiopia</p>
+            <p><i class="fas fa-envelope mr-3"></i> SHMS_info@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 251 11 758496</p>
+            <p><i class="fas fa-print mr-3"></i> + 251 13 568497</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+
+      <hr class="my-3">
+
+      <!-- Section: Copyright -->
+      <section class="p-3 pt-0">
+        <div class="row d-flex align-items-center">
+          <!-- Grid column -->
+          <div class="col-md-7 col-lg-8 text-center text-md-start">
+            <!-- Copyright -->
+            <div class="p-3">
+              © 2023 Copyright:
+              <a class="text-white" 
+                 >SHMS</a
+                >
+            </div>
+            <!-- Copyright -->
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+            <!-- Facebook -->
+            <a
+               class="btn btn-outline-light btn-floating m-1"
+             
+               class="text-white"
+               role="button"
+              
+               ><img  src="image/icon/facebook logo_icon.png" ></img
+              ></a>
+
+            <!-- Twitter -->
+            <a
+               class="btn btn-outline-light btn-floating m-1"
+               class="text-white"
+            
+               role="button"
+               ><img src="image/icon/twitter logo_icon.png"></img
+              ></a>
+
+        
+
+            <!-- Instagram -->
+            <a
+               class="btn btn-outline-light btn-floating m-1"
+               class="text-white"
+              
+               role="button"
+               ><img src="image/icon/instagram logo_icon.png"></img
+              ></a>
+
+              <a
+               class="btn btn-outline-light btn-floating m-1"
+               class="text-white"
+               
+               role="button"
+               ><img src="image/icon/linkedin logo_icon.png"></img
+              ></a>
+          </div>
+          <!-- Grid column -->
+        </div>
+      </section>
+      <!-- Section: Copyright -->
+    </div>
+    <!-- Grid container -->
+  </footer>
+  <!-- Footer -->
+</div>
 
  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
  <script src="lib/jquery/jquery-3.3.1.slim.min.js" ></script>

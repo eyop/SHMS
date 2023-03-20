@@ -22,81 +22,31 @@ if (isset($_POST['app-submit'])) {
   $gender = $_SESSION['gender'];
   $contact = $_SESSION['contact'];
 
-  if (!empty($bpm)) {
-    $bpm = "NULL";
-  } else {
+  if (!empty($bpm)) {$bpm = "NULL";} else {$bpm = $_POST['HRM_v'];}
 
-    $bpm = $_POST['HRM_v'];
-  }
+  if (!empty($bpmstate)) {$bpmstate = "NULL";} else {$bpmstate = $_POST['HRM_state'];}
 
-  if (!empty($bpmstate)) {
-    $bpmstate = "NULL";
-  } else {
-    $bpmstate = $_POST['HRM_state'];
-  }
+  if (!empty($Glucose)) {$Glucose = "NULL";} else {$Glucose = $_POST['Glucose_v'];}
 
-  if (!empty($Glucose)) {
-    $Glucose = "NULL";
-  } else {
-    $Glucose = $_POST['Glucose_v'];
-  }
+  if (!empty($Glucosestate)) {$Glucosestate = "NULL";} else {$Glucosestate = $_POST['Glucose_state'];}
 
-  if (!empty($Glucosestate)) {
-    $Glucosestate = "NULL";
-  } else {
-    $Glucosestate = $_POST['Glucose_state'];
-  }
+  if (!empty($oxygen)) {$oxygen = "NULL";} else {$oxygen = $_POST['OXY_v'];}
 
-  if (!empty($oxygen)) {
-    $oxygen = "NULL";
-  } else {
-    $oxygen = $_POST['OXY_v'];
-  }
+  if (!empty($oxygenstate)) {$oxygenstate = "NULL";} else {$oxygenstate = $_POST['OXY_state'];}
 
-  if (!empty($oxygenstate)) {
-    $oxygenstate = "NULL";
-  } else {
-    $oxygenstate = $_POST['OXY_state'];
-  }
+  if (!empty($BMIwight)) {$BMIwight = "NULL";} else {$BMIwight = $_POST['BMI_w'];}
 
-  if (!empty($BMIwight)) {
-    $BMIwight = "NULL";
-  } else {
-    $BMIwight = $_POST['BMI_w'];
-  }
+  if (!empty($BMI_h)) {$BMI_h = "NULL";} else {$BMI_h = $_POST['BMI_h'];}
 
-  if (!empty($BMI_h)) {
-    $BMI_h = "NULL";
-  } else {
-    $BMI_h = $_POST['BMI_h'];
-  }
+  if (!empty($BMI_a)) {$BMI_a = "NULL";} else {$BMI_a = $_POST['BMI_a'];}
 
-  if (!empty($BMI_a)) {
-    $BMI_a = "NULL";
-  } else {
-    $BMI_a = $_POST['BMI_a'];
-  }
+  if (!empty($BMI_R)) {$BMI_R = "NULL";} else {$BMI_R = $_POST['BMI_r'];}
 
-  if (!empty($BMI_R)) {
-    $BMI_R = "NULL";
-  } else {
-    $BMI_R = $_POST['BMI_r'];
-  }
-  if (!empty($BPD_v)) {
-    $BPD_v = "NULL";
-  } else {
-    $BPD_v = $_POST['BPD_v'];
-  }
-  if (!empty($BPS_v)) {
-    $BPS_v = "NULL";
-  } else {
-    $BPS_v = $_POST['BPS_v'];
-  }
-  if (!empty($BP_state)) {
-    $BP_state = "NULL";
-  } else {
-    $BP_state = $_POST['BP_state'];
-  }
+  if (!empty($BPD_v)) {$BPD_v = "NULL"; } else {$BPD_v = $_POST['BPD_v'];}
+
+  if (!empty($BPS_v)) {$BPS_v = "NULL";} else {$BPS_v = $_POST['BPS_v'];}
+
+  if (!empty($BP_state)) {$BP_state = "NULL";} else {$BP_state = $_POST['BP_state'];}
 
 
 
@@ -150,18 +100,12 @@ if (isset($_POST['app-submit'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- <link rel="stylesheet" href="Style/style.css"> -->
-  <!-- Latest compiled and minified CSS -->
-
 
   <!-- <link rel="stylesheet" href="Style/style.css"> -->
 
        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.css" rel="stylesheet"> -->
        <link href="lib/css/5.2.3-bootstrap.css" rel="stylesheet">
 
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
 
   <link rel="stylesheet" href="Style/animate.css">
 
@@ -178,9 +122,6 @@ if (isset($_POST['app-submit'])) {
   <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
 
 
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"> -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
-  <!-- Latest compiled JavaScript -->
 </head>
 <body  >
 
@@ -352,7 +293,7 @@ li:active {
          <a class="nav-link" href="Home1.php"><i class="fa fa-sign-out" id="list-dash-list" aria-hidden="true"></i>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#list-rec"><i class="fa fa-sign-out" id="list-rec-list"aria-controls="home">Record</i></a>
+          <a class="nav-link active" href="#list-rec"><i class="fa fa-sign-out" id="list-rec-list"aria-controls="home">Record</i></a>
           </li>
        <li class="nav-item">
         <a class="nav-link" href="Measurements.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Measurment</a>

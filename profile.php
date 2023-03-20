@@ -42,9 +42,8 @@ if (isset($_POST['edit-submit'])) {
   $query = mysqli_query($con,"update users set fname = '$fname',lname = '$lname',contact = '$contact1',bloodgroup = '$bloodgroup', country = '$country', region = '$region' where uid = $uid");
   $query = mysqli_query($con,"update exercise set fname = '$fname',lname = '$lname',contact = '$contact1' where uid = $uid");
   $query = mysqli_query($con,"update records set fname = '$fname',lname = '$lname',contact = '$contact1' where uid = $uid");
-//   $query1 = mysqli_query($con,"update records set fname = '$fname',lname = '$lname',contact = '$contact' where  uid = $uid");
-//   $query =;
-//   UPDATE `users` SET `bloodgroup` = 'am', `country` = 'ethiopia', `region` = 'addis abeba' WHERE `users`.`uid` = 10;
+
+
 $_SESSION['username'] = $_POST['fname']." ".$_POST['lname'];
 $_SESSION['fname'] = $_POST['fname'];
 $_SESSION['lname'] = $_POST['lname'];
@@ -71,9 +70,7 @@ if (isset($_POST['change-submit'])) {
     $cpassword=$_POST['cpassword'];
 
   $query2 = mysqli_query($con,"update users set password = '$password',cpassword = '$cpassword' where password = $opassword");
-//   $query1 = mysqli_query($con,"update records set fname = '$fname',lname = '$lname',contact = '$contact' where  uid = $uid");
-//   $query =;
-//   UPDATE `users` SET `bloodgroup` = 'am', `country` = 'ethiopia', `region` = 'addis abeba' WHERE `users`.`uid` = 10;
+
 if ($query2)
      {
         echo("<script>alert('Your Data successfully Changed. !');
@@ -102,15 +99,13 @@ if ($query2)
   <!-- Latest compiled and minified CSS -->
 
 
-  <link rel="stylesheet" href="Style/style.css">
+  <link rel="stylesheet" href="Ste/style.css">
 
   <link rel="stylesheet" href="Style/animate.css">
 
        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.css" rel="stylesheet"> -->
        <link href="lib/css/5.2.3-bootstrap.css" rel="stylesheet">
-       <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
-        
+  
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
   <script src="lib/js/5.2.3-bootstrap.bundle.min.js"></script>
 
@@ -127,14 +122,6 @@ if ($query2)
   <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
 
 
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"> -->
-
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
-
-<!-- carefull -->
-<!-- <link rel="stylesheet" href="lib/css/4.0.0-alpha.6-bootstrap.min.css" > -->
-
-  <!-- Latest compiled JavaScript -->
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style=" animation: fadeInRight 1s ;transition-delay: 5s;">
@@ -234,16 +221,16 @@ body {
         <a class="nav-link " href="Home1.php"><i class="fa fa-sign-out " id="list-dash-list"aria-controls="home"></i>Home</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link active" href="Home.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Record</a>
+        <a class="nav-link " href="Home.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Record</a>
       </li>
-       <li class="nav-item active">
+       <li class="nav-item ">
         <a class="nav-link " href="Measurements.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Measurment</a>
       </li>
        <li class="nav-item">
         <a class="nav-link" href="progress.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Progress</a>
       </li>
-       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Profile</a>
+       <li class="nav-item ">
+        <a class="nav-link active" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Profile</a>
       </li>
        <li class="nav-item">
         <a class="nav-link"style=" margin-left: 100px" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
@@ -281,7 +268,7 @@ body {
                     <div class="col-md-6"><label class="labels">LastName</label><input type="text" class="form-control" value=<?php echo $lname ?> name='lname' id='lname'></div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text"   value=<?php echo $contact ?> id='contact'name='contact' ></div>
+                    <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text"  class="form-control" value=<?php echo $contact ?> id='contact'name='contact' ></div>
                     <div class="col-md-12"><label class="labels">BloodGroup </label>
                        <select class="form-control" id="bloodgroup" name="bloodgroup" value=<?php echo $bloodgroup ?>>
                               <option><?php echo $bloodgroup ?></option>
@@ -311,9 +298,9 @@ body {
         <!-- <form> -->
         <div class="p-3 py-5">
                <h4 class="text-center"> Change Password</h4>
-                  <div class="col-md-12"><label class="labels">OLD PASSWORD</label><input type="text" class="form-control" placeholder="enter OLD PASSWORD" id='opassword' name='opassword'></div>
-                  <div class="col-md-12"><label class="labels">New Password</label><input type="text" class="form-control" placeholder="enter New Password" id='password' name='password'></div>
-                  <div class="col-md-12"><label class="labels">Confirm New Password</label><input type="text" class="form-control" placeholder="enter address line 2"  id='cpassword' name='cpassword'></div>
+                  <div class="col-md-12"><label class="labels">OLD PASSWORD</label><input type="password" class="form-control" placeholder="enter OLD PASSWORD" id='opassword' name='opassword'></div>
+                  <div class="col-md-12"><label class="labels">New Password</label><input type="password" class="form-control" placeholder="enter New Password" id='password' name='password'></div>
+                  <div class="col-md-12"><label class="labels">Confirm New Password</label><input type="password" class="form-control" placeholder="Confirm  New Password"  id='cpassword' name='cpassword'></div>
                   <div class="col-md-12"><button class="btn btn-primary profile-button" type="submit" name="change-submit">change Password</button></div>
 
         </div>
@@ -324,21 +311,153 @@ body {
 </div>
 </div>
 
-<footer class="deneb_footer" >
-      
-      <div class="copyright_area"style="background-color:#62A87C">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="copyright_text">
-                <p>Copyright &copy; 2023 All rights reserved.</p>
-              </div>
-            </div>
+<div class="container my-5">
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-white"
+          style="background-color: #45526e"
+          >
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+              SHMS - Smart Health Management System 
+            </h6>
+            <p>
+              we provide smart daily health manegment system fro you.
+              
+            </p>
           </div>
-        </div>
-      </div>
-    </footer>
+          <!-- Grid column -->
 
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+            <p>
+              <a class="text-white">Unlimited Daily health Storage</a>
+            </p>
+            <p>
+              <a class="text-white">Analise your data</a>
+            </p>
+            <p>
+              <a class="text-white">graphical Health progress </a>
+            </p>
+            <p>
+              <a class="text-white">Remote Monitoring</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+              Useful links
+            </h6>
+            <p>
+              <a class="text-white" href="https://www.healthchecks360.com/">Health Checks</a>
+            </p>
+            <p>
+              <a class="text-white" href="https://www.thehealthfeed.com/">The Health Feed</a>
+            </p>
+            <p>
+              <a class="text-white" href="https://www.healthyads.com/" >Healthyads</a>
+            </p>
+           
+          </div>
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+            <p><i class="fas fa-home mr-3"></i> Addis Abeba, Ethiopia</p>
+            <p><i class="fas fa-envelope mr-3"></i> SHMS_info@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 251 11 758496</p>
+            <p><i class="fas fa-print mr-3"></i> + 251 13 568497</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+
+      <hr class="my-3">
+
+      <!-- Section: Copyright -->
+      <section class="p-3 pt-0">
+        <div class="row d-flex align-items-center">
+          <!-- Grid column -->
+          <div class="col-md-7 col-lg-8 text-center text-md-start">
+            <!-- Copyright -->
+            <div class="p-3">
+              © 2023 Copyright:
+              <a class="text-white" 
+                 >SHMS</a
+                >
+            </div>
+            <!-- Copyright -->
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+            <!-- Facebook -->
+            <a
+               class="btn btn-outline-light btn-floating m-1"
+             
+               class="text-white"
+               role="button"
+              
+               ><img  src="image/icon/facebook logo_icon.png" ></img
+              ></a>
+
+            <!-- Twitter -->
+            <a
+               class="btn btn-outline-light btn-floating m-1"
+               class="text-white"
+            
+               role="button"
+               ><img src="image/icon/twitter logo_icon.png"></img
+              ></a>
+
+        
+
+            <!-- Instagram -->
+            <a
+               class="btn btn-outline-light btn-floating m-1"
+               class="text-white"
+              
+               role="button"
+               ><img src="image/icon/instagram logo_icon.png"></img
+              ></a>
+
+              <a
+               class="btn btn-outline-light btn-floating m-1"
+               class="text-white"
+               
+               role="button"
+               ><img src="image/icon/linkedin logo_icon.png"></img
+              ></a>
+          </div>
+          <!-- Grid column -->
+        </div>
+      </section>
+      <!-- Section: Copyright -->
+    </div>
+    <!-- Grid container -->
+  </footer>
+  <!-- Footer -->
+</div>
 
 
  

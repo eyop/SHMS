@@ -26,7 +26,7 @@
 
     <!-- <link rel="stylesheet" type="text/css" href="style2.css"> -->
     <link rel="stylesheet" href="Style/animate.css">
-    <link rel="stylesheet" type="text/css" href="style1.css">
+    <link rel="stylesheet" type="text/css" href="Style/style1.css">
 
 
     

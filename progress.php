@@ -22,44 +22,24 @@ $contact = $_SESSION['contact'];
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- <link rel="stylesheet" href="Style/style.css"> -->
-  
-  <!-- Latest compiled and minified CSS -->
 
 
-  <link rel="stylesheet" href="Style/style.css">
+  <link rel="stylesheet" href="/style.css">
 
   <link rel="stylesheet" href="vendor/animate.css/animate.css">
 
   
 
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
-  <script src="lib/jquery/3.6.1-jquery.min.js"></script>
-
-          <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
   
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+
 <link rel="stylesheet" href="lib/css/3.4.1-bootstrap.min.css">
   
   
   
-
-       <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.css" rel="stylesheet"> -->
        <link href="lib/css/5.2.3-bootstrap.css" rel="stylesheet">
 
 
-       <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
 
-        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
-        <script src="lib/js/5.2.3-bootstrap.bundle.min.js"></script>
-
-
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="lib/css/3.4.1-bootstrap.min.css">
 
 
@@ -68,16 +48,10 @@ $contact = $_SESSION['contact'];
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
   <script src="lib/js/3.4.1-bootstrap.min.js"></script>
 
+        <script src="lib/js/5.2.3-bootstrap.bundle.min.js"></script>
+        <script src="lib/jquery/3.6.1-jquery.min.js"></script>
   <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
 
-
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"> -->
-
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
-
-<!-- carefull -->
-<!-- <link rel="stylesheet" href="lib/css/4.0.0-alpha.6-bootstrap.min.css"> -->
-  <!-- Latest compiled JavaScript -->
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style="position: fixed; animation: fadeInLeft 1s ;transition-delay: 5s;">
@@ -125,13 +99,13 @@ li:active {
         <a class="nav-link " href="Home1.php"><i class="fa fa-sign-out " id="list-dash-list"aria-controls="home"></i>Home</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link active" href="Home.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Record</a>
+        <a class="nav-link " href="Home.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Record</a>
       </li>
-       <li class="nav-item active">
+       <li class="nav-item ">
         <a class="nav-link " href="Measurements.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Measurment</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Progress</a>
+        <a class="nav-link active" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Progress</a>
       </li>
        <li class="nav-item">
         <a class="nav-link" href="profile.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Profile</a>
@@ -198,6 +172,14 @@ border-radius: 1rem;
 box-shadow: 0 0 16px rgba(0,0,0,0.);
 
   }
+  .allt{
+    text-align: center;
+    font-size: x-large;
+    font-style: italic;
+    font-family: fangsong;
+    color: darkslategrey;
+    background-color: lavender;
+  }
 
 
  
@@ -211,76 +193,206 @@ box-shadow: 0 0 16px rgba(0,0,0,0.);
    </div>
 <div class=" container  ">
 
-<div class="chart-container  " style=" animation: flip  5s  ;transition-delay: 5s;position: relative; ">
-       
-<!--       -->
-           <canvas class=" chart " id="myChart4"alt="TODAY RECORDED VALUE"></canvas>
-           </div>
-           <div class="chart-container " style="animation: flip  5s  ;transition-delay: 5s;position: relative; ">
+
            <!-- heartrates Score        -->
-           <canvas class=" chart "  id="mycanvas"></canvas>
+           <div class="allt">Total Heartrates Score</div>
+           <div class="chart-container " style="animation: flip  2s  ;transition-delay: 1s;position: relative; ">
+           <canvas class=" chart " id="mycanvas"></canvas>
            </div>
 
-           <div class="chart-container " style="animation: flip  5s  ;transition-delay: 5s;position: relative; ">
-                <!--  //bloodoxygen Score -->
-           <canvas class=" chart " id="myChart1"></canvas>
+           <div class="allt">Total Bloodoxygen Score</div>
+           <!--  //bloodoxygen Score -->
+           <div class="chart-container " style="animation: flip  2s  ;transition-delay: 1s;position: relative; ">
+           <canvas class=" chart "id="myChart1"></canvas>
            </div>
-         
-           <div class="chart-container " style="animation: flip  5s  ;transition-delay: 5s;position: relative;  ">
-                  <!-- //glucose Score -->
+
+           <div class="allt" >Total Glucose Score</div>
+           <!-- //glucose Score -->
+           <div class="chart-container " style="animation: flip  2s  ;transition-delay: 1s;position: relative;  ">
            <canvas class=" chart "id="myChart2"></canvas>
            </div>
 
-           <div class="chart-container " style="animation: flip  5s  ;transition-delay: 5s;position: relative;  ">
-                  <!--   //bmi Score -->
+           <div class="allt" >Total BMI Score</div>
+           <!--   //bmi Score -->
+           <div class="chart-container " style="animation: flip  2s  ;transition-delay: 1s;position: relative;  ">
+
            <canvas class=" chart " id="myChart3"></canvas>
            </div>
 
-           
-           <div class="chart-container " style="animation: flip  5s  ;transition-delay: 5s;position: relative;  ">
-                  <!--   to be con -->
-           <canvas class=" chart " id="myChart5"></canvas>
+           <div class="allt" >Today Exercise Score</div>
+           <div class="chart-container " style="animation: flip  2s  ;transition-delay: 1s;position: relative;  ">
+           <canvas class=" chart " id="myChart4"></canvas>
            </div>
+
+           <div class="allt" >Total Exercise Scoree</div>
+          <div class="chart-container  " style=" animation: flip  2s  ;transition-delay: 1s;position: relative; ">
+       
+                     <!--       -->
+                  <canvas class=" chart " id="myChart5"></canvas></div>
 
     
 </div>
-    <footer class="deneb_footer " >
-      
-      <div class="copyright_area">
-        <div class="container"style="background-color:#BE97C6;">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="copyright_text">
-                <p>Copyright &copy; 2023 All rights reserved.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+  
 
-    <script src="graph.js"></script>
+    <script src="graph1.js"></script>
     
           <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
           <script src="lib/js/chart.js"></script>
 
-          <!-- <script src="vendor/Chart.js/Chart.js"></script> -->
-
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-      <!-- <script src="lib/jquery/jquery-3.2.1.slim.min.js"></script> -->
-    
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
-    <!-- <script src="lib/js/bootstrap-4.0.0-beta.min.js"></script> -->
-    
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> -->
+       
      <script src="lib/js/popper.min.js"></script>
-   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.all.min.js"> -->
+   
    <script src="lib/js/sweetalert2.all.min.js">
 
    </script>
 
+<div class="container my-5">
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-white"
+          style="background-color: #45526e"
+          >
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+              SHMS - Smart Health Management System 
+            </h6>
+            <p>
+              we provide smart daily health manegment system fro you.
+              
+            </p>
+          </div>
+          <!-- Grid column -->
 
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+            <p>
+              <a class="text-white">Unlimited Daily health Storage</a>
+            </p>
+            <p>
+              <a class="text-white">Analise your data</a>
+            </p>
+            <p>
+              <a class="text-white">graphical Health progress </a>
+            </p>
+            <p>
+              <a class="text-white">Remote Monitoring</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+              Useful links
+            </h6>
+            <p>
+              <a class="text-white" href="https://www.healthchecks360.com/">Health Checks</a>
+            </p>
+            <p>
+              <a class="text-white" href="https://www.thehealthfeed.com/">The Health Feed</a>
+            </p>
+            <p>
+              <a class="text-white" href="https://www.healthyads.com/" >Healthyads</a>
+            </p>
+           
+          </div>
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+            <p><i class="fas fa-home mr-3"></i> Addis Abeba, Ethiopia</p>
+            <p><i class="fas fa-envelope mr-3"></i> SHMS_info@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 251 11 758496</p>
+            <p><i class="fas fa-print mr-3"></i> + 251 13 568497</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+
+      <hr class="my-3">
+
+      <!-- Section: Copyright -->
+      <section class="p-3 pt-0">
+        <div class="row d-flex align-items-center">
+          <!-- Grid column -->
+          <div class="col-md-7 col-lg-8 text-center text-md-start">
+            <!-- Copyright -->
+            <div class="p-3">
+              © 2023 Copyright:
+              <a class="text-white" 
+                 >SHMS</a
+                >
+            </div>
+            <!-- Copyright -->
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+            <!-- Facebook -->
+            <a
+               class="btn btn-outline-light btn-floating m-1"
+             
+               class="text-white"
+               role="button"
+              
+               ><img  src="image/icon/facebook logo_icon.png" ></img
+              ></a>
+
+            <!-- Twitter -->
+            <a
+               class="btn btn-outline-light btn-floating m-1"
+               class="text-white"
+            
+               role="button"
+               ><img src="image/icon/twitter logo_icon.png"></img
+              ></a>
+
+        
+
+            <!-- Instagram -->
+            <a
+               class="btn btn-outline-light btn-floating m-1"
+               class="text-white"
+              
+               role="button"
+               ><img src="image/icon/instagram logo_icon.png"></img
+              ></a>
+
+              <a
+               class="btn btn-outline-light btn-floating m-1"
+               class="text-white"
+               
+               role="button"
+               ><img src="image/icon/linkedin logo_icon.png"></img
+              ></a>
+          </div>
+          <!-- Grid column -->
+        </div>
+      </section>
+      <!-- Section: Copyright -->
+    </div>
+    <!-- Grid container -->
+  </footer>
+  <!-- Footer -->
+</div>
 
 </body>
 </html>

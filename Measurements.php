@@ -33,15 +33,11 @@ $contact = $_SESSION['contact'];
        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.css" rel="stylesheet"> -->
        <link href="lib/css/5.2.3-bootstrap.css" rel="stylesheet">
 
-       <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
-
+     
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
         <script src="lib/js/5.2.3-bootstrap.bundle.min.js"></script>
 
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+  
 
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
   <script src="lib/js/3.4.1-bootstrap.min.js"></script>
@@ -54,17 +50,7 @@ $contact = $_SESSION['contact'];
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
   <script src="lib/jquery/3.6.1-jquery.min.js"></script>
 
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-  <!-- <script src="lib/js/bootstrap.min-3.4.1.js"></script> -->
-
-
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"> -->
-
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
-
-<!-- carefull -->
-<!-- <link rel="stylesheet" href="lib/css/4.0.0-alpha.6-bootstrap.min.css"> -->
-  <!-- Latest compiled JavaScript -->
+  
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style="animation: fadeInRight 1s ;transition-delay: 5s;">
@@ -82,6 +68,7 @@ $contact = $_SESSION['contact'];
   <style >
     .bg-primary {
     background: -webkit-linear-gradient(left, #000000, #000000);
+     /* background:-webkit-linear-gradient(left, #008148, #008148); */
 }
 .list-group-item.active {
     z-index: 2;
@@ -134,7 +121,7 @@ li:active {
 
   </style>
 
- <div class="collapse navbar-collapse" id="navbarSupportedContent"style="animation: bounceOutDown 1s ;transition-delay: 1s;">
+ <div class="collapse navbar-collapse bg-primary" id="navbarSupportedContent"style="animation: bounceOutDown 1s ;transition-delay: 1s;">
      <ul class="navbar-nav mr-auto">
        <li class="nav-item">
         <a class="nav-link " href="Home1.php"><i class="fa fa-sign-out " id="list-dash-list"aria-controls="home"></i>Home</a>
@@ -142,8 +129,8 @@ li:active {
        <li class="nav-item">
         <a class="nav-link active" href="Home.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Record</a>
       </li>
-       <li class="nav-item active">
-        <a class="nav-link " href="Measurements.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Measurment</a>
+       <li class="nav-item ">
+        <a class="nav-link active" href="Measurements.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Measurment</a>
       </li>
        <li class="nav-item">
         <a class="nav-link" href="progress.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Progress</a>
@@ -175,7 +162,7 @@ li:active {
     <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $username ?> 
    </h3>
     <div class="row">
-  <div class="col-md-4 " style="max-width:30%; margin-top: 3%;">
+  <div class="col-md-4 " style="max-width:30%; margin-top: 3%; ">
     <div class="list-group" id="list-tab" role="tablist">
       <a class="list-group-item list-group-item-action active" id="list-dash-list" data-toggle="list" href="#list-dash" role="tab" aria-controls="home">Dashboard</a>
       <a class="list-group-item list-group-item-action" href="#all-hist" id="list-pat-list" role="tab" data-toggle="list" aria-controls="home">ALL History</a>
@@ -300,7 +287,7 @@ li:active {
         <form class="form-group" method="post" action="search.php">
           <div class="row">
           
-                  <div class="col-md-4"><label>Email ID:</label></div>
+                  <div class="col-md-4"><label>Date:</label></div>
                   <div class="col-md-8"><input type="date"  class="form-control" name="date"format="yyyy-mm-dd"min="2022-02-20" max="2032-02-20" required></div><br><br>
                   
                 </div>
@@ -576,7 +563,7 @@ li:active {
   
 </div>
    </div>
-   <footer class="deneb_footer "style="background-color:#587B7F" >
+   <!-- <footer class="deneb_footer bottom "style="background-color:#587B7F" >
       
       <div class="copyright_area">
         <div class="container">
@@ -589,7 +576,7 @@ li:active {
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
    
