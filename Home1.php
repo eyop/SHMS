@@ -264,7 +264,7 @@ autoplay
             </div>
           </div>
 
-          <div class="tab-pane container hiding" id="Gallery" style="background-color: FFC4EB; padding-top: 5%;padding-bottom: 5%;color: black">
+          <div class="tab-pane container hiding" id="Gallery" style="background-color: #FFC4EF; padding-top: 5%;padding-bottom: 5%;color: black">
           
           <div class="slider">
         
@@ -482,7 +482,7 @@ autoplay
              
                class="text-white"
                role="button"
-              
+               href="https://www.facebook.com"
                ><img  src="image/icon/facebook logo_icon.png" ></img
               ></a>
 
@@ -490,7 +490,7 @@ autoplay
             <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
-            
+               href="https://www.twitter.com"
                role="button"
                ><img src="image/icon/twitter logo_icon.png"></img
               ></a>
@@ -501,7 +501,7 @@ autoplay
             <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
-              
+               href="https://www.instagram.com"
                role="button"
                ><img src="image/icon/instagram logo_icon.png"></img
               ></a>
@@ -509,7 +509,7 @@ autoplay
               <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
-               
+               href="https://www.linkedin.com"
                role="button"
                ><img src="image/icon/linkedin logo_icon.png"></img
               ></a>

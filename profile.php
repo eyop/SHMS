@@ -414,7 +414,7 @@ body {
             <!-- Facebook -->
             <a
                class="btn btn-outline-light btn-floating m-1"
-             
+               href="https://www.facebook.com"
                class="text-white"
                role="button"
               
@@ -425,7 +425,7 @@ body {
             <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
-            
+               href="https://www.twitter.com"
                role="button"
                ><img src="image/icon/twitter logo_icon.png"></img
               ></a>
@@ -436,7 +436,7 @@ body {
             <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
-              
+               href="https://www.instagram.com"
                role="button"
                ><img src="image/icon/instagram logo_icon.png"></img
               ></a>
@@ -444,7 +444,7 @@ body {
               <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
-               
+               href="https://www.linkedin.com"
                role="button"
                ><img src="image/icon/linkedin logo_icon.png"></img
               ></a>

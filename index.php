@@ -358,7 +358,7 @@
           <hr class="w-100 clearfix d-md-none" />
 
           <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-4">
             <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
             <p><i class="fas fa-home mr-3"></i> Addis Abeba, Ethiopia</p>
             <p><i class="fas fa-envelope mr-3"></i> SHMS_info@gmail.com</p>
@@ -390,14 +390,14 @@
           <!-- Grid column -->
 
           <!-- Grid column -->
-          <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+          <div class="col-md-5 col-lg-3 ml-lg-0 text-center text-md-end">
             <!-- Facebook -->
             <a
                class="btn btn-outline-light btn-floating m-1"
              
                class="text-white"
                role="button"
-              
+              href="https://www.facebook.com"
                ><img  src="image/icon/facebook logo_icon.png" ></img
               ></a>
 
@@ -407,6 +407,7 @@
                class="text-white"
             
                role="button"
+               href="https://www.twitter.com"
                ><img src="image/icon/twitter logo_icon.png"></img
               ></a>
 
@@ -416,7 +417,7 @@
             <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
-              
+               href="https://www.instagram.com"
                role="button"
                ><img src="image/icon/instagram logo_icon.png"></img
               ></a>
@@ -424,7 +425,7 @@
               <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
-               
+               href="https://www.linkedin.com"
                role="button"
                ><img src="image/icon/linkedin logo_icon.png"></img
               ></a>

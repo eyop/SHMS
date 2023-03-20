@@ -24,7 +24,7 @@ $contact = $_SESSION['contact'];
   
 
 
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="Style/style.css">
 
   <link rel="stylesheet" href="vendor/animate.css/animate.css">
 
@@ -43,9 +43,6 @@ $contact = $_SESSION['contact'];
   <link rel="stylesheet" href="lib/css/3.4.1-bootstrap.min.css">
 
 
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
-
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
   <script src="lib/js/3.4.1-bootstrap.min.js"></script>
 
         <script src="lib/js/5.2.3-bootstrap.bundle.min.js"></script>
@@ -60,38 +57,6 @@ $contact = $_SESSION['contact'];
     <span class="navbar-toggler-icon"></span>
   </button>
              
-  <style >
-    .bg-primary {
-      background: -webkit-linear-gradient(left, #001427, #001427);
-}
-.list-group-item.active {
-    z-index: 2;
-    color: #fff;
-    background-color: #942ac1;
-    border-color: #007bff;
-}
-a:active {
-    z-index: 2;
-    color: #fff;
-    background-color: #942ac1;
-    border-color: #007bff;
-}
-.text-primary {
-    color: #342ac1!important;
-}
-
-.btn-primary{
-  background-color: #3c50c1;
-  border-color: #3c50c1;
-}
-li:active {
-    z-index: 2;
-    color: #fff;
-    background-color: #942ac1;
-    border-color: #007bff;
-    font-size: larger;
-}
-  </style>
 
  <div class="collapse navbar-collapse" id="navbarSupportedContent"style="animation: bounceOutDown 1s ;transition-delay: 1s;">
      <ul class="navbar-nav mr-auto">
@@ -121,6 +86,37 @@ li:active {
    </nav>
 
   <style type="text/css">
+     .bg-primary {
+      background: -webkit-linear-gradient(left, #001427, #001427);
+}
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: #942ac1;
+    border-color: #007bff;
+}
+a:active {
+    z-index: 2;
+    color: #fff;
+    background-color: #942ac1;
+    border-color: #007bff;
+}
+.text-primary {
+    color: #342ac1!important;
+}
+
+.btn-primary{
+  background-color: #3c50c1;
+  border-color: #3c50c1;
+}
+li:active {
+    z-index: 2;
+    color: #fff;
+    background-color: #942ac1;
+    border-color: #007bff;
+    font-size: larger;
+}
+
     button:hover{cursor:pointer;}
     #inputbtn:hover{cursor:pointer;}
 
@@ -349,7 +345,7 @@ box-shadow: 0 0 16px rgba(0,0,0,0.);
             <!-- Facebook -->
             <a
                class="btn btn-outline-light btn-floating m-1"
-             
+               href="https://www.facebook.com"
                class="text-white"
                role="button"
               
@@ -360,7 +356,7 @@ box-shadow: 0 0 16px rgba(0,0,0,0.);
             <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
-            
+               href="https://www.twitter.com"
                role="button"
                ><img src="image/icon/twitter logo_icon.png"></img
               ></a>
@@ -371,7 +367,7 @@ box-shadow: 0 0 16px rgba(0,0,0,0.);
             <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
-              
+               href="https://www.instagram.com"
                role="button"
                ><img src="image/icon/instagram logo_icon.png"></img
               ></a>
@@ -379,7 +375,7 @@ box-shadow: 0 0 16px rgba(0,0,0,0.);
               <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
-               
+               href="https://www.linkedin.com"
                role="button"
                ><img src="image/icon/linkedin logo_icon.png"></img
               ></a>

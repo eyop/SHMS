@@ -365,6 +365,9 @@ if(isset($_POST['search_exercise']))
       echo "</tbody></table><center><a href='admin-panel1.php' class='btn btn-light'>Back to your Dashboard</a></div></center></div></div></div>";
     }
     }
+
+
+    
 ?>
      <script src="lib/jquery/jquery-3.2.1.slim.min.js" ></script>
     <script src="lib/js/popper.min.js" ></script>
