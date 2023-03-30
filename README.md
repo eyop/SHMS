@@ -42,9 +42,9 @@ on this live demo some future's may not work because of the incopatability.
 6. Import the file 'databasefile/shms.sql' inside your newly created database and click ok.
 
 
-               #USERS
+               # USERS
 
-     #username                        password
+     # username                        #password
 
     1. r@t.in                          123456
     2. chad@k.k                        123456
@@ -54,9 +54,9 @@ on this live demo some future's may not work because of the incopatability.
     6. biruk@gmail.com                 123456
 
     
-            #ADMIN
+            # ADMIN
 
-   # username                      password
+   # username                     # password
 
    1. admin                         admin123
 
