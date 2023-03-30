@@ -44,21 +44,21 @@ on this live demo some future's may not work because of the incopatability.
 
                #USERS
 
-    username                        password
+     #username                        password
 
-    r@t.in                          123456
-    chad@k.k                        123456
-    ka@g.m                          123456
-    nahomef@gmail.com               654321
-    ak@gmail.com                    654321
-    biruk@gmail.com                 123456
+    1. r@t.in                          123456
+    2. chad@k.k                        123456
+    3. ka@g.m                          123456
+    4. nahomef@gmail.com               654321
+    5. ak@gmail.com                    654321
+    6. biruk@gmail.com                 123456
 
     
             #ADMIN
 
-    username                      password
+   # username                      password
 
-    admin                         admin123
+   1. admin                         admin123
 
 
 ## GETTING INTO THE PROJECT:
