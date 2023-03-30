@@ -1,15 +1,5 @@
  Smart Health Management System 
 
-                     
-                       #Group 1
-                       
-          1. Ebisa Hirko        15, 334/21
-          2. Eyob Azeze         15, 351/21
-          3. Eyob Ketema        15, 381/21
-          4. Nigus Solomon      15, 360/21
-          5. Samson Bayisa      15, 243/21
-          6. Surafel Gezaheg    15, 364/21
-          7. Kirubel Aymro      15, 367/21
 
 Live Demo : [Smart Health Management System - 000webhost by ](https://shmsg1.000webhostapp.com/)
 on this live demo some future's may not work because of the incopatability.
