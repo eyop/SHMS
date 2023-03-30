@@ -26,7 +26,7 @@ $contact = $_SESSION['contact'];
   <!-- Latest compiled and minified CSS -->
 
 
-  <link rel="stylesheet" href="Style/style.css">
+  <link rel="stylesheet" href="St/style.css">
 
   <link rel="stylesheet" href="Style/animate.css">
 
@@ -162,7 +162,7 @@ li:active {
     <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $username ?> 
    </h3>
     <div class="row">
-  <div class="col-md-4 " style="max-width:30%; margin-top: 3%; ">
+  <div class="col-md-4 " style="max-width:30%; margin-top: 3%;">
     <div class="list-group" id="list-tab" role="tablist">
       <a class="list-group-item list-group-item-action active" id="list-dash-list" data-toggle="list" href="#list-dash" role="tab" aria-controls="home">Dashboard</a>
       <a class="list-group-item list-group-item-action" href="#all-hist" id="list-pat-list" role="tab" data-toggle="list" aria-controls="home">ALL History</a>
@@ -560,29 +560,13 @@ li:active {
 
 
 
- 
   
 </div>
    </div>
-   <!-- <footer class="deneb_footer bottom "style="background-color:#587B7F" >
-      
-      <div class="copyright_area">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="copyright_text">
-                <p>Copyright &copy; 2023 All rights reserved.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer> -->
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
    
 
-
+   </script>
 
 <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
 <script src="lib/jquery/jquery-3.3.1.slim.min.js" ></script>

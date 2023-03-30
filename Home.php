@@ -21,6 +21,7 @@ if (isset($_POST['app-submit'])) {
   $lname = $_SESSION['lname'];
   $gender = $_SESSION['gender'];
   $contact = $_SESSION['contact'];
+  
 
   if (!empty($bpm)) {$bpm = "NULL";} else {$bpm = $_POST['HRM_v'];}
 
@@ -49,16 +50,6 @@ if (isset($_POST['app-submit'])) {
   if (!empty($BP_state)) {$BP_state = "NULL";} else {$BP_state = $_POST['BP_state'];}
 
 
-
-  // $bpm = !empty($bpm) ? "'$bpm'" : "NULL";
-  // $bpmstate = !empty($bpmstate) ? "'$bpmstate'" : "NULL";
-  // $Glucose = !empty($Glucose) ? "'$Glucose'" : "NULL";
-  // $Glucosestate = !empty($Glucosestate) ? "'$Glucosestate'" : "NULL";
-  // $oxygen = !empty($oxygen) ? "'$oxygen'" : "NULL";
-  // $oxygenstate = !empty($oxygenstate) ? "'$oxygenstate'" : "NULL";
-  // $BMIwight = !empty($BMIwight) ? "'$BMIwight'" : "NULL";
-  // $BMI_a = !empty($BMI_a) ? "'$BMI_a'" : "NULL";
-  // $BMI_R = !empty($BMI_R) ? "'$BMI_R'" : "NULL";
   
   $EX_D = $_POST['EX_d'];
   if (!empty($EX_D )) {

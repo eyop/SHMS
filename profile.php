@@ -167,7 +167,7 @@ li:active {
     border-color: #007bff;
     font-size: larger;
 }
-/*000000000000000000000000000000000000000000hgjvvvvvvvvvvvvvvvvvvvvh */
+
 body {
    background-color: #6883BA;
     

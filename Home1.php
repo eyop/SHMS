@@ -22,11 +22,6 @@ $contact = $_SESSION['contact'];
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- <link rel="stylesheet" href="Style/style.css"> -->
-  <!-- Latest compiled and minified CSS -->
-
-
-  <!-- <link rel="stylesheet" href="Style/style.css"> -->
 
        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.css" rel="stylesheet"> -->
        <link href="lib/css/5.2.3-bootstrap.css" rel="stylesheet">

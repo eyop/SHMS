@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 02, 2023 at 06:46 PM
+-- Generation Time: Mar 20, 2023 at 04:21 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -109,7 +109,20 @@ INSERT INTO `exercise` (`uid`, `exid`, `fname`, `lname`, `gender`, `email`, `con
 (1, 48, 'chad', 'K', 'Male', 'r@t.in', 914748384, 'plank', 55, 193, '2023-02-22 16:26:14'),
 (1, 49, 'chad', 'K', 'Male', 'r@t.in', 914748384, 'yoga', 90, 295, '2023-02-22 16:26:32'),
 (10, 50, 'king', 'chad', 'Male', 'chad@k.k', 955455485, 'steps', 7000, 350, '2023-03-02 17:38:11'),
-(10, 51, 'king', 'chad', 'Male', 'chad@k.k', 955455485, 'steps', 15487, 774, '2023-03-02 17:43:07');
+(10, 51, 'king', 'chad', 'Male', 'chad@k.k', 955455485, 'steps', 15487, 774, '2023-03-02 17:43:07'),
+(10, 52, 'king', 'chad', 'Male', 'chad@k.k', 955455485, 'walking', 54, 448, '2023-03-17 09:53:52'),
+(1, 53, 'chad', 'K', 'Male', 'r@t.in', 914748384, 'running', 58, 580, '2023-03-17 10:20:20'),
+(1, 54, 'chad', 'K', 'Male', 'r@t.in', 914748384, 'running', 58, 580, '2023-03-17 10:20:20'),
+(1, 55, 'chad', 'K', 'Male', 'r@t.in', 914748384, 'boxing', 54, 659, '2023-03-19 22:49:57'),
+(1, 56, 'chad', 'K', 'Male', 'r@t.in', 914748384, 'walking', 54, 448, '2023-03-19 22:52:02'),
+(1, 57, 'chad', 'K', 'Male', 'r@t.in', 914748384, 'steps', 457574, 22879, '2023-03-19 22:53:34'),
+(0, 58, 'Nahome', 'Fikadu', 'Male', 'nahomef@gmail.com', 915845956, 'football', 84, 297, '2023-03-20 06:23:07'),
+(16, 59, 'biruk', 't', 'Male', 'biruk@gmail.com', 958421847, 'football', 844, 2988, '2023-03-20 14:46:27'),
+(16, 60, 'biruk', 't', 'Male', 'biruk@gmail.com', 958421847, 'steps', 658, 33, '2023-03-20 14:47:37'),
+(16, 61, 'biruk', 't', 'Male', 'biruk@gmail.com', 958421847, 'swimming', 87, 47328, '2023-03-20 14:47:52'),
+(14, 62, 'Nahome', 'Fikadu', 'Male', 'nahomef@gmail.com', 915845956, 'walking', 45, 374, '2023-03-20 15:14:51'),
+(14, 63, 'Nahome', 'Fikadu', 'Male', 'nahomef@gmail.com', 915845956, 'steps', 5487, 274, '2023-03-20 15:18:19'),
+(14, 64, 'Nahome', 'Fikadu', 'Male', 'nahomef@gmail.com', 915845956, 'plank', 54, 189, '2023-03-20 15:19:26');
 
 -- --------------------------------------------------------
 
@@ -186,7 +199,28 @@ INSERT INTO `records` (`uid`, `rid`, `fname`, `lname`, `gender`, `email`, `conta
 (10, 285, 'king', 'chad', 'Male', 'chad@k.k', 955455485, 56, 'General', '', '', 0, 0, '', 0, '', 0, 0, 0, 0, NULL, NULL, '2023-03-02 17:37:30'),
 (10, 286, 'king', 'chad', 'Male', 'chad@k.k', 955455485, 88, 'Resting', '', '', 0, 0, '', 0, '', 0, 0, 0, 0, NULL, NULL, '2023-03-02 17:37:43'),
 (10, 287, 'king', 'chad', 'Male', 'chad@k.k', 955455485, 0, '', '87', 'Exercise Lightly', 0, 0, '', 0, '', 0, 0, 0, 0, NULL, NULL, '2023-03-02 17:37:55'),
-(10, 288, 'king', 'chad', 'Male', 'chad@k.k', 955455485, 0, '', '', '', 0, 0, '', 0, '', 66, 189, 25, 18, NULL, NULL, '2023-03-02 17:38:33');
+(10, 288, 'king', 'chad', 'Male', 'chad@k.k', 955455485, 0, '', '', '', 0, 0, '', 0, '', 66, 189, 25, 18, NULL, NULL, '2023-03-02 17:38:33'),
+(1, 289, 'chad', 'K', 'Male', 'r@t.in', 914748384, 84, 'Resting', '', '', 0, 0, '', 0, '', 0, 0, 0, 0, NULL, NULL, '2023-03-20 06:27:14'),
+(14, 290, 'Nahome', 'Fikadu', 'Male', 'nahomef@gmail.com', 915845956, 84, 'General', '', '', 0, 0, '', 0, '', 0, 0, 0, 0, NULL, NULL, '2023-03-20 06:28:23'),
+(16, 291, 'biruk', 't', 'Male', 'biruk@gmail.com', 958421847, 84, 'After Exercise', '', '', 0, 0, '', 0, '', 0, 0, 0, 0, NULL, NULL, '2023-03-20 14:45:12'),
+(16, 292, 'biruk', 't', 'Male', 'biruk@gmail.com', 958421847, 77, '', '', '', 191, 159, 'Non taken', 0, '', 0, 0, 0, 0, NULL, NULL, '2023-03-20 14:45:26'),
+(16, 293, 'biruk', 't', 'Male', 'biruk@gmail.com', 958421847, 0, '', '75', 'Exercise Lightly', 0, 0, '', 0, '', 0, 0, 0, 0, NULL, NULL, '2023-03-20 14:45:36'),
+(16, 294, 'biruk', 't', 'Male', 'biruk@gmail.com', 958421847, 99, 'Sad', '', '', 0, 0, '', 0, '', 0, 0, 0, 0, NULL, NULL, '2023-03-20 14:45:47'),
+(16, 295, 'biruk', 't', 'Male', 'biruk@gmail.com', 958421847, 0, '', '', '', 0, 0, '', 0, '', 87, 178, 45, 27, NULL, NULL, '2023-03-20 14:48:14'),
+(16, 296, 'biruk', 't', 'Male', 'biruk@gmail.com', 958421847, 0, '', '', '', 0, 0, '', 7, 'Fasting', 0, 0, 0, 0, NULL, NULL, '2023-03-20 14:48:48'),
+(16, 297, 'biruk', 't', 'Male', 'biruk@gmail.com', 958421847, 0, '', '', '', 0, 0, '', 87, 'Post-meal', 0, 0, 0, 0, NULL, NULL, '2023-03-20 14:49:02'),
+(16, 298, 'biruk', 't', 'Male', 'biruk@gmail.com', 958421847, 0, '', '', '', 0, 0, '', 74, 'Before Sleep', 0, 0, 0, 0, NULL, NULL, '2023-03-20 14:50:02'),
+(16, 299, 'biruk', 't', 'Male', 'biruk@gmail.com', 958421847, 0, '', '74', 'Exercise Lightly', 0, 0, '', 0, '', 0, 0, 0, 0, NULL, NULL, '2023-03-20 14:50:13'),
+(16, 300, 'biruk', 't', 'Male', 'biruk@gmail.com', 958421847, 87, 'General', '', '', 0, 0, '', 0, '', 0, 0, 0, 0, NULL, NULL, '2023-03-20 14:50:25'),
+(14, 301, 'Nahome', 'Fikadu', 'Male', 'nahomef@gmail.com', 915845956, 66, 'After Exercise', '', '', 0, 0, '', 0, '', 0, 0, 0, 0, NULL, NULL, '2023-03-20 15:13:24'),
+(14, 302, 'Nahome', 'Fikadu', 'Male', 'nahomef@gmail.com', 915845956, 84, 'Before Exercise', '', '', 0, 0, '', 0, '', 0, 0, 0, 0, NULL, NULL, '2023-03-20 15:13:36'),
+(14, 303, 'Nahome', 'Fikadu', 'Male', 'nahomef@gmail.com', 915845956, 0, '', '99', 'Exercise Lightly', 0, 0, '', 0, '', 0, 0, 0, 0, NULL, NULL, '2023-03-20 15:13:49'),
+(14, 304, 'Nahome', 'Fikadu', 'Male', 'nahomef@gmail.com', 915845956, 0, '', '89', 'Exercise Lightly', 0, 0, '', 0, '', 0, 0, 0, 0, NULL, NULL, '2023-03-20 15:13:59'),
+(14, 305, 'Nahome', 'Fikadu', 'Male', 'nahomef@gmail.com', 915845956, 0, '', '', '', 0, 0, '', 88, 'Post-meal', 0, 0, 0, 0, NULL, NULL, '2023-03-20 15:14:15'),
+(14, 306, 'Nahome', 'Fikadu', 'Male', 'nahomef@gmail.com', 915845956, 0, '', '', '', 0, 0, '', 99, 'Before Sleep', 0, 0, 0, 0, NULL, NULL, '2023-03-20 15:14:26'),
+(14, 307, 'Nahome', 'Fikadu', 'Male', 'nahomef@gmail.com', 915845956, 0, '', '', '', 0, 0, '', 0, '', 66, 178, 22, 21, NULL, NULL, '2023-03-20 15:14:41'),
+(14, 308, 'Nahome', 'Fikadu', 'Male', 'nahomef@gmail.com', 915845956, 87, '', '', '', 219, 185, 'Taken', 0, '', 0, 0, 0, 0, NULL, NULL, '2023-03-20 15:15:07'),
+(14, 309, 'Nahome', 'Fikadu', 'Male', 'nahomef@gmail.com', 915845956, 48, 'General', '', '', 0, 0, '', 0, '', 0, 0, 0, 0, NULL, NULL, '2023-03-20 15:19:36');
 
 -- --------------------------------------------------------
 
@@ -213,9 +247,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`uid`, `fname`, `lname`, `gender`, `email`, `contact`, `password`, `cpassword`, `bloodgroup`, `country`, `region`) VALUES
-(1, 'chad', 'K', 'Male', 'r@t.in', 914748384, '258741369', '258741369', 'A RhD positive (A+)', 'canada', 'toronto'),
+(1, 'chad', 'K', 'Male', 'r@t.in', 914748384, '123456', '123456', 'A RhD positive (A+)', 'canada', 'toronto'),
 (10, 'king', 'chad', 'Male', 'chad@k.k', 955455485, '123456', '123456', 'AB RhD positive (AB+)', 'US', 'DC'),
-(12, 'ak', 'k', 'Male', 'ka@g.m', 922151815, '123456', '123456', NULL, NULL, NULL);
+(12, 'ak', 'k', 'Male', 'ka@g.m', 922151815, '123456', '123456', NULL, NULL, NULL),
+(14, 'Nahome', 'Fikadu', 'Male', 'nahomef@gmail.com', 915845956, '654321', '654321', NULL, NULL, NULL),
+(15, 'abebe', 'Kebede', 'Male', 'ak@gmail.com', 954865845, '654321', '654321', NULL, NULL, NULL),
+(16, 'biruk', 't', 'Male', 'biruk@gmail.com', 958421847, '123456', '123456', 'B RhD positive (B+)', '', '');
 
 --
 -- Indexes for dumped tables
@@ -247,19 +284,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `exercise`
 --
 ALTER TABLE `exercise`
-  MODIFY `exid` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `exid` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `records`
 --
 ALTER TABLE `records`
-  MODIFY `rid` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=289;
+  MODIFY `rid` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=310;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `uid` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `uid` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

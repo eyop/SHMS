@@ -193,7 +193,7 @@ $(document).ready(function(){
       var ctx7 = $("#myChart4");
 
       var barGraph = new Chart(ctx7, {
-        type: 'pie',
+        type: 'doughnut',
         data: chartdata7
       });
     },
