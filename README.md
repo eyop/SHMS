@@ -1,4 +1,4 @@
- # Smart Health Management System 
+ ## Smart Health Management System 
 
 
 Live Demo : [Smart Health Management System - 000webhost by ](https://shmsg1.000webhostapp.com/)
@@ -42,23 +42,21 @@ on this live demo some future's may not work because of the incopatability.
 6. Import the file 'databasefile/shms.sql' inside your newly created database and click ok.
 
 
-               # USERS
-
-     # username                        #password
-
-    1. r@t.in                          123456
-    2. chad@k.k                        123456
-    3. ka@g.m                          123456
-    4. nahomef@gmail.com               654321
-    5. ak@gmail.com                    654321
-    6. biruk@gmail.com                 123456
+# USERS
 
     
-            # ADMIN
+1. r@t.in                          123456
+2. chad@k.k                        123456
+3. ka@g.m                          123456
+4. nahomef@gmail.com               654321
+5. ak@gmail.com                    654321
+6. biruk@gmail.com                 123456
 
-   # username                     # password
+    
+# ADMIN
 
-   1. admin                         admin123
+  
+1. admin                         admin123
 
 
 ## GETTING INTO THE PROJECT:
