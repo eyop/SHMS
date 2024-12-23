@@ -89,3 +89,4 @@ Login into admin account can be done by toggling into admin tab of the Home page
 On clicking the ‘Login’ button, the admin will be redirected to his/her dashboard
 
 search operation id done by using email for user and date for record.
+
