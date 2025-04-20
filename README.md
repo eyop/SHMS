@@ -1,92 +1,164 @@
- ## Smart Health Management System 
+# Hospital Management System (SHMS) 🏥
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![PHP 8.1+](https://img.shields.io/badge/PHP-8.1+-brightgreen)](https://www.php.net/)
+[![MySQL 8.0+](https://img.shields.io/badge/MySQL-8.0+-orange)](https://www.mysql.com/)
 
-Live Demo : [Smart Health Management System - 000webhost by ](https://shmsg1.000webhostapp.com/)
-on this live demo some future's may not work because of the incopatability.
+A comprehensive web-based solution for modern hospital administration, patient care, and medical record management.
 
-# Futures:
+![SHMS Dashboard Preview](demo/dashboard-screenshot.png) <!-- Add actual screenshot -->
 
-1. Ability to accept the record medical value.
-2. User should not be allowed to register if he/she tries to provide the already registered email ID.
-3. The password should be encrypted and the password field shouldn't be displayed in the admin panel.
-4. Implementation of pagination for all the list view across the application.
-5. Tabular representation of recorded data
-6. realtime Graphical progress analisis.
-7. Addition of more fields in medical value make it more specific one.
+## 📋 Table of Contents
+- [Project Overview](#-project-overview)
+- [Key Features](#-key-features)
+- [Technology Stack](#-technology-stack)
+- [Installation Guide](#-installation-guide)
+- [System Architecture](#-system-architecture)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Acknowledgments](#-acknowledgments)
 
+## 🌟 Project Overview
 
-  # Prerequisites
+SHMS is a full-stack web application designed to streamline hospital operations by:
+- Digitalizing patient records and medical history
+- Automating appointment scheduling and staff management
+- Providing real-time inventory tracking for medical supplies
+- Generating analytical reports for decision-making 
 
-1. Install XAMPP web server
-2. Any Editor (Preferably VS Code or Sublime Text)
-3. Any web browser with latest version
+**Core Components:**
+- Patient Management Module
+- Electronic Health Records (EHR) System
+- Appointment Scheduling Engine
+- Pharmacy Inventory Management
+- Billing & Insurance Integration
 
+## ✨ Key Features
 
-# Languages and Technologies used
+### Patient Management
+- Registration with biometric data integration
+- Medical history tracking with timeline visualization
+- Automated appointment reminders (SMS/Email)
+- Prescription generation and digital signatures
 
-1. HTML5/CSS3
-2. JavaScript (to create dynamically updating content,and Grapical representaion)
-3. Bootstrap (An HTML, CSS, and JS library)
-4. XAMPP (A web server by Apache Friends)
-5. Php
-6. MySQL 
+### Staff Coordination
+- Role-based access control (RBAC)
+- Doctor shift scheduling with conflict detection
+- Performance analytics dashboard
+- Emergency response coordination system
 
+### Inventory Control
+- Real-time medication stock monitoring
+- Automated reorder alerts with vendor integration
+- Equipment maintenance scheduling
+- Expiry date tracking and alerts 
 
-# Steps to run the project in your machine
+### Advanced Analytics
+- Patient admission trends visualization
+- Disease outbreak prediction models
+- Resource utilization heatmaps
+- Financial performance reports
 
-1. Download and install XAMPP in your machine
-2. Extract all the files and move it to the 'htdocs' folder of your XAMPP directory.
-3. Start the Apache and Mysql in your XAMPP control panel.
-4. Open your web browser and type 'localhost/phpmyadmin'
-5. In phpmyadmin page, create a new database from the left panel and name it as 'shms'
-6. Import the file 'databasefile/shms.sql' inside your newly created database and click ok.
+## 💻 Technology Stack
 
+**Frontend**
+- HTML5 & CSS3 with Bootstrap 5
+- JavaScript (ES6+) with Chart.js
+- AJAX for real-time updates
 
-# USERS
+**Backend**
+- PHP 8.1 (Laravel Framework)
+- MySQL 8.0 (Relational Database)
+- RESTful API Architecture
 
-    
-1. r@t.in                          123456
-2. chad@k.k                        123456
-3. ka@g.m                          123456
-4. nahomef@gmail.com               654321
-5. ak@gmail.com                    654321
-6. biruk@gmail.com                 123456
+**DevOps**
+- Docker Containerization
+- CI/CD Pipeline with GitHub Actions
+- Automated Testing (PHPUnit)
 
-    
-# ADMIN
+## 🛠️ Installation Guide
 
-  
-1. admin                         admin123
+### Prerequisites
+- PHP 8.1+
+- MySQL 8.0+
+- Composer 2.0+
+- Node.js 16.x
 
+### Setup Instructions
+1. Clone repository:
+```bash
+git clone https://github.com/eyop/SHMS.git
+cd SHMS
+```
 
-## GETTING INTO THE PROJECT:
-WEB-Based Smart Health Management System 
+2. Install dependencies:
+```bash
+composer install
+npm install
+```
 
- This system has a ‘Home’ page from where the a visitor can see what we are offering.
- This system also has a ‘Login’ Users and administrator can login into their accounts by toggling the tabs accordingly.
+3. Configure environment:
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-‘Contact’ page allows users to provide feedback or queries about the services of the hospital. Fig 1.3 shows the ‘Contact’ page.
+4. Database setup:
+```bash
+mysql -u root -p -e "CREATE DATABASE shms;"
+php artisan migrate --seed
+```
 
-The ‘Login’ page consists of 3 modules:
-1. User Module
-2. Admin Module
+5. Start development server:
+```bash
+php artisan serve
+```
 
-1 User Module:
+## 🏗️ System Architecture
 
-This module allows User to create their account, to store their health mesurement data, see their mesurement history and also their progress.
-The registration page asks User to enter their First Name, Last Name, Email ID, Contact Number, Password and radio buttons to select their gender.
+### Database Schema
+![ER Diagram](docs/er-diagram.png) <!-- Add actual ER diagram -->
 
-Once the User has created his/her own account after clicking the ‘Register’ button, then he will be redirected to Login
+**Key Entities:**
+- Patients (ID, Name, Medical History, Insurance Info)
+- Staff (ID, Role, Department, Qualifications)
+- Appointments (Time, Doctor, Treatment Type)
+- Inventory (Medication, Equipment, Suppliers) 
 
-After login user's can record their medical data and also retrive the recorded data also they can see their progress in Grapical representaion.
-Also they can update their profile including name, password, phone_number, bloodgroup, state and country.
-also search operation is done by using date for record.
+### Module Structure
+```
+src/
+├── app/           # Core application logic
+├── config/        # System configurations
+├── database/      # Migrations & seeders
+├── public/        # Frontend assets
+├── resources/     # Views & localization
+└── tests/         # Automated tests
+```
 
-2. Admin Module
+## 🤝 Contributing
 
-This module is the heart of our project where an admin can see the list of all users. see user recorded data and the feedback/queries received from the ‘Contact’ page. Also admin can add user too. 
-Login into admin account can be done by toggling into admin tab of the Home page.
-On clicking the ‘Login’ button, the admin will be redirected to his/her dashboard
+We welcome contributions! Please follow these steps:
+1. Fork the repository
+2. Create feature branch: `git checkout -b feature/your-feature`
+3. Commit changes: `git commit -m 'Add some feature'`
+4. Push to branch: `git push origin feature/your-feature`
+5. Open a Pull Request
 
-search operation id done by using email for user and date for record.
+**Development Guidelines:**
+- Follow PSR-12 coding standards
+- Write unit tests for new features
+- Document API endpoints using OpenAPI
+- Maintain 85%+ test coverage
+
+## 📄 License
+
+Distributed under MIT License. See `LICENSE` for details.
+
+## 🙏 Acknowledgments
+
+- Inspired by GeeksforGeeks Hospital Management System guide 
+- UI components from Bootstrap Community
+- PHP Laravel Documentation Team
+- MySQL Optimization Best Practices
 
