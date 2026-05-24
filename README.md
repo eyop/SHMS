@@ -1,164 +1,179 @@
-# Hospital Management System (SHMS) 🏥
+<div align="center">
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![PHP 8.1+](https://img.shields.io/badge/PHP-8.1+-brightgreen)](https://www.php.net/)
-[![MySQL 8.0+](https://img.shields.io/badge/MySQL-8.0+-orange)](https://www.mysql.com/)
+# 🏥 Smart Hospital Management System (SHMS)
 
-A comprehensive web-based solution for modern hospital administration, patient care, and medical record management.
+**Full-stack web application for modern hospital administration**
 
-![SHMS Dashboard Preview](demo/dashboard-screenshot.png) <!-- Add actual screenshot -->
+[![PHP](https://img.shields.io/badge/PHP-8.1+-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0+-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://mysql.com)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-## 📋 Table of Contents
-- [Project Overview](#-project-overview)
-- [Key Features](#-key-features)
-- [Technology Stack](#-technology-stack)
-- [Installation Guide](#-installation-guide)
-- [System Architecture](#-system-architecture)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Acknowledgments](#-acknowledgments)
+> Patient Management · EHR · Appointment Scheduling · Inventory · Role-Based Access Control
 
-## 🌟 Project Overview
+</div>
 
-SHMS is a full-stack web application designed to streamline hospital operations by:
-- Digitalizing patient records and medical history
-- Automating appointment scheduling and staff management
-- Providing real-time inventory tracking for medical supplies
-- Generating analytical reports for decision-making 
+---
 
-**Core Components:**
-- Patient Management Module
-- Electronic Health Records (EHR) System
-- Appointment Scheduling Engine
-- Pharmacy Inventory Management
-- Billing & Insurance Integration
+## 📌 Overview
 
-## ✨ Key Features
+SHMS is a comprehensive hospital management platform built to digitalize and streamline core hospital operations. It replaces manual, paper-based workflows with a secure, role-based web system covering patient records, staff coordination, medical inventory, and data analytics.
 
-### Patient Management
-- Registration with biometric data integration
-- Medical history tracking with timeline visualization
-- Automated appointment reminders (SMS/Email)
-- Prescription generation and digital signatures
+**Problem it solves:** Ethiopian healthcare facilities — like many in developing regions — still manage patient records manually. SHMS provides a low-cost, deployable solution to modernize these workflows.
 
-### Staff Coordination
-- Role-based access control (RBAC)
-- Doctor shift scheduling with conflict detection
-- Performance analytics dashboard
-- Emergency response coordination system
+---
 
-### Inventory Control
+## ✨ Core Features
+
+### 👤 Patient Management
+- Patient registration with full medical history
+- Appointment booking and calendar management
+- Treatment record tracking with timeline view
+- Prescription generation
+
+### 👨‍⚕️ Staff & Access Control
+- Role-Based Access Control (RBAC): Admin, Doctor, Nurse, Receptionist
+- User authentication with session management
+- Department-based access restrictions
+- Audit trail for sensitive record changes
+
+### 📦 Medical Inventory
 - Real-time medication stock monitoring
-- Automated reorder alerts with vendor integration
+- Low-stock alerts and reorder tracking
 - Equipment maintenance scheduling
-- Expiry date tracking and alerts 
 
-### Advanced Analytics
-- Patient admission trends visualization
-- Disease outbreak prediction models
-- Resource utilization heatmaps
-- Financial performance reports
+### 📊 Analytics Dashboard
+- Patient admission trends (Chart.js visualizations)
+- Staff performance metrics
+- Daily/weekly/monthly report generation
 
-## 💻 Technology Stack
+---
 
-**Frontend**
-- HTML5 & CSS3 with Bootstrap 5
-- JavaScript (ES6+) with Chart.js
-- AJAX for real-time updates
+## 🏗️ System Architecture
 
-**Backend**
-- PHP 8.1 (Laravel Framework)
-- MySQL 8.0 (Relational Database)
-- RESTful API Architecture
+```
+┌─────────────────────────────────────────────────────┐
+│                   Frontend Layer                     │
+│          HTML5 + Bootstrap 5 + Chart.js              │
+│              AJAX for real-time updates              │
+└──────────────────────┬──────────────────────────────┘
+                       │
+┌──────────────────────▼──────────────────────────────┐
+│                  Backend Layer                       │
+│               PHP 8.1 + REST API                     │
+│        Authentication · Business Logic               │
+└──────────────────────┬──────────────────────────────┘
+                       │
+┌──────────────────────▼──────────────────────────────┐
+│                  Database Layer                      │
+│                  MySQL 8.0                           │
+│    Patients · Staff · Appointments · Inventory       │
+└─────────────────────────────────────────────────────┘
+```
 
-**DevOps**
-- Docker Containerization
-- CI/CD Pipeline with GitHub Actions
-- Automated Testing (PHPUnit)
+---
 
-## 🛠️ Installation Guide
+## 📁 Project Structure
+
+```
+SHMS/
+├── Style/               # CSS stylesheets
+├── databasefile/        # SQL schema & seed data
+├── image/               # Static assets
+├── js/                  # JavaScript modules
+├── lib/                 # PHP utility libraries
+├── vendor/              # Third-party dependencies
+├── index.php            # Entry point
+├── login.php            # Authentication
+├── adminpage.php        # Admin dashboard
+├── Home.php             # Patient home
+├── Measurements.php     # Health metrics tracking
+├── Totalexdata.php      # Analytics/reporting
+├── authenticateuser.php # Session & RBAC logic
+└── README.md
+```
+
+---
+
+## 🚀 Installation
 
 ### Prerequisites
 - PHP 8.1+
 - MySQL 8.0+
-- Composer 2.0+
-- Node.js 16.x
+- Apache/Nginx web server (or XAMPP for local dev)
 
-### Setup Instructions
-1. Clone repository:
+### Setup
+
 ```bash
+# 1. Clone the repository
 git clone https://github.com/eyop/SHMS.git
 cd SHMS
-```
 
-2. Install dependencies:
-```bash
-composer install
-npm install
-```
-
-3. Configure environment:
-```bash
-cp .env.example .env
-php artisan key:generate
-```
-
-4. Database setup:
-```bash
+# 2. Import database schema
 mysql -u root -p -e "CREATE DATABASE shms;"
-php artisan migrate --seed
+mysql -u root -p shms < databasefile/shms.sql
+
+# 3. Configure database connection
+# Edit db config in lib/ to match your MySQL credentials
+
+# 4. Serve with Apache or XAMPP
+# Place project in htdocs/ and visit http://localhost/SHMS
 ```
 
-5. Start development server:
-```bash
-php artisan serve
-```
+### Default Login Credentials (Dev)
+| Role | Username | Password |
+|------|----------|----------|
+| Admin | admin | admin123 |
+| Doctor | doctor | doctor123 |
 
-## 🏗️ System Architecture
+> ⚠️ Change all default credentials before any production deployment.
 
-### Database Schema
-![ER Diagram](docs/er-diagram.png) <!-- Add actual ER diagram -->
+---
 
-**Key Entities:**
-- Patients (ID, Name, Medical History, Insurance Info)
-- Staff (ID, Role, Department, Qualifications)
-- Appointments (Time, Doctor, Treatment Type)
-- Inventory (Medication, Equipment, Suppliers) 
+## 🔐 Security Implementation
 
-### Module Structure
-```
-src/
-├── app/           # Core application logic
-├── config/        # System configurations
-├── database/      # Migrations & seeders
-├── public/        # Frontend assets
-├── resources/     # Views & localization
-└── tests/         # Automated tests
-```
+- Password hashing with `password_hash()` (bcrypt)
+- Prepared statements to prevent SQL injection
+- Session-based authentication with timeout
+- Role-based route protection
+- Input sanitization on all form fields
+- CSRF protection on state-changing operations
 
-## 🤝 Contributing
+---
 
-We welcome contributions! Please follow these steps:
-1. Fork the repository
-2. Create feature branch: `git checkout -b feature/your-feature`
-3. Commit changes: `git commit -m 'Add some feature'`
-4. Push to branch: `git push origin feature/your-feature`
-5. Open a Pull Request
+## 🛠️ Tech Stack
 
-**Development Guidelines:**
-- Follow PSR-12 coding standards
-- Write unit tests for new features
-- Document API endpoints using OpenAPI
-- Maintain 85%+ test coverage
+| Layer | Technology |
+|-------|-----------|
+| Frontend | HTML5, CSS3, Bootstrap 5, JavaScript |
+| Charts | Chart.js |
+| Backend | PHP 8.1 |
+| Database | MySQL 8.0 |
+| Auth | PHP Sessions + RBAC |
+| Local Dev | XAMPP / Apache |
+
+---
+
+## 🔧 Roadmap
+
+- [ ] REST API layer for mobile client
+- [ ] Docker containerization
+- [ ] Migrate to Laravel framework
+- [ ] Add CI/CD pipeline with GitHub Actions
+- [ ] Integrate SAST scanning (CodeQL)
+- [ ] SMS appointment reminders
+- [ ] Telemedicine module
+
+---
 
 ## 📄 License
 
-Distributed under MIT License. See `LICENSE` for details.
+MIT License — see [LICENSE](LICENSE) for details.
 
-## 🙏 Acknowledgments
+---
 
-- Inspired by GeeksforGeeks Hospital Management System guide 
-- UI components from Bootstrap Community
-- PHP Laravel Documentation Team
-- MySQL Optimization Best Practices
+<div align="center">
 
+**Built by [Eyob Ketema](https://github.com/eyop)** · [LinkedIn](https://www.linkedin.com/in/eyob-ketema-14539b242/)
+
+</div>
